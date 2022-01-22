@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../css/stilus.css"></script>
     <script src="../css/szerkezet.css"></script>
     <title>Gyorsétterem</title>
@@ -12,7 +13,7 @@
     <main>
         <header> 
             <h1>Üdvözlünk az oldalon!</h1>
-            <img src="" alt="kepek/logo.jpg" class="logo" >
+            <img src="kepek/logo.jpg" alt="" class="logo" >
             <nav>
                 <ul>
                     <li><a href="rendelesek.html">Rendelések</a></li>
@@ -24,18 +25,20 @@
                 </ul>
             </nav>
         </header>
-        <section>
+        <article>
                 <table class="dolgozok">
                     <thead>
+                        <tr>
                         <th>Név</th>
                         <th>Szül dátum</th>
                         <th>Címe</th>
                         <th>Telefonszám</th>
                         <th>Jelszava</th>
                         <th>Munkakör</th>
+                        </tr>
                     
                     </thead>
-                
+                    <tbody>
                     <tr class="dolgozo">
                         <td class="dolgozonev">Dolgozó neve</td>
                         <td class="szuldatum">Születési dátum</td>
@@ -46,8 +49,9 @@
                         <td class="torles"><button>Törlés</button></td>
                         <td class="szerkeszt"><button>Szerkesztés</button></td>
                     </tr>
+                    </tbody>
                 </table>
-        </section>
+        </article>
         <footer>
             <p>
                 Az oldalt készítették: Szabó Gergő, Szántai Barna, Tóth Virág
