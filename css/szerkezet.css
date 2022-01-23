@@ -1,41 +1,15 @@
 @charset "utf-8";
 
-.dolgozok{
-    width:100%; 
-    border:1px solid black;
-}
-body{
-    background-color: rgba(75, 1, 1, 0.808);
-}
 main{
-    background-color: peachpuff;
+    max-width: 1200px;
+    margin: auto;
 }
-
 nav ul {
     display: grid;
-    grid-template-columns: 100px 100px auto 100px;
+    grid-template-columns: 150px 150px 150px 150px;
     grid-gap: 5px;
     padding: 0px;
 }
-nav ul li {
-    padding: 3px 10px;
-    border: 1px solid lavender;
-    border-radius: 5px;
-    list-style-type: none;
-    background-color: rgba(75, 1, 1, 0.808);
-}
-nav ul li:hover {
-    background: lavender;
-}
-nav ul a {
-    text-decoration: none;
-    color: rgb(189, 161, 161);
-}
-button{
-    background-color: rgba(75, 1, 1, 0.808);
-    color: rgb(189, 161, 161);
-}
-
 header{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

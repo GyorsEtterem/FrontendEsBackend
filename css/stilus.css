@@ -1,3 +1,36 @@
+@charset "utf-8";
+
+.dolgozok{
+    width:100%; 
+    border:1px solid black;
+}
+body{
+    background-color: rgba(75, 1, 1, 0.808);
+}
+main{
+    background-color: peachpuff;
+}
+nav ul li {
+    width: 4.5vw;
+    padding: 3px 10px;
+    border: 1px solid lavender;
+    border-radius: 5px;
+    list-style-type: none;
+    background-color: rgba(75, 1, 1, 0.808);
+}
+nav ul li:hover {
+    background: lavender;
+}
+nav ul a {
+    width: 4.5vw;
+    text-decoration: none;
+    color: rgb(189, 161, 161);
+}
+button{
+    background-color: rgba(75, 1, 1, 0.808);
+    color: rgb(189, 161, 161);
+}
+
 .logo{
     width: 100px;
 }
