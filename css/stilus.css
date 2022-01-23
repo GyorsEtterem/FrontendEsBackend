@@ -11,20 +11,21 @@ main{
     background-color: peachpuff;
 }
 nav ul li {
-    width: 4.5vw;
     padding: 3px 10px;
     border: 1px solid lavender;
     border-radius: 5px;
     list-style-type: none;
     background-color: rgba(75, 1, 1, 0.808);
+    width:auto;
+    text-align: center;
 }
 nav ul li:hover {
     background: lavender;
 }
 nav ul a {
-    width: 4.5vw;
     text-decoration: none;
     color: rgb(189, 161, 161);
+    
 }
 button{
     background-color: rgba(75, 1, 1, 0.808);
@@ -35,7 +36,7 @@ button{
     width: 100px;
 }
 .nagykep{
-    width: 350px;
+    width: 250px;
 }
 .kep{
     width: 250px;
