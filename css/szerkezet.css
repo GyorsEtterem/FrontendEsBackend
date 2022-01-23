@@ -4,4 +4,46 @@
     width:100%; 
     border:1px solid black;
 }
+body{
+    background-color: moccasin;
+}
+main{
+    background-color: lightpink;
+}
 
+nav ul {
+    display: grid;
+    grid-template-columns: 100px 100px auto 100px;
+    grid-gap: 5px;
+    padding: 0px;
+}
+nav ul li {
+    padding: 3px 10px;
+    border: 1px solid lavender;
+    border-radius: 5px;
+    list-style-type: none;
+    background-color: moccasin;
+}
+nav ul li:hover {
+    background: lavender;
+}
+nav ul a {
+    text-decoration: none;
+}
+button{
+    background-color: moccasin;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px;
+    gap: 10px;
+}
+
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px;
+    gap: 10px;
+}
