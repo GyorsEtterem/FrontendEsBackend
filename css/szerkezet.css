@@ -5,10 +5,10 @@
     border:1px solid black;
 }
 body{
-    background-color: moccasin;
+    background-color: peachpuff;
 }
 main{
-    background-color: lightpink;
+    background-color: rgba(75, 1, 1, 0.808);
 }
 
 nav ul {
@@ -22,7 +22,7 @@ nav ul li {
     border: 1px solid lavender;
     border-radius: 5px;
     list-style-type: none;
-    background-color: moccasin;
+    background-color: peachpuff;
 }
 nav ul li:hover {
     background: lavender;
@@ -31,7 +31,7 @@ nav ul a {
     text-decoration: none;
 }
 button{
-    background-color: moccasin;
+    background-color: peachpuff;
 }
 
 header{
