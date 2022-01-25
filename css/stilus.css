@@ -1,14 +1,15 @@
 @charset "utf-8";
-
+html, body{
+    margin: 0;
+}
 .dolgozok{
     width:100%; 
     border:1px solid rgb(51, 0, 0);
 }
 body{
     /* background-color: rgb(51, 0, 0); */
-    
     background-color: bisque;
-    color: rgb(155, 81, 81);
+    color: rgb(51, 0, 0);
 }
 main{
     /* background-color: rgb(188, 255, 233); */
@@ -29,7 +30,8 @@ nav ul li {
     text-align: center;
 }
 nav ul li:hover {
-    background:rgb(155, 81, 81);
+    /* background:rgb(155, 81, 81); */
+    background-color: rgb(189, 161, 161);
 }
 nav ul a {
     text-decoration: none;
@@ -37,7 +39,7 @@ nav ul a {
     
 }
 article div{
-    border: 1px solid rgb(189, 161, 161);
+    /* border: 1px solid  rgb(51, 0, 0); */
     padding: 5px;
     border-radius: 12px;
 }
@@ -47,16 +49,17 @@ button, .gomb{
     border-radius: 5px;;
 }
 
-#cim{
+
+header{
+    background-color: rgb(51, 0, 0);
+    width: 100%;
+    height: 100%;
+    margin: 0;
     color: bisque;
 }
-header{
-    background-color: rgb(102, 28, 28);
-    width: 100%;
-}
 footer{
-    background-color: rgb(102, 28, 28);
-    width: 100%;
+    background-color: rgb(51, 0, 0);
+    width:100%;
     height: 5vw;
     color: bisque;
 }
@@ -69,15 +72,19 @@ footer p{
 }
 .kep{
     width: 250px;
+    display: block;
+    margin: auto;
 }
 .kosar{
-    background-color: rgb(189, 161, 161);
+    background-color: rgb(230, 208, 208);
+    border: 1px solid  rgb(51, 0, 0);
     border-radius: 12px;
-    position: relative;
     padding: 10px;
     font-size: 10pt;
-    padding-bottom: 30px;
 }
 .kosar button{
     border-radius: 5px;
+}
+#kategoriaCim{
+    text-align: center;
 }

@@ -1,6 +1,6 @@
 article{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     padding: 15px;
     gap: 10px;
 }
@@ -11,5 +11,6 @@ article{
     padding: 10px;
 }
 .nagykep{
-    width: 350px;;
+    width: 350px;
+    border-radius: 12px;
 }
