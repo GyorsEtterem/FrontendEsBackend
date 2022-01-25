@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 main{
-    max-width: 1200px;
+    max-width: 1800px;
     margin: auto;
 }
 /* nav ul {
@@ -35,4 +35,10 @@ article{
     grid-template-columns: 1fr 1fr 1fr;
     padding: 15px;
     gap: 10px;
+}
+.kategoriak{
+    display: grid;
+    grid-template-columns: 1fr  1fr ;
+    grid-gap: 1px;
+    padding: 10px;
 }

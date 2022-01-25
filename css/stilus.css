@@ -2,25 +2,29 @@
 
 .dolgozok{
     width:100%; 
-    border:1px solid black;
+    border:1px solid rgb(51, 0, 0);
 }
 body{
-    background-color: rgba(75, 1, 1, 0.808);
+    background-color: rgb(51, 0, 0);
+    color: rgb(155, 81, 81);
 }
 main{
-    background-color: peachpuff;
+    /* background-color: rgb(188, 255, 233); */
+    /* background-color: rgb(183, 224, 210); */
+    background-color: bisque;
+    /*background-color: beige;*/
 }
 nav ul li {
     padding: 3px 10px;
-    border: 1px solid lavender;
+    border: 1px solid rgb(189, 161, 161);
     border-radius: 5px;
     list-style-type: none;
-    background-color: rgba(75, 1, 1, 0.808);
+    background-color: rgb(51, 0, 0);
     width:auto;
     text-align: center;
 }
 nav ul li:hover {
-    background: lavender;
+    background:rgb(155, 81, 81);
 }
 nav ul a {
     text-decoration: none;
@@ -28,7 +32,7 @@ nav ul a {
     
 }
 button{
-    background-color: rgba(75, 1, 1, 0.808);
+    background-color: rgb(51, 0, 0);
     color: rgb(189, 161, 161);
 }
 
@@ -36,8 +40,19 @@ button{
     width: 100px;
 }
 .nagykep{
-    width: 250px;
+    width: 350px;;
 }
 .kep{
     width: 250px;
+}
+.kosar{
+    background-color: rgb(189, 161, 161);
+    border-radius: 12px;
+    position: relative;
+    padding: 10px;
+    font-size: 10pt;
+    padding-bottom: 30px;
+}
+.kosar button{
+    border-radius: 5px;
 }
