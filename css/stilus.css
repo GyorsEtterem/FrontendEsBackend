@@ -18,7 +18,7 @@ main{
 }
 nav ul li {
     padding: 3px 10px;
-    border: 1px solid rgb(189, 161, 161);
+    border: 1px solid bisque;
     border-radius: 5px;
     list-style-type: none;
     background-color: rgb(51, 0, 0);
@@ -30,7 +30,7 @@ nav ul li:hover {
 }
 nav ul a {
     text-decoration: none;
-    color: rgb(189, 161, 161);
+    color: bisque;
     
 }
 article div{
@@ -44,11 +44,25 @@ button, .gomb{
     border-radius: 5px;;
 }
 
+#cim{
+    color: bisque;
+}
+header{
+    background-color: rgb(102, 28, 28);
+    width: 100%;
+}
+footer{
+    background-color: rgb(102, 28, 28);
+    width: 100%;
+    height: 5vw;
+    color: bisque;
+}
+footer p{
+    text-align: center;
+}
+
 .logo{
     width: 100px;
-}
-.nagykep{
-    width: 350px;;
 }
 .kep{
     width: 250px;
