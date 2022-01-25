@@ -1,0 +1,12 @@
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px;
+    gap: 10px;
+}
+.kategoriak{
+    display: grid;
+    grid-template-columns: 1fr  1fr ;
+    grid-gap: 1px;
+    padding: 10px;
+}

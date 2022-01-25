@@ -20,24 +20,87 @@
                 <h1>Reklamáció:</h1>
             </div>
             <div>
-            <nav>
-                <ul>
-                    <div id="menuszet1">
-                    <li><a href="index.html">Kezdőlap</a></li>
-                    <li><a href="konyha.html">Konyha</a></li>
-                    <li><a href="dolgozo.html">Dolgozók</a></li>
-                    <li><a href="profil.html">Profil</a></li>
-                    </div>
-                    <div id="menuszet2">
-                    <li><a href="kedvezmeny.html">Kedvezmény</a></li>
-                    <li><a href="rendelesek.html">Rendelések</a></li>
-                    <li><a href="reklamacio.html">Reklamáció</a></li> 
-                    </div>
-                </ul>
-            </nav>
+                <nav>
+                    <ul>
+                        <div id="menuszet1">
+                        <a href="index.html"><li>Kezdőlap</li></a>
+                        <a href="konyha.html"><li>Konyha</li></a>
+                        <a href="dolgozo.html"><li>Dolgozók</li></a>
+                        <a href="profil.html"><li>Profil</li></a>
+                        </div>
+                        <div id="menuszet2">
+                        <a href="kedvezmeny.html"><li>Kedvezmény</li></a>
+                        <a href="rendelesek.html"><li>Rendelések</li></a>
+                        <a href="reklamacio.html"><li>Reklamáció</li></a>
+                        </div>
+                    </ul>
+                </nav>
             </div>
             </div>
         </header>
+        <article>
+            <section class="nagydiv">
+                
+                <div class="reklamaico">
+                    <h3 class="rendelesszam">Lorem ipsum dolor</h3>
+                    <button class="bovebb">LEZÁRÁS</button>
+                </div>
+                <div class="reklamaico">
+                    <h3 class="rendelesszam">Lorem ipsum dolor</h3>
+                    <button class="atabovebbdva">LEZÁRÁS</button>
+                </div>
+                <div class="reklamaico">
+                    <h3 class="rendelesszam">Lorem ipsum dolor</h3>
+                    <button class="bovebb">LEZÁRÁS</button>
+                </div>
+            </section>
+            
+            <h2>Elmúlt 10perc rendelései:</h2>
+            <section class="nagydiv">
+                <div class="reklamaico">
+                    <h3 class="rendelesszam">Lorem ipsum dolor</h3>
+                    <p>Dátum: <p class="datum"></p></p>
+                    <button class="bovebb">REKLAMÁCIÓ HOZZÁADÁSA</button>
+                </div>
+                </div>
+                <div class="reklamaico">
+                    <h3 class="rendelesszam">Lorem ipsum dolor</h3>
+                    <p>Dátum: <p class="datum"></p></p>
+                    <button class="bovebb">REKLAMÁCIÓ HOZZÁADÁSA</button>
+                </div>
+                <div class="reklamaico">
+                    <h3 class="rendelesszam">Lorem ipsum dolor</h3>
+                    <p>Dátum: <p class="datum"></p></p>
+                    <button class="bovebb">REKLAMÁCIÓ HOZZÁADÁSA</button>
+                </div>
+                
+            </section>
+            <section>
+                
+                <fieldset>
+                    <legend>Reklamáció hozzáadáas:</legend>
+                    <label for="termeknev">Terménév:</label>
+                    <input type="text" id="termeknev" name="termeknev"><br><br>
+                    <label for="termekMegjegyzes">Megjegyzés:</label>
+                    <textarea rows="5" cols="30" id="termekMegjegyzes"></textarea><br><br>
+                    <label for="termekAr">Ár:</label>
+                    <input type="text" id="termekAr" name="termekAr"><br><br>
+                    <label for="termekAr">Mennyiség:</label>
+                    <input type="text" id="termekAr" name="termekAr"><br><br>
+                    <div>
+                      <input type="button" class="gomb" id="ajaxModosit" value="SZERKESZTÉS">
+                    </div>
+  
+                    
+                  </fieldset>
+            </section>
+            
+        </article>
+        <footer>
+            <p>
+                Az oldalt készítették: Szabó Gergő, Szántai Barna, Tóth Virág
+            </p>
+        </footer>
     </main>
 </body>
 </html>
