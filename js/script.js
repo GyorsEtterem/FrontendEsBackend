@@ -17,7 +17,7 @@ $(function () {
             const obj = new Dolgozo(node, elem);
 
         });
-        sablonElem.hide();
+        //sablonElem.hide();
     }
 
 });
