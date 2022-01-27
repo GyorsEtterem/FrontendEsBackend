@@ -1,0 +1,29 @@
+{
+    "reklamacio": [
+      {
+        "reklam_id": "1",
+        "termek_id": "1",
+        "nyugta": "1",
+        "leiras": "hideg",
+        "menny": "1",
+        "csere_ideje": "2022-01-27 10:25:27.477"
+      },
+      {
+        "reklam_id": "2",
+        "termek_id": "1",
+        "nyugta": "2",
+        "leiras": "túl száraz",
+        "menny": "1",
+        "csere_ideje": "2022-01-27 10:28:35.267"
+      },
+      {
+        "reklam_id": "3",
+        "termek_id": "6",
+        "nyugta": "5",
+        "leiras": "fura szaga van",
+        "menny": "2",
+        "csere_ideje": "2022-01-27 10:28:43.763"
+      }
+      
+    ]
+  }
