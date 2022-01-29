@@ -7,7 +7,7 @@ $(function () {
     myAjax.adatBetolt(apivegpont, dolgozoTomb, dolgozoKiir);
 
     function dolgozoKiir(dolgozok){
-        const sablonElem = $('tbody .termek');
+        const sablonElem = $('.termek');
         szuloElem.empty();
         sablonElem.show();
         

@@ -62,14 +62,15 @@ footer p{
 .logo{
     width: 100px;
 }
-.kosar{
-    background-color: rgb(138, 120, 120);
+.kosar, .urlap{
+    background-color: rgb(51, 0, 0);
     border: 1px solid  rgb(51, 0, 0);
     border-radius: 12px;
     padding: 10px;
     font-size: 10pt;
     color:rgb(243, 237, 229);
 }
+
 
 .belsoMezo::-webkit-scrollbar{
     width: 20px;
@@ -101,6 +102,7 @@ html::-webkit-scrollbar-thumb{
     display: block;
     margin: auto; 
 }
-.kosar button{
+.kosar button, .urlap button{
     border-radius: 5px;
+    border: 1px solid rgb(243, 237, 229);;
 }
