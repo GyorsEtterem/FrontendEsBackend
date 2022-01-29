@@ -14,3 +14,34 @@ article{
     width: 350px;
     border-radius: 12px;
 }
+.kategoria{
+    position: relative;
+    height: 250px;
+}
+.kezdolapKepszoveg{
+    transition: .2s ease;
+    opacity: 0;
+    font-size: 40px;
+    color:black;
+    position: relative;
+    bottom: 60%;
+}
+.kep{
+    width: 250px;
+    display: block;
+    margin: auto;
+    opacity: 1;
+    transition: .2s ease;
+}
+.kategoria a{
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+.kategoria:hover .kep{
+    opacity: 0.3;
+}  
+.kategoria:hover .kezdolapKepszoveg{
+    opacity: 1;
+}
