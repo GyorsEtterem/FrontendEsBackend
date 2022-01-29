@@ -38,5 +38,9 @@ article{
 }
 .nagydiv div{
     margin:10px;
-    
+}
+.belsoMezo{
+    max-height: 400px;
+    overflow: auto;
+    margin-top: 5px;
 }
