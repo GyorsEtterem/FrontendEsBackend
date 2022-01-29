@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="../css/stilus.css" rel="stylesheet" type="text/css"/>
     <link href="../css/szerkezet.css" rel="stylesheet" type="text/css"/>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/reklamacio.js"></script>
+    <script src="../js/script.js"></script>
     <title>Gyorsétterem</title>
 </head>
 <body>
@@ -39,7 +42,7 @@
             </div>
         </header>
         <article>
-            <section class="nagydiv">
+            <div class="nagydiv">
                 
                 <div class="reklamaico">
                     <h3 class="leiras">Lorem ipsum dolor</h3>
@@ -59,15 +62,14 @@
                     <h3 class="datum">Lorem ipsum dolor</h3>
                     <button class="bovebb">LEZÁRÁS</button>
                 </div>
-            </section>
+            </div>
             
             <h2>Elmúlt 10perc rendelései:</h2>
-            <section class="nagydiv">
+            <div class="nagydiv">
                 <div class="reklamaico">
                     <h3 class="rendelesszam">Lorem ipsum dolor</h3>
                     <p>Dátum: <p class="datum"></p></p>
                     <button class="bovebb">REKLAMÁCIÓ HOZZÁADÁSA</button>
-                </div>
                 </div>
                 <div class="reklamaico">
                     <h3 class="rendelesszam">Lorem ipsum dolor</h3>
@@ -80,32 +82,26 @@
                     <button class="bovebb">REKLAMÁCIÓ HOZZÁADÁSA</button>
                 </div>
                 
-            </section>
-            <section>
+            </div>
                 
-                <fieldset>
-                    <legend>Reklamáció hozzáadáas:</legend>
-                    <label for="termeknev">Terménév:</label>
-                    <input type="text" id="termeknev" name="termeknev"><br><br>
-                    <label for="termekMegjegyzes">Megjegyzés:</label>
-                    <textarea rows="5" cols="30" id="termekMegjegyzes"></textarea><br><br>
-                    <label for="termekAr">Ár:</label>
-                    <input type="text" id="termekAr" name="termekAr"><br><br>
-                    <label for="termekAr">Mennyiség:</label>
-                    <input type="text" id="termekAr" name="termekAr"><br><br>
-                    <div>
-                      <input type="button" class="gomb" id="ajaxModosit" value="SZERKESZTÉS">
-                    </div>
-  
-                    
-                  </fieldset>
-            </section>
+            <fieldset>
+                <legend>Reklamáció hozzáadáas:</legend>
+                <label for="termeknev">Terménév:</label>
+                <input type="text" id="termeknev" name="termeknev"><br><br>
+                <label for="termekMegjegyzes">Megjegyzés:</label>
+                <textarea rows="5" cols="30" id="termekMegjegyzes"></textarea><br><br>
+                <label for="termekAr">Ár:</label>
+                <input type="text" id="termekAr" name="termekAr"><br><br>
+                <label for="termekAr">Mennyiség:</label>
+                <input type="text" id="termekAr" name="termekAr"><br><br>
+                <div>
+                  <input type="button" class="gomb" id="ajaxModosit" value="SZERKESZTÉS">
+                </div>
+            </fieldset>
             
         </article>
         <footer>
-            <p>
-                Az oldalt készítették: Szabó Gergő, Szántai Barna, Tóth Virág
-            </p>
+            <p>Az oldalt készítették: Szabó Gergő, Szántai Barna, Tóth Virág</p>
         </footer>
     </main>
 </body>
