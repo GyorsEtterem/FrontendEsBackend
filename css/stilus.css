@@ -7,17 +7,11 @@ html, body{
     border:1px solid rgb(51, 0, 0);
 }
 body{
-    /* background-color: rgb(51, 0, 0); */
     background-color: rgb(243, 237, 229);
     color: rgb(51, 0, 0);
 }
 main{
-    /* background-color: rgb(188, 255, 233); */
-    /* background-color: rgb(183, 224, 210); */
-    
     background-color: rgb(243, 237, 229);
-    
-    /*background-color: beige;*/
 }
 nav ul li {
     padding: 3px 10px;
@@ -30,7 +24,6 @@ nav ul li {
     text-align: center;
 }
 nav ul li:hover {
-    /* background:rgb(155, 81, 81); */
     background-color: rgb(189, 161, 161);
 }
 nav ul a {
@@ -39,7 +32,6 @@ nav ul a {
     
 }
 article div{
-    /* border: 1px solid  rgb(51, 0, 0); */
     padding: 5px;
     border-radius: 12px;
 }
@@ -70,11 +62,6 @@ footer p{
 .logo{
     width: 100px;
 }
-.kep{
-    width: 250px;
-    display: block;
-    margin: auto;
-}
 .kosar{
     background-color: rgb(138, 120, 120);
     border: 1px solid  rgb(51, 0, 0);
@@ -84,9 +71,11 @@ footer p{
     color:rgb(243, 237, 229);
 }
 
+.kep{
+    width: 250px;
+    display: block;
+    margin: auto; 
+}
 .kosar button{
     border-radius: 5px;
-}
-#kategoriaCim{
-    text-align: center;
 }

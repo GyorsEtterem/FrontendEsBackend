@@ -14,3 +14,34 @@ article{
     width: 350px;
     border-radius: 12px;
 }
+#kategoriaCim{
+    text-align: center;
+}
+.kategoria{
+    position: relative;
+    height: 250px;
+}
+.KKepCim{
+    transition: .2s ease;
+    opacity: 0;
+    font-size: 40px;
+    color:black;
+    position: relative;
+    bottom: 60%;
+}
+.kep{
+    opacity: 1;
+    transition: .2s ease;
+}
+.kategoria a{
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+.kategoria:hover .kep{
+    opacity: 0.1;
+}  
+.kategoria:hover .KKepCim{
+    opacity: 1;
+}
