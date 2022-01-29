@@ -14,11 +14,14 @@ article{
     width: 350px;
     border-radius: 12px;
 }
+#kategoriaCim{
+    text-align: center;
+}
 .kategoria{
     position: relative;
     height: 250px;
 }
-.kezdolapKepszoveg{
+.KKepCim{
     transition: .2s ease;
     opacity: 0;
     font-size: 40px;
@@ -27,9 +30,6 @@ article{
     bottom: 60%;
 }
 .kep{
-    width: 250px;
-    display: block;
-    margin: auto;
     opacity: 1;
     transition: .2s ease;
 }
@@ -40,8 +40,8 @@ article{
     font-weight: bold;
 }
 .kategoria:hover .kep{
-    opacity: 0.3;
+    opacity: 0.1;
 }  
-.kategoria:hover .kezdolapKepszoveg{
+.kategoria:hover .KKepCim{
     opacity: 1;
 }
