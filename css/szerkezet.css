@@ -44,3 +44,12 @@ article{
     overflow: auto;
     margin-top: 5px;
 }
+.termekarticle{
+    display: grid;
+    grid-template-columns: 3fr  1fr;
+    padding: 15px;
+    
+}
+.termekarticle section{
+    padding: 35px;
+}
