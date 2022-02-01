@@ -1,17 +1,18 @@
 article{
+    max-width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 4fr 1fr;
     padding: 15px;
     gap: 10px;
 }
 .kategoriak{
     display: grid;
-    grid-template-columns: 1fr  1fr ;
+    grid-template-columns: 1fr  1fr  1fr ;
     grid-gap: 1px;
     padding: 10px;
 }
 .nagykep{
-    width: 350px;
+    width: 250px;
     border-radius: 12px;
 }
 #kategoriaCim{
