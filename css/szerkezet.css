@@ -53,3 +53,17 @@ article{
 .termekarticle section{
     padding: 35px;
 }
+
+/************reszponzivitás****************/
+@media screen and (max-width: 770px) {
+    #konyha {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #konyha {
+        grid-template-columns: 1fr;
+
+    }
+}
