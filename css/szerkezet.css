@@ -55,7 +55,7 @@ article{
 }
 
 /************reszponzivitás****************/
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1024px) {
     #konyha {
         grid-template-columns: 1fr 1fr;
     }
