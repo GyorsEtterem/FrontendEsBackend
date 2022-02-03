@@ -1,0 +1,13 @@
+.dolgozok{
+    width:100%; 
+    border:1px solid rgb(51, 0, 0);
+}
+
+
+
+/************reszponzivitás****************/
+@media screen and (max-width: 1024px) {
+    tr{
+        diplay: grid;
+    }
+}
