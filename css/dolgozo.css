@@ -1,13 +1,36 @@
 .dolgozok{
     width:100%; 
     border:1px solid rgb(51, 0, 0);
+    padding: 10px;
 }
 
+tr{
+    padding: 10px;
+    margin: 1px;
+}
 
+td{
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
 
 /************reszponzivitás****************/
-@media screen and (max-width: 1024px) {
+ @media screen and (max-width: 800px) {
+     .dolgozok{
+         padding: 0px;
+     }
     tr{
-        diplay: grid;
+        display: grid;
+        grid-template-columns: 1fr;
+        border:1px solid rgb(51, 0, 0);
+    } 
+    thead{
+        display: none;
+    }
+    .dolgozok .torles, .dolgozok .szerkeszt{
+        display: none;
+    }
+    .regisztraciofelv{
+        display: none;
     }
 }

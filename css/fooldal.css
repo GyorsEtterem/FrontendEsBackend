@@ -12,8 +12,9 @@ article{
     padding: 10px;
 }
 .nagykep{
-    width: 250px;
+    width: 200px;
     border-radius: 12px;
+    height: 450pt;
 }
 #kategoriaCim{
     text-align: center;

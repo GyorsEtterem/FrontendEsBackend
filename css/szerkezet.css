@@ -5,10 +5,17 @@ main{
     max-height: 100%;
     margin: auto;
 }
+html{
+    
+    min-height: 100%;
+    position: relative;
+}
 article{
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 30px;
 }
+/*******menü kialakítása*******/
 .felsoSav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -29,6 +36,7 @@ article{
     padding: 0px;
 
 }
+/******/
 
 .nagydiv{
     display: grid;
@@ -53,15 +61,22 @@ article{
 .termekarticle section{
     padding: 35px;
 }
+footer{
+	position:absolute;
+	bottom: 0;
+    width: 100%;
+    height: 50px;
+}
 
 /************reszponzivitás****************/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
+
     #konyha {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
     #konyha {
         grid-template-columns: 1fr;
 

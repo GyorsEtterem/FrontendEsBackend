@@ -1,6 +1,6 @@
 @charset "utf-8";
 html, body{
-    margin: 0;
+    margin: auto;
 }
 
 body{
@@ -66,8 +66,12 @@ footer p{
     padding: 10px;
     font-size: 10pt;
     color:rgb(243, 237, 229);
+    margin-bottom: 30px;
 }
-
+.kosar{
+    height: 440pt;
+    padding-bottom: 0;
+}
 
 .belsoMezo::-webkit-scrollbar{
     width: 20px;
