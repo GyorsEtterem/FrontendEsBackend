@@ -127,11 +127,32 @@ footer{
     #konyha {
         grid-template-columns: 1fr 1fr;
     }
+    #menuszet1{
+        display: none;
+    }
+    #menuszet2{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 400px) {
     #konyha {
         grid-template-columns: 1fr;
 
+    }
+    .felsoSav{
+        grid-template-columns: 1fr;
+          
+    }
+    .logo{
+        display: block;
+        margin: auto;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+    .dropdown{
+        display: none;
     }
 }
