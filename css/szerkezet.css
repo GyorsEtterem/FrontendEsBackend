@@ -6,7 +6,7 @@ main{
     margin: auto;
 }
 html{
-    
+    scroll-behavior:smooth;
     min-height: 100%;
     position: relative;
 }
@@ -101,7 +101,7 @@ article{
     margin:10px;
 }
 .belsoMezo{
-    max-height: 400px;
+    max-height: 445px;
     overflow: auto;
     margin-top: 5px;
 }
