@@ -1,8 +1,6 @@
 article{
-    max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    padding: 15px;
     gap: 10px;
 }
 .kategoriak{
@@ -60,4 +58,32 @@ article{
     background-color: rgb(51, 0, 0);
     border: 1px solid  white;
     border-radius: 50px;
+}
+
+/************reszponzivitás****************/
+@media screen and (max-width: 1215px) {
+    .nagykep{
+        display: none;
+    }
+    article{
+        grid-template-columns: 3fr 1fr;
+    }
+}
+@media screen and (max-width: 1035px) {
+    article{
+        grid-template-columns: 2fr 1fr;
+    }
+    .kategoriak{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 800px) {
+    article{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 565px) {
+    .kategoriak{
+        grid-template-columns: 1fr;
+    }
 }

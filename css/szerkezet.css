@@ -14,6 +14,7 @@ article{
     max-width: 1200px;
     margin: auto;
     margin-bottom: 30px;
+    padding: 15px;
 }
 /*******menü kialakítása*******/
 .felsoSav{
@@ -60,6 +61,7 @@ article{
     background-color: #f1f1f1;
     border-radius: 5px;
     min-width: 160px;
+    right: 0;
     z-index: 1;
   }
   .dropdown-content2 {
@@ -118,7 +120,10 @@ footer{
 	position:absolute;
 	bottom: 0;
     width: 100%;
-    height: 50px;
+    height: auto;
+}
+footer p{
+    margin: 5pt;
 }
 
 /************reszponzivitás****************/
@@ -135,7 +140,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 413px) {
     #konyha {
         grid-template-columns: 1fr;
 
@@ -151,8 +156,14 @@ footer{
     
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 801px) {
     .dropdown{
         display: none;
+    }
+}
+
+@media screen and (max-width: 315px) {
+    header, footer{
+        width: 315px;
     }
 }
