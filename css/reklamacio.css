@@ -1,0 +1,14 @@
+/**reszponzivitás**/ 
+@media screen and (max-width: 800px) {      
+    #reklamaicorespo,#percrespo{         
+        grid-template-columns: 1fr 1fr;     
+    }     
+    .urlap, .reklamhozza {         
+        display: none;     
+    } 
+}  
+@media screen and (max-width: 400px) {     
+    #reklamaicorespo, #percrespo{         
+        grid-template-columns: 1fr;      
+    }      
+}
