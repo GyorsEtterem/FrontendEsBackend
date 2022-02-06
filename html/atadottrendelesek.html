@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="../css/rendeles.css" rel="stylesheet" type="text/css"/>
     <link href="../css/stilus.css" rel="stylesheet" type="text/css"/>
     <link href="../css/szerkezet.css" rel="stylesheet" type="text/css"/>
     <title>Gyorsétterem</title>
@@ -15,6 +16,9 @@
             <div class="felsoSav">
             <div>
                 <img src="../kepek/logo.png" alt="" class="logo" >
+            </div>
+            <div class="cimMenuben">
+                <h1>átadott Rendelések</h1>
             </div>
             <div>
                 <nav>
@@ -33,7 +37,7 @@
                     </ul>
                     
                     <div class="dropdown">
-                        <button class="dropbtn"></button>
+                        <button class="dropbtn">Menü</button>
                         <div class="dropdown-content">
                             <a href="konyha.html">Konyha</a>
                             <a href="dolgozo.html">Dolgozók</a>
@@ -56,26 +60,46 @@
             </div>
         </header>
         <article>
-            <div class="nagydiv">
-                <div class="rendeles">
-                    <h3 class="rendelesszam">Lorem ipsum dolor</h3>
-                    <p>Termék: <p class="termek"></p></p>
-                    <p>Termék ár: <span class="termekAr"></span></p>
-                    <button class="bovebb">BŐVEBBEN</button>
-                </div>
-                <div class="rendeles">
-                    <h3 class="rendelesszam">Lorem ipsum dolor</h3>
-                    <p>Termék: <p class="termek"></p></p>
-                    <p>Termék ár: <span class="termekAr"></span></p>
-                    <button class="bovebb">BŐVEBBEN</button>
-                </div>
-                <div class="rendeles">
-                    <h3 class="rendelesszam">Lorem ipsum dolor</h3>
-                    <p>Termék: <p class="termek"></p></p>
-                    <p>Termék ár: <span class="termekAr"></span></p>
-                    <button class="bovebb">BŐVEBBEN</button>
-                </div>
+            <div class="cimMenunKivul">
+                <h1>átadott Rendelések</h1>
             </div>
+            <div class="nagydiv" id="atrendelesek">
+            <div class="rendeles">
+                <h3 class="rendelesszam">Lorem ipsum dolor</h3>
+                <p>Rendelés állapota:
+                <p class="rendelesAll"></p>
+                </p>
+                <p>Termék:
+                <p class="termeknev"></p>
+                </p>
+                <p>Termék ár: <span class="termekAr"></span></p>
+                <button class="bovebb">BŐVEBBEN</button>
+            </div>
+            <div class="rendeles">
+                <h3 class="rendelesszam">Lorem ipsum dolor</h3>
+                <p class="rendelesAll"></p>
+                </p>
+                <p>Rendelés állapota:
+                    <p class="rendelesAll"></p>
+                    </p>
+                <p>Termék:
+                <p class="termeknev"></p>
+                </p>
+                <p>Termék ár: <span class="termekAr"></span></p>
+                <button class="bovebb">BŐVEBBEN</button>
+            </div>
+            <div class="rendeles">
+                <h3 class="rendelesszam">Lorem ipsum dolor</h3>
+                <p>Rendelés állapota:
+                <p class="rendelesAll"></p>
+                </p>
+                <p>Termék:
+                <p class="termeknev"></p>
+                </p>
+                <p>Termék ár: <span class="attermekAr"></span></p>
+                    <button class="bovebb">BŐVEBBEN</button>
+                </div>
+                </div>
         </article>
         <footer>
             <p>Az oldalt készítették: Szabó Gergő, Szántai Barna, Tóth Virág</p>

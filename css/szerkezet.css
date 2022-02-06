@@ -132,11 +132,12 @@ footer p{
     #konyha {
         grid-template-columns: 1fr 1fr;
     }
-    #menuszet1{
+    #menuszet1, #menuszet2, .cimMenuben{
         display: none;
     }
-    #menuszet2{
-        display: none;
+    .felsoSav{
+        grid-template-columns:1fr 1fr;
+          
     }
 }
 
@@ -157,7 +158,7 @@ footer p{
 }
 
 @media screen and (min-width: 801px) {
-    .dropdown{
+    .dropdown, .cimMenunKivul{
         display: none;
     }
 }
