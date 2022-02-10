@@ -32,10 +32,14 @@ article div{
     padding: 5px;
     border-radius: 12px;
 }
-button, .gomb{
+button{
     background-color: rgb(51, 0, 0);
     color: rgb(243, 237, 229);
     border-radius: 5px;
+}
+
+.kozosGomb{
+    margin-top: 5pt;
 }
 
 h1{
@@ -110,4 +114,10 @@ html::-webkit-scrollbar-thumb{
 .kosar button, .urlap button{
     border-radius: 5px;
     border: 1px solid rgb(243, 237, 229);;
+}
+.gomb{
+    background-color:  rgb(243, 237, 229);
+    color:rgb(51, 0, 0);
+    font-weight: bold;
+    border-radius: 5pt;
 }
