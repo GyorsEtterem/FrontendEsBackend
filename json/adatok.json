@@ -1,4 +1,5 @@
-{ "dolgozok": [
+{ 
+  "dolgozok": [
     {
       "dolg-id": "1",
       "neve": "Nagy Valaki",
@@ -55,5 +56,73 @@
         "csere_ideje": "2022-01-27 10:28:43.763"
       }
       
+    ],
+    "termekek": [
+      {
+        "termek_id": "1",
+        "fajta": "E",
+        "termeknev": "Csirkehúsos, dupla sajtburger",
+        "eladhato": "true",
+        "raktaron": "true",
+        "meret": "nagy",
+        "ar": "1200",
+        "kedvezmeny": "1",
+        "kep": ""
+      },
+      {
+        "termek_id": "2",
+        "fajta": "E",
+        "termeknev": "Csípős, csirkeburger",
+        "eladhato": "true",
+        "raktaron": "true",
+        "meret": "kicsi",
+        "ar": "500",
+        "kedvezmeny": "2",
+        "kep": ""
+      },
+      {
+        "termek_id": "3",
+        "fajta": "E",
+        "termeknev": "Szalonnás, tojásos, reggeli burger",
+        "eladhato": "true",
+        "raktaron": "true",
+        "meret": "kozepes",
+        "ar": "700",
+        "kedvezmeny": "3",
+        "kep": ""
+      },
+      {
+        "termek_id": "4",
+        "fajta": "I",
+        "termeknev": "Bepsi Cola",
+        "eladhato": "true",
+        "raktaron": "true",
+        "meret": "kozepes",
+        "ar": "300",
+        "kedvezmeny": "4",
+        "kep": ""
+      },
+      {
+        "termek_id": "5",
+        "fajta": "I",
+        "termeknev": "Bepsi Cola Zero",
+        "eladhato": "true",
+        "raktaron": "true",
+        "meret": "kozepes",
+        "ar": "300",
+        "kedvezmeny": "5",
+        "kep": ""
+      },
+      {
+        "termek_id": "6",
+        "fajta": "SZ",
+        "termeknev": "Majonéz",
+        "eladhato": "true",
+        "raktaron": "true",
+        "meret": "kicsi",
+        "ar": "200",
+        "kedvezmeny": "6",
+        "kep": ""
+      }
     ]
 }
