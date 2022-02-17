@@ -32,6 +32,7 @@ article{
 .kep{
     opacity: 1;
     transition: .2s ease;
+    
 }
 
 .kategoria a{
@@ -80,6 +81,11 @@ article{
 @media screen and (max-width: 800px) {
     article{
         grid-template-columns: 1fr;
+    }
+    
+    .kep, .KKepCim{   
+        width: 100px;
+        
     }
 }
 @media screen and (max-width: 565px) {
