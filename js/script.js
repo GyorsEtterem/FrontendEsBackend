@@ -22,5 +22,15 @@ $(function () {
         });
         sablonElem.hide();
     }
+    
+    $(".torles").on("click", () =>{
+        myAjax.adatTorles(apivegpont,1)
+    });
+    
+    
+    $(window).on("torles", (event) => {
+        console.log(event.detail.id);
+        myAjax.adatTorles(apivegpont,event.detail.id);
+    });
 
 });

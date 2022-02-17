@@ -11,6 +11,15 @@ class Dolgozo{
         this.dolgJelszo = this.node.children(".jelszo");
         this.dolgMunka = this.node.children(".munkakor");
         this.setAdat(this.adat);
+        
+        //this.dolgozoTorles = this.node.children(".torles").children("button");
+        this.dolgozoModosit = this.node.children(".modosit").children("button");
+        // this.dolgozoTorles.on("click ", () => {
+        //     this.torlesTrigger();
+        // });
+        this.dolgozoModosit.on("click ", () => {
+            this.modositTrigger();
+        });
 
     }
 
@@ -24,4 +33,20 @@ class Dolgozo{
         this.dolgJelszo.text(adat.jelszo);
         this.dolgMunka.text(adat.munkakor_id);
     }
+
+    torlesTrigger(){
+        let esemeny  = new CustomEvent("torles", {
+
+            detail: this.adat, 
+        });
+        window.dispatchEvent(esemeny); 
+    }
+    modositTrigger(){
+        let esemeny  = new CustomEvent("modositas", {
+
+            detail: this.adat, 
+        });
+        window.dispatchEvent(esemeny); 
+    }
+     
 }
