@@ -147,7 +147,7 @@ footer p{
 
     }
     .felsoSav{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 50px;
           
     }
     .logo{

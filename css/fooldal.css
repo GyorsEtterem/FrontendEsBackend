@@ -83,8 +83,20 @@ article{
         grid-template-columns: 1fr;
     }
     
-    .kep, .KKepCim{   
-        width: 100px;
+    .kep{   
+       
+        display: none;
+    }
+    .KKepCim{
+        opacity: 1;
+        bottom: 35%;
+        color: white;
+
+    }
+    .kategoria{
+        margin: 15px;
+        height: 35px;
+        background-color: rgb(51, 0, 0);
         
     }
 }
@@ -92,4 +104,21 @@ article{
     .kategoriak{
         grid-template-columns: 1fr;
     }
+    .kep{   
+       
+        display: none;
+    }
+    .KKepCim{
+        opacity: 1;
+        bottom: 35%;
+        color: white;
+
+    }
+    .kategoria{
+        margin: 15px;
+        height: 35px;
+        background-color: rgb(51, 0, 0);
+        
+    }
+
 }
