@@ -4,6 +4,7 @@ class Dolgozo{
         this.node = node;
         /**selectorok elnvezése */
         this.adat = adat;
+        this.dolgId = adat.dolg_id;
         this.dolgNev = this.node.children(".dolgozonev");
         this.szulDatum = this.node.children(".szuldatum");
         this.dolgCim = this.node.children(".cime");
@@ -12,11 +13,11 @@ class Dolgozo{
         this.dolgMunka = this.node.children(".munkakor");
         this.setAdat(this.adat);
         
-        //this.dolgozoTorles = this.node.children(".torles").children("button");
+        this.dolgozoTorles = this.node.children(".torles").children("button");
         this.dolgozoModosit = this.node.children(".modosit").children("button");
-        // this.dolgozoTorles.on("click ", () => {
-        //     this.torlesTrigger();
-        // });
+        this.dolgozoTorles.on("click ", () => {
+            this.torlesTrigger(this.adat);
+        });
         this.dolgozoModosit.on("click ", () => {
             this.modositTrigger();
         });
@@ -34,11 +35,11 @@ class Dolgozo{
         this.dolgMunka.text(adat.munkakor_id);
     }
 
-    torlesTrigger(){
+    torlesTrigger(adat){
         let esemeny  = new CustomEvent("torles", {
-
-            detail: this.adat, 
+            detail: this.adat,
         });
+        
         window.dispatchEvent(esemeny); 
     }
     modositTrigger(){

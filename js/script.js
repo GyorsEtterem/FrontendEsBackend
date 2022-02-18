@@ -23,14 +23,14 @@ $(function () {
         sablonElem.hide();
     }
     
-    $(".torles").on("click", () =>{
+    /* $(".torles").on("click", () =>{
         myAjax.adatTorles(apivegpont,1)
-    });
+    }); */
     
     
     $(window).on("torles", (event) => {
-        console.log(event.detail.id);
-        myAjax.adatTorles(apivegpont,event.detail.id);
+        console.log("halo: " + event.detail.dolg_id);
+        myAjax.adatTorles(apivegpont, event.detail.dolg_id);
     });
 
 });
