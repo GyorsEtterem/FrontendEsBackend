@@ -20,7 +20,7 @@ adatBetolt(apivegpont,  tomb, myCallback) {
 
 adatTorles(apivegpont, id){
     $.ajax({ 
-        url: apivegpont +"/"+id,
+        url: apivegpont +"?dolg_id=" + id,
         type: "DELETE",
         success: function (result) {}
       });
