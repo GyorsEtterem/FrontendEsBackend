@@ -43,7 +43,22 @@ $(function () {
         });
         sablonElem.hide();
     }
-    
+    function rend10percKiir(rendelesek10percben){
+        const szuloElem = $(".rendelesek10perc #percrespo");
+        console.log(rendelesek10percben)
+        const sablonElem = $('.rendeles');
+        szuloElem.empty();
+        sablonElem.show();
+        
+
+        rendelesek10percben.forEach(function(elem) {
+            let node = sablonElem.clone().appendTo(szuloElem);
+            const obj = new Rendelesek10percben(node, elem);
+            
+
+        });
+        sablonElem.hide();
+    }
     
     $(".torles").on("click", () =>{
         myAjax.adatTorles(apivegpont+"dolgozok",1)
