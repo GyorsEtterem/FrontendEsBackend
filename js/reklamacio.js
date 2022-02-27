@@ -3,16 +3,19 @@ class Reklamacio{
         this.node = node;
         /**selectorok elnvezése */
         this.adat = adat;
-        this.reklIdeje = this.node.children(".leiras");
-        this.reklLeiras = this.node.children(".mennyiseg");
-        this.reklMenny = this.node.children(".datum");
-
+        this.reklamId = adat.reklam_id;
+        this.termekId = adat.termek_id;
+        this.reklNyugta = this.node.children(".nyugta");
+        this.reklLeiras = this.node.children(".leiras");
+        this.reklMenny = this.node.children(".mennyiseg");
+        this.reklIdeje = this.node.children(".datum");
+        this.setAdat(this.adat);
     }
 
     setAdat(adat) {
         this.adat = adat;
-        this.reklIdeje.text(adat.csere_ideje);
         this.reklLeiras.text(adat.leiras);
         this.reklMenny.text(adat.menny);
+        this.reklIdeje.text(adat.csere_ideje);
     }
 }

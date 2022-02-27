@@ -121,5 +121,27 @@
       "kedvezmeny": "6",
       "kep": ""
     }
+  ],
+  "rendelesek10percben":[
+      {
+        "rendeles_id": "1",
+        "nyugta": "2",
+        "csere_ideje": "2022-01-27 10:28:35.267"
+      },
+      {
+        "rendeles_id": "2",
+        "nyugta": "1",
+        "csere_ideje": "2022-01-27 10:25:27.477"
+      },
+      {
+        "rendeles_id": "4",
+        "nyugta": "2",
+        "csere_ideje": "2022-01-27 10:28:35.267"
+      },
+      {
+        "rendeles_id": "3",
+        "nyugta": "5",
+        "csere_ideje": "2022-01-27 10:28:43.763"
+      }
   ]
 }

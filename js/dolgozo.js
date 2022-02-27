@@ -1,6 +1,5 @@
 class Dolgozo{
     constructor(node, adat) {
-        console.log(adat)
         this.node = node;
         /**selectorok elnvezése */
         this.adat = adat;
@@ -25,7 +24,6 @@ class Dolgozo{
     }
 
     setAdat(adat) {
-        console.log(adat)
         this.adat = adat;
         this.dolgNev.text(adat.neve);
         this.szulDatum.text(adat.szuldatum);
