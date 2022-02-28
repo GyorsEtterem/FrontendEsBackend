@@ -28,7 +28,7 @@ $(function () {
      }
 
     function reklamKiir(reklamaciok){
-        const szuloElem = $(".reklamaciok #reklamaicorespo");
+        const szuloElem = $("#reklamaicorespo");
         console.log(reklamaciok)
         const sablonElem = $('.reklamacio');
         szuloElem.empty();
@@ -43,15 +43,15 @@ $(function () {
         });
         sablonElem.hide();
     }
-    function rend10percKiir(rendelesek10percben){
-        const szuloElem = $(".rendelesek10perc #percrespo");
-        console.log(rendelesek10percben)
+    function rend10percKiir(rendelesek10perc){
+        const szuloElem = $("#percrespo");
+        console.log(rendelesek10perc)
         const sablonElem = $('.rendeles');
         szuloElem.empty();
         sablonElem.show();
         
 
-        rendelesek10percben.forEach(function(elem) {
+        rendelesek10perc.forEach(function(elem) {
             let node = sablonElem.clone().appendTo(szuloElem);
             const obj = new Rendelesek10percben(node, elem);
             

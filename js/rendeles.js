@@ -19,6 +19,7 @@ class Rendeles{
 }
 class Rendelesek10percben extends Rendeles {
     constructor(node, adat){
+        super(node, adat);
         this.node = node;
         /**selectorok elnvezése */
         this.adat = adat;
