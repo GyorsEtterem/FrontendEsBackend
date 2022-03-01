@@ -30,15 +30,15 @@
                     <nav>
                         <ul>
                             <div id="menuszet1">
-                                <a href="index.html"><li>Kezdőlap</li></a>
-                                <a href="konyha.html"><li>Konyha</li></a>
-                                <a href="dolgozo.html"><li>Dolgozók</li></a>
-                                <a href="profil.html"><li>Profil</li></a>
+                                <a href="index"><li>Kezdőlap</li></a>
+                                <a href="konyha"><li>Konyha</li></a>
+                                <a href="dolgozo"><li>Dolgozók</li></a>
+                                <a href="profil"><li>Profil</li></a>
                             </div>
                             <div id="menuszet2">
-                                <a href="kedvezmeny.html"><li>Kedvezmény</li></a>
-                                <a href="rendelesek.html"><li>Rendelések</li></a>
-                                <a href="reklamacio.html"><li>Reklamáció</li></a>
+                                <a href="kedvezmeny"><li>Kedvezmény</li></a>
+                                <a href="rendelesek"><li>Rendelések</li></a>
+                                <a href="reklamacio"><li>Reklamáció</li></a>
                             </div>
                         </ul>
                         
