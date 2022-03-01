@@ -3,9 +3,9 @@ $(function () {
     const dolgozoTomb = [];
     const reklamTomb = [];
     const rendelesek10percbenTomb = [];
-    let apivegpont="http://localhost:3000/";
+    let apivegpont="http://127.0.0.1:8000/api/";
     
-    myAjax.adatBetolt(apivegpont+"dolgozok", dolgozoTomb, dolgozoKiir);
+    myAjax.adatBetolt(apivegpont+"dolgozo", dolgozoTomb, dolgozoKiir);
     myAjax.adatBetolt(apivegpont+"reklamacio", reklamTomb, reklamKiir);
     myAjax.adatBetolt(apivegpont+"rendelesek10percben", rendelesek10percbenTomb, rend10percKiir);
 
