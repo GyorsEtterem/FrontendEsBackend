@@ -1,8 +1,5 @@
-
+@yield('head')
+@yield('header')
 @include('includes.nav')
-
-<main role="main" class="container">
-    @yield('content')
-</main>
-
+@yield('content')
 @include('includes.footer')
