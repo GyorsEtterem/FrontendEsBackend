@@ -60,14 +60,14 @@ $(function () {
         sablonElem.hide();
     }
     
-    $(".torles").on("click", () =>{
-        myAjax.adatTorles(apivegpont+"dolgozok",1)
-    }); 
+    // $(".torles").on("click", () =>{
+    //     myAjax.adatTorles(apivegpont+"dolgozok",1)
+    // }); 
     
     
     $(window).on("torles", (event) => {
         console.log("halo: " + event.detail.dolg_id);
-        myAjax.adatTorles(apivegpont+"dolgozok", event.detail.dolg_id);
+        myAjax.adatTorles(apivegpont+"dolgozo", event.detail.dolg_id);
     });
 
 });

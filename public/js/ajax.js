@@ -19,8 +19,9 @@ adatBetolt(apivegpont,  tomb, myCallback) {
 
 
 adatTorles(apivegpont, id){
+    console.log(apivegpont, id)
     $.ajax({ 
-        url: apivegpont +"?dolg_id=" + id,
+        url: apivegpont +"/" + id,
         type: "DELETE",
         success: function (result) {}
       });
