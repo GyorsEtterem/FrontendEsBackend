@@ -22,7 +22,7 @@ use App\Http\Controllers\reklamacioController;
 use App\Http\Controllers\menuosszeallController;
 use App\Http\Controllers\munkakorController;
 use App\Http\Controllers\dolgozoController;
-
+use App\Http\Controllers\CustomAuthController;
 
 
 
@@ -37,9 +37,9 @@ use App\Http\Controllers\dolgozoController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/login', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/login', function (Request $request) {
+//     return $request->user();
+// });
 
 Route::get('/termek', [termekController::class, 'index']);
 Route::put('/termek/id', [termekController::class, 'update']);

@@ -1,4 +1,5 @@
-<html lang="hu"><head>
+<html lang="hu">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,10 +27,11 @@
         </header>
         <article>
             <form action="login" method="post">
-                <input type="hidden" name="_token" value="unFJwsoVKiaeEz7KgepH8kdXSTPwBNDCD55YNVyu">                <div class="imgcontainer">
-                    <!-- <img src="../kepek/icon.png" alt="Avatar" class="avatar"> -->
-                </div>
-
+                <!-- <input type="hidden" name="_token" value="unFJwsoVKiaeEz7KgepH8kdXSTPwBNDCD55YNVyu">                
+                <div class="imgcontainer">
+                    <img src="../kepek/icon.png" alt="Avatar" class="avatar"> 
+                </div> -->
+                @csrf
                 <div class="container">
                     <label for="username"><b>Felhasználónév:</b></label><br><br>
                     <input type="text" placeholder="Írja be a felhasználónevét" name="username" required=""><br><br>
@@ -52,4 +54,5 @@
     </main>
 
 
-</body></html>
+</body>
+</html>
