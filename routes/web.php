@@ -19,15 +19,16 @@ Route::get('/', function () {
 });
 
 Route::post('/login', [CustomAuthController::class, 'login'] );
-// Route::post("registration", [CutomAuthController::class, 'registration'] );
+Route::post('/registration-user', [CustomAuthController::class, 'registerUser'] )
+->name('registration-user');
 
 Route::get('bejelentkezes', function () {
     return view('pages.bejelentkezes');
 });
 
-// Route::get('regisztracio', function () {
-//     return view('pages.regisztracio');
-// });
+ Route::get('regisztracio', function () {
+     return view('pages.regisztracio');
+ });
 
 Route::get('index', function () {
     return view('pages.index');
