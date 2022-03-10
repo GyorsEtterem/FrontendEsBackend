@@ -18,17 +18,24 @@ Route::get('/', function () {
     return view('pages.index');
 });
 
-Route::post('/login', [CustomAuthController::class, 'login'] );
+Route::get('/login', [CustomAuthController::class, 'login'] );
+Route::get('/registration', [CustomAuthController::class, 'registration'] );
+
 Route::post('/registration-user', [CustomAuthController::class, 'registerUser'] )
 ->name('registration-user');
 
-Route::get('bejelentkezes', function () {
-    return view('pages.bejelentkezes');
-});
+Route::post('/login-user', [CustomAuthController::class, 'loginUser'] )
+->name('login-user');
 
- Route::get('regisztracio', function () {
-     return view('pages.regisztracio');
- });
+Route::get('/dashboard', [CustomAuthController::class, 'dashboard'] );
+
+// Route::get('login', function () {
+//     return view('pages.login');
+// });
+
+// Route::get('registration', function () {
+//      return view('pages.registration');
+//  });
 
 Route::get('index', function () {
     return view('pages.index');

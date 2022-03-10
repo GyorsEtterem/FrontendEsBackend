@@ -19,6 +19,7 @@ class CreateDolgozosTable extends Migration
             $table->date('szuldatum');
             $table->char('cim', 50);
             $table->char('telefonszam', 11);
+            $table->char('email', 50);
             $table->Integer('munkakor_id')->unsigned();
             $table->index('munkakor_id');
             $table->foreign('munkakor_id')->references('munkakor_id')->on('munkakors');
