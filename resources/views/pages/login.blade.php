@@ -38,13 +38,13 @@
                 @endif
                 @csrf
                 <div class="container">
-                    <label for="email"><b>Email:</b></label><br><br>
+                    <label for="email"><b>Email:</b></label><br>
                     <input type="text" placeholder="Írja be az emailcímét" name="email" value="{{old('email')}}"><br><br>  <!--required="" -->
-                    <span>@error('email'){{$message}} @enderror</span><br><br>
+                    <span>@error('email'){{$message}} @enderror</span><br>
 
-                    <label for="password"><b>Jelszó:</b></label><br><br>
-                    <input type="password" placeholder="Írja be a jelszavát" name="password" value="{{old('password')}}"><br><br>  <!--required="" -->
-                    <span>@error('password'){{$message}} @enderror</span><br><br>
+                    <label for="jelszo"><b>Jelszó:</b></label><br>
+                    <input type="password" placeholder="Írja be a jelszavát" name="jelszo" value="{{old('jelszo')}}"><br><br>  <!--required="" -->
+                    <span>@error('jelszo'){{$message}} @enderror</span><br>
 
                     
 
@@ -55,8 +55,8 @@
                         <span class="text-danger">@error('email') {{$message}} @enderror</span>
                     </div>
                     <div class="from-group">
-                        <label for="password">Jelszó:</label>
-                        <input type="password" class="from-control" placeholder="Írd be a jelszavad:" name="password" value="{{old('password')}}">
+                        <label for="jelszo">Jelszó:</label>
+                        <input type="jelszo" class="from-control" placeholder="Írd be a jelszavad:" name="jelszo" value="{{old('jelszo')}}">
                         <span class="text-danger">@error('jelszo') {{$message}} @enderror</span>
                     </div>
                     <div class="from-group">
@@ -71,7 +71,7 @@
 
                 <!-- <div class="container" style="background-color:#f1f1f1">
                     <button type="button" class="cancelbtn">Mégse</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
+                    <span class="psw">Forgot <a href="#">jelszo?</a></span>
                 </div> -->
             </form>
         </article>

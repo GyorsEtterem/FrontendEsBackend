@@ -18,7 +18,11 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  /*width: 100%;*/
+}
+.login, p{
+  padding: 4px 8px;
+  margin: 3px 0;
 }
 
 /* hover effect a button-okra */

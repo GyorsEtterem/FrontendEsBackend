@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\dolgozo;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Hash;
-//use Illuminate\Support\Facades\Session;
-//use Hash;
-use Session;
-use Illuminate\Validation\Rules\Unique;
-use SebastianBergmann\Environment\Console;
+use Illuminate\Support\Facades\Session;
+
 
 class CustomAuthController extends Controller
 {
@@ -25,25 +22,26 @@ class CustomAuthController extends Controller
     }
     public function registerUser(Request $request){
         $request -> validate([
-            'name' => 'required', 
-            'birthdate' => 'required', 
-            'lakohely' => 'required', 
-            'tel' => 'required', 
-            'email' => 'required|email|unique:users', 
-            'password' => 'required|min:6|max:15', 
+            'neve' => 'required', 
+            'telefonszam' => 'required', 
+            'szuldatum' => 'required', 
+            'cim' => 'required', 
+            'email' => 'required|email|unique:dolgozos', 
+            'jelszo' => 'required|min:6|max:15', 
         ]);
         // $request ->validate([
-        //     'name' => 'required';
+        //     'neve' => 'required';
         // ]);
-        $user = new User();
-        $user -> name = $request -> name;
-        $user -> birthdate = $request -> birthdate;
-        $user -> lakohely = $request -> lakohely;
-        $user -> tel = $request -> tel;
-        $user -> email = $request -> email;
-        //$user -> password = $request -> password;
-        $user -> password = Hash::make($request -> password);
-        $res = $user -> save();
+        $dolgozo = new dolgozo();
+        $dolgozo -> neve = $request -> neve;
+        $dolgozo -> szuldatum = $request -> szuldatum;
+        $dolgozo -> cim = $request -> cim;
+        $dolgozo -> telefonszam = $request -> telefonszam;
+        $dolgozo -> email = $request -> email;
+        $dolgozo -> munkakor_id = 2;
+        //$dolgozo -> jelszo = $request -> jelszo;
+        $dolgozo -> jelszo = Hash::make($request -> jelszo);
+        $res = $dolgozo -> save();
         
         if($res){
             return back()->with('sikeres','Sikeresen regisztrálta a dolgozót');
@@ -55,12 +53,12 @@ class CustomAuthController extends Controller
     public function loginUser(Request $request){
         $request -> validate([
             'email' => 'required|email', 
-            'password' => 'required|min:6|max:15', 
+            'jelszo' => 'required|min:6|max:15', 
         ]);
-        $user = User :: where('email','=', $request ->email)->first();
-        if ($user){
-            if(Hash::check($request-> password, $user -> password)){ //Hash::check(
-                $request -> session()->put('loginId', $user-> id);
+        $dolgozo = dolgozo :: where('email','=', $request ->email)->first();
+        if ($dolgozo){
+            if(Hash::check($request-> jelszo, $dolgozo -> jelszo)){ //Hash::check(
+                $request -> session()->put('loginId', $dolgozo-> id);
                 return redirect('dashboard');
             }else{
                 return back() -> with('sikertelen', 'Nem jó a jelszó');       

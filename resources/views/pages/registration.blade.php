@@ -40,11 +40,11 @@
             <div class="alert alert-sikeres">{{Session::get('sikeres')}}</div>
             @endif
             @if(Session::has('sikertelen'))
-            <div class="alert alert-sikertelen">{{Session::get('sikertelen')}}</div>
+            <div class="alert alert-danger">{{Session::get('sikertelen')}}</div>
             @endif
             @csrf
         <div class="container">
-    <p>Please fill in this form to create an account.</p>
+    <p>Kérlek töltsd ki a közetkezőket új dolgozó regisztálásához:</p>
     <hr>
 
     <label for="email"><b>Email:</b></label>
@@ -54,39 +54,38 @@
     <input type="text" placeholder="Enter username" name="username" id="username" required>  -->
     
 
-    <label for="password"><b>Jelszó:</b></label>
-    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+    <label for="jelszo"><b>Jelszó:</b></label>
+    <input type="password" placeholder="Enter jelszo" name="jelszo" id="jelszo" required>
 
-    <label for="password-repeat"><b>Ismételje meg a jelszót:</b></label>
-    <input type="password" placeholder="Repeat Password" name="password-repeat" id="password-repeat" required>
+    <label for="jelszo-ismet"><b>Ismételje meg a jelszót:</b></label>
+    <input type="password" placeholder="Ismételje meg a jelszót" name="jelszo-ismet" id="jelszo-ismet" required>
     
-    <label for="name">Teljes név:</label><br>
-    <input type="text" id="name" name="name" value="{{old('name')}}">
+    <label for="neve">Teljes név:</label><br>
+    <input type="text" id="neve" name="neve" value="{{old('neve')}}">
 
-    <label for="lakohely">Cím:</label><br>
-    <input type="text" id="lakohely" name="lakohely" required>
+    <label for="cim">Cím:</label><br>
+    <input type="text" id="cim" name="cim"  value="{{old('cim')}}">
 
-    <label for="birthdate">Dátum:</label>
-    <input type="text" id="birthdate" name="birthdate"><br><br>
+    <label for="szuldatum">Születési dátum:</label>
+    <input type="datetime-local" id="szuldatum" name="szuldatum" value="{{old('szuldatum')}}"><br><br>
 
     
-    <label for="tel">Telefonszám:</label><br>
-    <input type="tel" id="tel" placeholder="06301234567" pattern="[0-9]{10,}" maxlength="11" required></br></br>
+    <label for="telefonszam">Telefonszám:</label><br>
+    <input type="text" id="telefonszam" placeholder="06301234567" name="telefonszam" value="{{old('telefonszam')}}"></br></br> <!-- pattern="[0-9]{10,}" maxlength="11"  -->
     
-    <label for="mkor">Munkakör:</label><br>
-          <select name="mkor" id="mkor" required>
-            <option value="mkor">Pénztáros</option>
-            <option value="mkor">Konyhai dolgozó</option>
-            <option value="mkor">Menedzser</option>
+    <!-- <label for="munkakor_id">Munkakör:</label><br>
+          <select name="munkakor_id" id="munkakor_id" required>
+            <option value="munkakor_id">Pénztáros</option>
+            <option value="munkakor_id">Konyhai dolgozó</option>
+            <option value="munkakor_id">Menedzser</option>
           </select>  
-    <hr>
+    <hr> -->
 
     <!-- <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
     <button type="submit" class="registerbtn">Regisztráció</button>
   </div>
 
-  <div class="container signin">
-    <p>Már van fiókod?<a href="login">Bejelentkezés</a>.</p>
+    <p>Már van fiókod?<a class="login" href="login"><button class="kozosGomb">Bejelentkezés</button></a>.</p>
   </div>
 </form>
         </article>
