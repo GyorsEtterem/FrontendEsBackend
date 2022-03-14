@@ -55,10 +55,10 @@
     
 
     <label for="jelszo"><b>Jelszó:</b></label>
-    <input type="password" placeholder="Enter jelszo" name="jelszo" id="jelszo" required>
+    <input type="password" placeholder="Enter jelszo" name="jelszo" id="jelszo">
 
     <label for="jelszo-ismet"><b>Ismételje meg a jelszót:</b></label>
-    <input type="password" placeholder="Ismételje meg a jelszót" name="jelszo-ismet" id="jelszo-ismet" required>
+    <input type="password" placeholder="Ismételje meg a jelszót" name="jelszo-ismet" id="jelszo-ismet" >
     
     <label for="neve">Teljes név:</label><br>
     <input type="text" id="neve" name="neve" value="{{old('neve')}}">
@@ -85,7 +85,8 @@
     <button type="submit" class="registerbtn">Regisztráció</button>
   </div>
 
-    <p>Már van fiókod?<a class="login" href="login"><button class="kozosGomb">Bejelentkezés</button></a>.</p>
+    <!-- <p>Már van fiókod?<a class="login" href="/login"><button class="kozosGomb">Bejelentkezés</button></a>.</p> -->
+    <p>Már van fiókod?<a class="login" class="kozosGomb" href="/login">Bejelentkezés</a></p>
   </div>
 </form>
         </article>

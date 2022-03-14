@@ -57,7 +57,7 @@ class CustomAuthController extends Controller
         ]);
         $dolgozo = dolgozo :: where('email','=', $request ->email)->first();
         if ($dolgozo){
-            if(Hash::check($request-> jelszo, $dolgozo -> jelszo)){ //Hash::check(
+            if(Hash::check($request-> jelszo, $dolgozo -> jelszo)){ 
                 $request -> session()->put('loginId', $dolgozo-> id);
                 return redirect('dashboard');
             }else{
@@ -68,8 +68,19 @@ class CustomAuthController extends Controller
         }
     }
     public function dashboard(){
+        $data = array();
+        if (Session::has('loginId')){
+            $data = dolgozo :: where('dolg_id','=', Session::get('loginId'))->first();
         
-        return view("pages.profil");
+        }
+        return view("pages.profil", compact('data'));
+    }
+    public function logout(){
+        
+        if (!Session::has('loginId')){
+            Session::pull('loginId');
+            return redirect('login');
+        }
     }
 }
 

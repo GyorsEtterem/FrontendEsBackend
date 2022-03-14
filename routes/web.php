@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('pages.index');
 });
 
-Route::get('/login', [CustomAuthController::class, 'login'] );
+Route::get('/login', [CustomAuthController::class, 'login'] ); //->middleware('isLoggedIn');
 Route::get('/registration', [CustomAuthController::class, 'registration'] );
 
 Route::post('/registration-user', [CustomAuthController::class, 'registerUser'] )
@@ -27,15 +27,9 @@ Route::post('/registration-user', [CustomAuthController::class, 'registerUser'] 
 Route::post('/login-user', [CustomAuthController::class, 'loginUser'] )
 ->name('login-user');
 
-Route::get('/dashboard', [CustomAuthController::class, 'dashboard'] );
+Route::get('/dashboard', [CustomAuthController::class, 'dashboard'] );//->middleware('isLoggedIn');
 
-// Route::get('login', function () {
-//     return view('pages.login');
-// });
-
-// Route::get('registration', function () {
-//      return view('pages.registration');
-//  });
+Route::get('/logout', [CustomAuthController::class, 'logout'] );
 
 Route::get('index', function () {
     return view('pages.index');
