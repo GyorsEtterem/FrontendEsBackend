@@ -22,7 +22,7 @@
         <header>
             <div class="felsoSav">
                 <div>
-                    <img src="../kepek/logo.png" alt="Oldalunk logója" class="logo">
+                    <a href="index"><img src="../kepek/logo.png" alt="Oldalunk logója" class="logo"></a>
                 </div>
                 <div class="cimMenuben">
                     <h1>Rendelések</h1>
@@ -84,8 +84,8 @@
                 </div>
             </div>
             <section class="buttonok">
-                <a href="index.html" id="rendeleshozza"><button class="kozosGomb">Új rendelés</button></a>
-                <a href="atadottrendelesek.html"><button class="kozosGomb">Átadott rendelések</button></a>
+                <a href="index" id="rendeleshozza"><button class="kozosGomb">Új rendelés</button></a>
+                <a href="atadottrendelesek"><button class="kozosGomb">Átadott rendelések</button></a>
             </section>
             <section class="urlap">
                 <fieldset>

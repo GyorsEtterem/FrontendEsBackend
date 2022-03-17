@@ -3,11 +3,13 @@ $(function () {
     const dolgozoTomb = [];
     const reklamTomb = [];
     const rendelesek10percbenTomb = [];
+    const rendelesekTomb = [];
     let apivegpont="http://localhost:3000/";
     
     myAjax.adatBetolt(apivegpont+"dolgozok", dolgozoTomb, dolgozoKiir);
     myAjax.adatBetolt(apivegpont+"reklamacio", reklamTomb, reklamKiir);
     myAjax.adatBetolt(apivegpont+"rendelesek10percben", rendelesek10percbenTomb, rend10percKiir);
+    myAjax.adatBetolt(apivegpont+"rendelesek", rendelesekTomb, rendelKiir);
 
     function dolgozoKiir(dolgozok){
         const szuloElem = $(".dolgozok_tabla");
@@ -54,6 +56,23 @@ $(function () {
         rendelesek10perc.forEach(function(elem) {
             let node = sablonElem.clone().appendTo(szuloElem);
             const obj = new Rendelesek10percben(node, elem);
+            
+
+        });
+        sablonElem.hide();
+    }
+
+    function rendelKiir(rendelesek10perc){
+        const szuloElem = $("#rendelesek");
+        console.log(rendelesek10perc)
+        const sablonElem = $('.rendeles');
+        szuloElem.empty();
+        sablonElem.show();
+        
+
+        rendelesek10perc.forEach(function(elem) {
+            let node = sablonElem.clone().appendTo(szuloElem);
+            const obj = new Rendeles(node, elem);
             
 
         });
