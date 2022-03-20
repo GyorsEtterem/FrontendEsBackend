@@ -24,7 +24,7 @@
         <header> 
             <div class="felsoSav">
             <div>
-                <img src="../kepek/logo.png" alt="Oldalunk logója" class="logo" >
+                <a href="index"><img src="../kepek/logo.png" alt="Oldalunk logója" class="logo"></a>
             </div>
             <div class="cimMenuben">
                 <h1>Reklamáció</h1>

@@ -17,7 +17,7 @@
         <header> 
             <div class="felsoSav">
             <div>
-                <img src="../kepek/logo.png" alt="Oldalunk logója" class="logo" >
+                <a href="index"><img src="../kepek/logo.png" alt="Oldalunk logója" class="logo"></a>
             </div>
             <div>
                 <h1>Bejelentkezés</h1>
