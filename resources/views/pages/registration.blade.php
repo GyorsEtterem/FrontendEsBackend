@@ -67,7 +67,7 @@
     <input type="text" id="cim" name="cim"  value="{{old('cim')}}">
 
     <label for="szuldatum">Születési dátum:</label>
-    <input type="datetime-local" id="szuldatum" name="szuldatum" value="{{old('szuldatum')}}"><br><br>
+    <input type="date" id="szuldatum" name="szuldatum" value="{{old('szuldatum')}}"><br><br>
 
     
     <label for="telefonszam">Telefonszám:</label><br>
