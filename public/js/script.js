@@ -9,10 +9,48 @@ $(function () {
     myAjax.adatBetolt(apivegpont+"reklamacio", reklamTomb, reklamKiir);
     myAjax.adatBetolt(apivegpont+"rendelesek10percben", rendelesek10percbenTomb, rend10percKiir);
 
+    // Dolgozók névsorának olala
+    let keresomezo= $("#kereso");
+    keresomezo.on("keyup", () =>{
+    let apivegpont="http://127.0.0.1:8000/api/dolgozo";
+       apivegpont += "?q=" + keresomezo.val();
+       console.log(apivegpont);
+       myAjax.adatBetolt(apivegpont, dolgozoTomb, dolgozoKiir);
+    })
+
+    $("#rendezesiszempont").on("change", function() {
+        const rendezesElem = $("#rendezesiszempont");
+        let ujvegpont="http://127.0.0.1:8000/api/dolgozo";
+        let szempont = $(this).val();
+        console.log(szempont);
+    
+      switch(szempont) {
+      case "nevRendezNo":
+        ujvegpont = apivegpont+"dolgozo" + "?_sort=dolgozonev&_order=asc";
+        myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
+        break;
+        case "nevRendezCsokken":
+          ujvegpont = apivegpont+"dolgozo" + "?_sort=dolgozonev&_order=desc";
+          myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
+          break;
+        case "korRendezNo":
+          ujvegpont = apivegpont+"dolgozo" + "?_sort=szuldatum&_order=asc";   
+          myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
+          break;
+        case "korRendezCsokken":
+          ujvegpont = apivegpont+"dolgozo" + "?_sort=szuldatum&_order=desc";
+          myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
+          break;
+      default:
+        ujvegpont= apivegpont;
+        break;
+      }
+      })
+
     function dolgozoKiir(dolgozok){
         const szuloElem = $(".dolgozok_tabla");
         console.log(dolgozok)
-        const sablonElem = $('.dolgozo');
+        const sablonElem = $(' .dolgozo'); //$('.sablonhoz .dolgozo')
         szuloElem.empty();
         sablonElem.show();
         
@@ -27,6 +65,16 @@ $(function () {
         sablonElem.hide();
      }
 
+     
+    $(window).on("torles", (event) => {
+        console.log("halo: " + event.detail.dolg_id);
+        myAjax.adatTorles(apivegpont+"dolgozo", event.detail.dolg_id);
+    });
+
+    
+
+
+// Reklamációk oldala
     function reklamKiir(reklamaciok){
         const szuloElem = $("#reklamaicorespo");
         console.log(reklamaciok)
@@ -59,15 +107,5 @@ $(function () {
         });
         sablonElem.hide();
     }
-    
-    // $(".torles").on("click", () =>{
-    //     myAjax.adatTorles(apivegpont+"dolgozok",1)
-    // }); 
-    
-    
-    $(window).on("torles", (event) => {
-        console.log("halo: " + event.detail.dolg_id);
-        myAjax.adatTorles(apivegpont+"dolgozo", event.detail.dolg_id);
-    });
 
 });

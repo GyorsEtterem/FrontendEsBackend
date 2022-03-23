@@ -6,6 +6,7 @@ class Dolgozo{
         this.dolgId = adat.dolg_id;
         this.dolgNev = this.node.children(".dolgozonev");
         this.szulDatum = this.node.children(".szuldatum");
+        this.dolgEmail = this.node.children(".email");
         this.dolgCim = this.node.children(".cime");
         this.dolgTel = this.node.children(".telszam");
         this.dolgJelszo = this.node.children(".jelszo");
@@ -13,7 +14,7 @@ class Dolgozo{
         this.setAdat(this.adat);
         
         this.dolgozoTorles = this.node.children(".torles").children("button");
-        this.dolgozoModosit = this.node.children(".modosit").children("button");
+        this.dolgozoModosit = this.node.children(".modositas").children("button");
         this.dolgozoTorles.on("click ", () => {
             this.torlesTrigger(this.adat);
         });
@@ -27,6 +28,7 @@ class Dolgozo{
         this.adat = adat;
         this.dolgNev.text(adat.neve);
         this.szulDatum.text(adat.szuldatum);
+        this.dolgEmail.text(adat.email);
         this.dolgCim.text(adat.cim);
         this.dolgTel.text(adat.telefonszam);
         this.dolgJelszo.text(adat.jelszo);
