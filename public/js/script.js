@@ -71,7 +71,31 @@ $(function () {
         myAjax.adatTorles(apivegpont+"dolgozo", event.detail.dolg_id);
     });
 
+    $(window).on("modositas", (event) => {
+        console.log(event.detail);
+        $("#dolgId").val(event.detail.dolg_id);
+        $("#dolgNev").val(event.detail.neve);
+        $("#szulDatum").val(event.detail.szuldatum);
+        $("#dolgCim").val(event.detail.cime);
+        $("#dolgTel").val(event.detail.telszam);
+        $("#dolgMunka").val(event.detail.munkakor);
+        $("#dolgEmail").val(event.detail.email);
+        $("#dolgJelszo").val(event.detail.jelszo);
+    });
     
+    $("#ajaxModosit").on("click", () =>{
+        let adat= {}
+        adat.dolg_id= $("#dolgId").val();
+        adat.neve= $("#dolgNev").val();
+        adat.szuldatum= $("#szulDatum").val();
+        adat.cime= $("#dolgCim").val();
+        adat.telszam= $("#dolgTel").val();
+        adat.munkakor= $("#dolgMunka").val();
+        adat.email= $("#dolgEmail").val();
+        adat.jelszo= $("#dolgJelszo").val();
+        
+        myAjax.adatPut(apivegpont+"dolgozo",adat, adat.dolg_id)
+    });
 
 
 // Reklamációk oldala
