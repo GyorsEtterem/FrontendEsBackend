@@ -8,19 +8,35 @@ use App\Models\dolgozo;
 class dolgozoController extends Controller
 {
     //
-    public function index()
-
-    {
-
-        return dolgozo::all();
-
-    }
-
+    public function index(Request $request){
+        
+    $neve = $request->query('q','');
+    $keres=dolgozo::where('neve','like',"%$neve%");
+    $sort = $request->query('desc','');
+        $a='';
+        if($sort==""){
+            return $keres->get();
+        }
+        else if($sort=="nevRendezNo"){
+            $a='ASC';
+        }
+        else if($sort=="nevRendezCsokken"){
+            $a='DESC';
+        }
+    // $neve=$request->query('neve');
+    // $keres=dolgozo::selectRaw("*");
+    // if($neve){
+    //     $keres->where('neve','like','%'.$neve.'%');
+    // }
+    //return response()->json($keres->get());
+    return $keres->orderBy('neve', $a)->get();
+}
  
 
     public function show($id)
-
+    
     {
+        
 
         return dolgozo::find($id);
 
@@ -31,7 +47,7 @@ class dolgozoController extends Controller
     public function store(Request $request)
 
     {
-
+        dd($request);
         //kötelező oszlopok
 
      $request->validate([
@@ -64,7 +80,7 @@ class dolgozoController extends Controller
 
 
 
-    public function delete(Request $request, $id)
+    public function destroy(string $id)
 
     {
 

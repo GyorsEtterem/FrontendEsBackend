@@ -50,8 +50,8 @@
                 <select id="rendezesiszempont"> 
                             <option value="nevRendezNo">Név szerint növekvő</option>
                             <option value="nevRendezCsokken">Név szerint csökkenő</option>
-                            <option value="korRendezNo">Kor szerint növekvő</option>
-                            <option value="korRendezCsokken">Kor szerint csökkenő</option>
+                            <!-- <option value="korRendezNo">Kor szerint növekvő</option>
+                            <option value="korRendezCsokken">Kor szerint csökkenő</option> -->
                  </select><br><br>
             </div>
             <table class=sablonhoz>
@@ -75,20 +75,21 @@
                         <th>Dolgozó törlés:</th>
                         <th>Adat módosítás:</th>
                     </tr>
+                    <tr class="dolgozo">
+                        <td class="dolgozonev"></td>
+                        <td class="szuldatum"></td>
+                        <td class="cime"></td>
+                        <td class="telszam"></td>
+                        <!-- <td class="jelszo">Jelszó</td> -->
+                        <td class="munkakor"></td>
+                        <td class="email"></td>
+                        <td class="torles"><button>Törlés</button></td>
+                        <td class="modositas"><button>Módosítás</button></td>
+                    </tr>
 
                 </thead>
                 <tbody class="dolgozok_tabla">
-                <tr class="dolgozo">
-                        <td class="dolgozonev">Dolgozó neve</td>
-                        <td class="szuldatum">Születési dátum</td>
-                        <td class="cime">Cím</td>
-                        <td class="telszam">Telefonszám</td>
-                        <!-- <td class="jelszo">Jelszó</td> -->
-                        <td class="munkakor">Munkakör</td>
-                        <td class="email">Email</td>
-                        <td class="torles"><button>Törlés</button></td>
-                        <td class="modositas"><button>Módosítás</button></td>
-                </tr>
+                
                 </tbody>
             </table>
             <a class="regisztraciofelv" href="regisztracio"><button class="kozosGomb">Új dolgozó regisztrácálása</button></a>

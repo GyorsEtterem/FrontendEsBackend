@@ -6,56 +6,84 @@ $(function () {
     let apivegpont="http://127.0.0.1:8000/api/";
     
     myAjax.adatBetolt(apivegpont+"dolgozo", dolgozoTomb, dolgozoKiir);
-    myAjax.adatBetolt(apivegpont+"reklamacio", reklamTomb, reklamKiir);
-    myAjax.adatBetolt(apivegpont+"rendelesek10percben", rendelesek10percbenTomb, rend10percKiir);
+    //myAjax.adatBetolt(apivegpont+"reklamacio", reklamTomb, reklamKiir);
+    //myAjax.adatBetolt(apivegpont+"rendelesek10percben", rendelesek10percbenTomb, rend10percKiir);
 
     // Dolgozók névsorának olala
     let keresomezo= $("#kereso");
     keresomezo.on("keyup", () =>{
-    let apivegpont="http://127.0.0.1:8000/api/dolgozo";
-       apivegpont += "?q=" + keresomezo.val();
-       console.log(apivegpont);
-       myAjax.adatBetolt(apivegpont, dolgozoTomb, dolgozoKiir);
+        //function kereses(){
+            const szuloElem = $(".dolgozok_tabla");
+            const sablonElem = $('.dolgozo');
+            apivegpont="http://127.0.0.1:8000/api/dolgozo"; //dolgozoKerese
+            apivegpont += "?q=" + keresomezo.val();
+            szuloElem.children().remove();
+            dolgozoTomb.splice();
+            console.log(apivegpont);
+            myAjax.adatBetolt(apivegpont, dolgozoTomb, dolgozoKiir);
+        //}
+    
     })
-
+//    $(document).ready(function(e) {
+//     let timeout;
+//     let delay = 1000;
+//     $('#kereso').keyup(function(e) {
+//         console.log("ír");
+//         if(timeout) {
+//             clearTimeout(timeout);
+//             console.log(timeout);
+//         }
+//         timeout = setTimeout(function() {
+//             kereses();
+//         }, delay);
+//     });
+//});
     $("#rendezesiszempont").on("change", function() {
-        const rendezesElem = $("#rendezesiszempont");
+        
+        const szuloElem = $(".dolgozok_tabla");
+        const sablonElem = $('.dolgozo');
+        //const rendezesElem = $("#rendezesiszempont");
         let ujvegpont="http://127.0.0.1:8000/api/dolgozo";
+        szuloElem.children().remove();
+        dolgozoTomb.splice();
         let szempont = $(this).val();
         console.log(szempont);
     
       switch(szempont) {
       case "nevRendezNo":
-        ujvegpont = apivegpont+"dolgozo" + "?_sort=dolgozonev&_order=asc";
-        myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
+        ujvegpont += "?desc=nevRendezNo";
+        //myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
         break;
         case "nevRendezCsokken":
-          ujvegpont = apivegpont+"dolgozo" + "?_sort=dolgozonev&_order=desc";
-          myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
-          break;
-        case "korRendezNo":
-          ujvegpont = apivegpont+"dolgozo" + "?_sort=szuldatum&_order=asc";   
-          myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
-          break;
-        case "korRendezCsokken":
-          ujvegpont = apivegpont+"dolgozo" + "?_sort=szuldatum&_order=desc";
-          myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
-          break;
+          ujvegpont +="?desc=nevRendezCsokken";
+          //myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
+        break;
+        // case "korRendezNo":
+        //   ujvegpont = apivegpont+"dolgozo" + "?_sort=szuldatum&_order=asc";   
+        //   myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
+        //   break;
+        // case "korRendezCsokken":
+        //   ujvegpont = apivegpont+"dolgozo" + "?_sort=szuldatum&_order=desc";
+        //   myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
+        //   break;
       default:
-        ujvegpont= apivegpont;
         break;
       }
+      
+      myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
       })
 
-    function dolgozoKiir(dolgozok){
+    function dolgozoKiir(dolgozok1){
+        
+        console.log("asdf");
         const szuloElem = $(".dolgozok_tabla");
-        console.log(dolgozok)
+        console.log(dolgozok1)
         const sablonElem = $(' .dolgozo'); //$('.sablonhoz .dolgozo')
-        szuloElem.empty();
         sablonElem.show();
+        szuloElem.empty();
         
 
-        dolgozok.forEach(function(elem) {
+        dolgozok1.forEach(function(elem) {
 
             let node = sablonElem.clone().appendTo(szuloElem);
             const obj = new Dolgozo(node, elem);
@@ -69,6 +97,7 @@ $(function () {
     $(window).on("torles", (event) => {
         console.log("halo: " + event.detail.dolg_id);
         myAjax.adatTorles(apivegpont+"dolgozo", event.detail.dolg_id);
+        window.location.reload();
     });
 
     $(window).on("modositas", (event) => {

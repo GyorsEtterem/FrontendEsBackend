@@ -95,8 +95,12 @@ Route::get('/munkakor/{munkakor}', [munkakorController::class, 'show']);
 Route::delete('/munkakor/{id}', [munkakorController::class, 'delete']);
 Route::post('/munkakor', [munkakorController::class, 'store']);
 
-Route::get('/dolgozo', [dolgozoController::class, 'index']);
-Route::put('/dolgozo/id', [dolgozoController::class, 'update']);
-Route::get('/dolgozo/{dolgozo}', [dolgozoController::class, 'show']);
-Route::delete('/dolgozo/{id}', [dolgozoController::class, 'delete']);
-Route::post('/dolgozo', [dolgozoController::class, 'store']);
+ Route::get('/dolgozo', [dolgozoController::class, 'index']);
+ Route::put('/dolgozo/id', [dolgozoController::class, 'update']);
+ Route::get('/dolgozo/{dolgozo}', [dolgozoController::class, 'show']);
+ Route::delete('/dolgozo/{id}', [dolgozoController::class, 'delete']);
+ Route::post('/dolgozo', [dolgozoController::class, 'store']);
+//Route::apiResource('dolgozo', dolgozoController::class);
+//Route::apiResource('dolgozoKerese', dolgozoController::class);
+
+//Route::get('/dolgozoKerese', [dolgozoController::class, 'index']);
