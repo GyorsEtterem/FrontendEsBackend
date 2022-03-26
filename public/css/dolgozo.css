@@ -26,7 +26,7 @@ td{
     thead{
         display: none;
     }
-    .dolgozok .torles, .dolgozok .szerkeszt{
+    .dolgozok .torles, .dolgozok .modositas, .urlap{
         display: none;
     }
     .regisztraciofelv{

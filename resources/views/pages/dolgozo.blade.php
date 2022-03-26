@@ -39,6 +39,8 @@
                 </div>
             </div>
         </header>
+        
+        <article>
         <section class="szures">
             <div>
                 <form>
@@ -54,12 +56,8 @@
                             <option value="korRendezCsokken">Kor szerint csökkenő</option> -->
                  </select><br><br>
             </div>
-            <table class=sablonhoz>
-                
-            </table>
             
         </section>
-        <article>
             <div class="cimMenunKivul">
                 <h1>Dolgozók</h1>
             </div>
@@ -78,7 +76,7 @@
                     <tr class="dolgozo">
                         <td class="dolgozonev"></td>
                         <td class="szuldatum"></td>
-                        <td class="cime"></td>
+                        <td class="cim"></td>
                         <td class="telszam"></td>
                         <!-- <td class="jelszo">Jelszó</td> -->
                         <td class="munkakor"></td>
@@ -95,6 +93,7 @@
             <a class="regisztraciofelv" href="regisztracio"><button class="kozosGomb">Új dolgozó regisztrácálása</button></a>
             <br><br>
             <section class="urlap">
+            <form action="" method="POST">
             <fieldset>
                 <legend>Dolgozó adatainak módosítása:</legend>
                 <label for="email"><b>Email:</b></label><br>
@@ -106,12 +105,14 @@
                 <label for="dolgozonev">Teljes név:</label><br>
                 <input type="text" id="dolgozonev" name="dolgozonev"><br><br>
 
-                <label for="cime">Cím:</label><br>
-                <input type="text" id="cime" name="cime" ><br><br>
+                <label for="cim">Cím:</label><br>
+                <input type="text" id="cim" name="cim" ><br><br>
 
                 <label for="szuldatum">Születési dátum:</label><br>
                 <input type="date" id="szuldatum" name="szuldatum"><br><br>
 
+                <label for="munkakor">munkakor :</label><br>
+                <input type="text" id="munkakor" name="munkakor"><br><br>
     
                 <label for="telefonszam">Telefonszám:</label><br>
                 <input type="text" id="telefonszam" placeholder="06301234567" name="telefonszam" ></br></br> <!-- pattern="[0-9]{10,}" maxlength="11"  -->
@@ -120,6 +121,7 @@
                   <input type="button" class="gomb" id="ajaxModosit" value="MÓDOSÍT">
                 </div>
             </fieldset>
+            </form>
             </section>
         </article>
 
