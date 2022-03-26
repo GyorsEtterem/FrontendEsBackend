@@ -7,7 +7,7 @@ class Dolgozo{
         this.dolgNev = this.node.children(".dolgozonev");
         this.szulDatum = this.node.children(".szuldatum");
         this.dolgEmail = this.node.children(".email");
-        this.dolgCim = this.node.children(".cime");
+        this.dolgCim = this.node.children(".cim");
         this.dolgTel = this.node.children(".telszam");
         this.dolgJelszo = this.node.children(".jelszo");
         this.dolgMunka = this.node.children(".munkakor");
