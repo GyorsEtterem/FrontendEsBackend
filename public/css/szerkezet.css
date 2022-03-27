@@ -144,10 +144,14 @@ footer p{
         grid-template-columns:1fr 1fr;
           
     }
+    .szures {
+        grid-template-columns: 1fr;
+
+    }
 }
 
 @media screen and (max-width: 413px) {
-    #konyha {
+    #konyha{
         grid-template-columns: 1fr;
 
     }
