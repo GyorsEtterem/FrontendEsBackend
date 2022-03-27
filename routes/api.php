@@ -2,16 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-// use App\Models\termek;
-// use App\Models\alapanyag;
-// use App\Models\osszetevo;
-// use App\Models\arvaltozas;
-// use App\Models\kedvezmeny;
-// use App\Models\nyugtatetel;
-// use App\Models\nyugta;
-// use App\Models\reklamacio;
-// use App\Models\menuosszeall;
-// use App\Models\munkakor;
 use App\Http\Controllers\termekController;
 use App\Http\Controllers\alapanyagController;
 use App\Http\Controllers\osszetevoController;
@@ -96,7 +86,7 @@ Route::delete('/munkakor/{id}', [munkakorController::class, 'delete']);
 Route::post('/munkakor', [munkakorController::class, 'store']);
 
  Route::get('/dolgozo', [dolgozoController::class, 'index']);
- Route::put('/dolgozo/id', [dolgozoController::class, 'update']);
+ Route::put('/dolgozo/{id}', [dolgozoController::class, 'update']);
  Route::get('/dolgozo/{dolgozo}', [dolgozoController::class, 'show']);
  Route::delete('/dolgozo/{id}', [dolgozoController::class, 'delete']);
  Route::post('/dolgozo', [dolgozoController::class, 'store']);

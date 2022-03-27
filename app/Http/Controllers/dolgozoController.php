@@ -48,7 +48,8 @@ class dolgozoController extends Controller
         //kötelező oszlopok
 
      $request->validate([
-        'poszt' => 'required'
+        // 'poszt' => 'required',
+        // 'munkakor_id' => 'required'
         ]);
 
         return dolgozo::create($request->all());
@@ -57,22 +58,32 @@ class dolgozoController extends Controller
 
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request,string $dolg_id)  //
 
     {
 
-        $article = dolgozo::find($id);
+        //$article = dolgozo::find($dolg_id);
 
-     $request->validate([
-        'poszt' => 'required',
-        'munkakor_id' => 'required'
-     ]);
+      $request->validate([
+         'neve' => 'required',
+         'szuldatum' => 'required',
+         'cim' => 'required',
+         'telefonszam' => 'required',
+         'email' => 'required',
+         //'munkakor_id' => 'required',
+         'jelszo' => 'required'
+      ]);
+        $dolgozo = dolgozo::find($dolg_id);
+        $dolgozo-> neve = $request-> neve;
+        $dolgozo-> szuldatum = $request-> szuldatum;
+        $dolgozo-> cim = $request-> cim;
+        $dolgozo-> telefonszam = $request-> telefonszam;
+        $dolgozo-> email = $request-> email;
+        $dolgozo-> jelszo = $request-> jelszo;
+        $dolgozo->save();
 
-        $article->update($request->all());
 
-
-
-        return $article;
+        return ['message' => 'Módosítva'];
 
     }
 

@@ -9,4 +9,14 @@ class dolgozo extends Model
 {
     use HasFactory;
     protected $primaryKey='dolg_id';
+
+    protected $fillable = [
+        'neve',
+        'szuldatum',
+        'cim',
+        'telefonszam',
+        'email',
+        'munkakor_id',
+        'jelszo'
+    ];
 }

@@ -26,13 +26,13 @@ class Dolgozo{
 
     setAdat(adat) {
         this.adat = adat;
-        this.dolgNev.text(adat.neve);
-        this.szulDatum.text(adat.szuldatum);
-        this.dolgEmail.text(adat.email);
-        this.dolgCim.text(adat.cim);
-        this.dolgTel.text(adat.telefonszam);
-        this.dolgJelszo.text(adat.jelszo);
-        this.dolgMunka.text(adat.munkakor_id);
+        this.dolgNev.html(adat.neve);
+        this.szulDatum.html(adat.szuldatum);
+        this.dolgEmail.html(adat.email);
+        this.dolgCim.html(adat.cim);
+        this.dolgTel.html(adat.telefonszam);
+        this.dolgJelszo.html(adat.jelszo);
+        this.dolgMunka.html(adat.munkakor_id);
     }
 
     torlesTrigger(adat){

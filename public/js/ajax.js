@@ -3,7 +3,8 @@ class MyAjax{
         
     }
 adatBetolt(apivegpont,  tomb, myCallback) {
-    tomb.splice(0,tomb.length);
+    //tomb.splice(0,tomb.length);
+    tomb = [];
     $.ajax({
         url: apivegpont,
         type: "GET",

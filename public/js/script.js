@@ -11,7 +11,7 @@ $(function () {
 
     // Dolgozók névsorának olala
     let keresomezo= $("#kereso");
-    keresomezo.on("keyup", () =>{
+    keresomezo.on("keyup", function(){
         //function kereses(){
             const szuloElem = $(".dolgozok_tabla");
             const sablonElem = $('.dolgozo');
@@ -73,36 +73,36 @@ $(function () {
       myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
       })
 
-    function dolgozoKiir(dolgozok1){
+    function dolgozoKiir(dolgozok){
         
-        console.log("asdf");
         const szuloElem = $(".dolgozok_tabla");
-        console.log(dolgozok1)
-        const sablonElem = $(' .dolgozo'); //$('.sablonhoz .dolgozo')
-        sablonElem.show();
+        console.log(dolgozok)
+        const sablonElem = $('#sablonhoz .dolgozo'); //$('.sablonhoz .dolgozo')
+        //sablonElem.show();
         szuloElem.empty();
         
 
-        dolgozok1.forEach(function(elem) {
+        dolgozok.forEach(function(elem) {
 
             let node = sablonElem.clone().appendTo(szuloElem);
             const obj = new Dolgozo(node, elem);
             
 
         });
-        sablonElem.hide();
+        //sablonElem.hide();
      }
 
      
     $(window).on("torles", (event) => {
-        console.log("halo: " + event.detail.dolg_id);
+        console.log(event.detail.dolg_id);
         myAjax.adatTorles(apivegpont+"dolgozo", event.detail.dolg_id);
         window.location.reload();
     });
 
     $(window).on("modositas", (event) => {
         console.log(event.detail);
-        //$("#dolgId").val(event.detail.dolg_id);
+        console.log(event.detail.dolg_id);
+        $("#dolgId").val(event.detail.dolg_id);
         $("#dolgozonev").val(event.detail.neve);
         $("#szuldatum").val(event.detail.szuldatum);
         $("#cim").val(event.detail.cim);
@@ -115,7 +115,7 @@ $(function () {
     $("#ajaxModosit").on("click", () =>{
         
         let adat= {}
-        //adat.dolg_id= $("#dolgId").val();
+        adat.dolg_id= $("#dolgId").val();
         adat.neve= $("#dolgozonev").val();
         adat.szuldatum=$("#szuldatum").val();
         adat.cim= $("#cim").val();
@@ -124,17 +124,20 @@ $(function () {
         adat.email= $("#email").val();
         adat.jelszo= $("#jelszo").val();
         console.log(adat);
-        myAjax.adatPut(apivegpont+"dolgozo",adat, adat.dolg_id)
-        dolgozoTomb.splice();
-        myAjax.adatBetolt(apivegpont+"dolgozo", dolgozoTomb, dolgozoKiir);
+        myAjax.adatPut(apivegpont+"dolgozo", adat, adat.dolg_id);
+        
+        myAjax.adatBetolt(apivegpont+"dolgozo",dolgozoTomb, dolgozoKiir);
+        
         $("#dolgId").val('');
-        $("#dolgNev").val('');
+        $("#dolgozonev").val('');
         $("#szuldatum").val('');
         $("#cim").val('');
         $("#telefonszam").val('');
         $("#munkakor").val('');
         $("#email").val('');
         $("#jelszo").val('');
+        console.log("asd");
+        //window.location.reload();
     });
 
 

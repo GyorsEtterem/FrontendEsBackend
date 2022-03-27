@@ -4,6 +4,14 @@
     padding: 10px;
 }
 
+#dolgId{
+    display: none;
+}
+
+#sablonhoz .dolgozo{
+    display: none;
+}
+
 tr{
     padding: 10px;
     margin: 1px;
@@ -23,6 +31,7 @@ td{
         grid-template-columns: 1fr;
         border:1px solid rgb(51, 0, 0);
     } 
+    
     thead{
         display: none;
     }
