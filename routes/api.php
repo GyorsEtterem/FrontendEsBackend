@@ -30,6 +30,7 @@ use App\Http\Controllers\CustomAuthController;
 // Route::middleware('auth:sanctum')->get('/login', function (Request $request) {
 //     return $request->user();
 // });
+Route::get('/elmult10perc', [elmult10pRendController::class, 'index']);
 
 Route::get('/termek', [termekController::class, 'index']);
 Route::put('/termek/{id}', [termekController::class, 'update']);
