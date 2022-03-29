@@ -21,5 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call([TermekSeeder::class]);
         $this->call([OsszetevoSeeder::class]);
         $this->call([MenuosszeallSeeder::class]);
+        $this->call([NyugtaSeeder::class]);
+        $this->call([NyugtatetelSeeder::class]);
     }
 }
