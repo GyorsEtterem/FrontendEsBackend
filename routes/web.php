@@ -15,11 +15,11 @@ use App\Http\Controllers\CustomAuthController;
 */
 
 Route::get('/', function () {
-    return view('pages.index');
+    return view('pages.login');
 });
 
 Route::get('/login', [CustomAuthController::class, 'login'] ); //->middleware('isLoggedIn');
-Route::get('/registration', [CustomAuthController::class, 'registration'] );
+Route::get('/registration', [CustomAuthController::class, 'registration']);
 
 Route::post('/registration-user', [CustomAuthController::class, 'registerUser'] )
 ->name('registration-user');
@@ -27,7 +27,7 @@ Route::post('/registration-user', [CustomAuthController::class, 'registerUser'] 
 Route::post('/login-user', [CustomAuthController::class, 'loginUser'] )
 ->name('login-user');
 
-Route::get('/dashboard', [CustomAuthController::class, 'dashboard'] );//->middleware('isLoggedIn');
+Route::get('/profilo', [CustomAuthController::class, 'profilo'] )->name('profilo');//->middleware('isLoggedIn');
 
 Route::get('/logout', [CustomAuthController::class, 'logout'] );
 
