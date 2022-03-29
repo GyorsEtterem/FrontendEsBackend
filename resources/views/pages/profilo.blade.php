@@ -41,16 +41,9 @@
             <div class="cimMenunKivul">
                 <h1>Felhasználói Profil</h1>
             </div>
-            <!-- <div>
-                <h3>NÉV:                                Columbo</h3>
-                <h3>SZÜLETÉSI DÁTUM:  1968. február 20.</h3>
-                <h3>CÍM:                                - TITKOS -</h3>
-                <h3>TELEFONSZÁM:         - TITKOS -</h3>
-                <h3>MUNKAKÖR:               hadnagy</h3>
-                <button>KIJELENTKEZÉS</button>
-            </div> -->
-            <table class="dolgozok">
             
+            <h1>{{$data->neve}}</h1>
+            <table class="dolgozok">
                 <thead>
                 <th>Név:</th>
                         <th>Szül dátum:</th>
@@ -60,12 +53,23 @@
                         <th>Munkakör:</th>
                     <th></th>
                 </thead>
+                @foreach($data as $adat)
                 <tbody class="dolgozok_tabla">
                     <tr class="dolgozo">
-                    
-                        <td> <a href="logout"><button class="kozosGomb">Kijelentkezés</button></a></td>
+                        <td>{{$adat->neve}}</td>
+                        <td>{{$adat->szuldatum}}</td>
+                        <td>{{$adat->cim}}</td>
+                        <td>{{$adat->telefonszam}}</td>
+                        <td>{{$adat->email}}</td>
+                        <td>{{$adat->munkakor_id}}</td>
                     </tr>
                 </tbody>
-            </table>
+                @endforeach
+            </table> 
+            <div>
+            <a href="logout"><button class="kozosGomb">Kijelentkezés</button></a>
+                    
+            </div>
+
         </article>
         @endsection

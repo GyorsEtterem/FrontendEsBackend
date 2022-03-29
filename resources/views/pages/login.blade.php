@@ -34,45 +34,21 @@
                 <div class="alert alert-sikeres">{{Session::get('sikeres')}}</div>
                 @endif
                 @if(Session::has('sikertelen'))
-                <div class="alert alert-sikertelen">{{Session::get('sikertelen')}}</div>
+                <div class="alert alert-danger">{{Session::get('sikertelen')}}</div>
                 @endif
                 @csrf
                 <div class="container">
                     <label for="email"><b>Email:</b></label><br>
-                    <input type="text" placeholder="Írja be az emailcímét" name="email" value="{{old('email')}}"><br><br>  <!--required="" -->
+                    <input type="text" placeholder="Írja be az emailcímét" name="email" value="{{old('email')}}"><br><br> 
                     <span>@error('email'){{$message}} @enderror</span><br>
 
                     <label for="jelszo"><b>Jelszó:</b></label><br>
-                    <input type="password" placeholder="Írja be a jelszavát" name="jelszo" value="{{old('jelszo')}}"><br><br>  <!--required="" -->
+                    <input type="password" placeholder="Írja be a jelszavát" name="jelszo" value="{{old('jelszo')}}"><br><br> 
                     <span>@error('jelszo'){{$message}} @enderror</span><br>
 
-                    
-
-
-                    <!-- <div class="from-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="from-control" placeholder="Írd be az emailod:" name="email" value="{{old('email')}}">
-                        <span class="text-danger">@error('email') {{$message}} @enderror</span>
-                    </div>
-                    <div class="from-group">
-                        <label for="jelszo">Jelszó:</label>
-                        <input type="jelszo" class="from-control" placeholder="Írd be a jelszavad:" name="jelszo" value="{{old('jelszo')}}">
-                        <span class="text-danger">@error('jelszo') {{$message}} @enderror</span>
-                    </div>
-                    <div class="from-group">
-                        <button class="btn btn-block btn-primary" type="submit">Belépés</button>
-                    </div> -->
-
                     <button type="submit">Bejelentkezés</button>
-                    <!-- <label>
-                        <input type="checkbox" checked="checked" name="remember"> Emlékezzen rám
-                    </label> -->
                 </div>
 
-                <!-- <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" class="cancelbtn">Mégse</button>
-                    <span class="psw">Forgot <a href="#">jelszo?</a></span>
-                </div> -->
             </form>
         </article>
         </body>
