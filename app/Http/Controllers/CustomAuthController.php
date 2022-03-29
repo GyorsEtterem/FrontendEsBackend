@@ -11,12 +11,10 @@ use Illuminate\Support\Facades\Session;
 
 class CustomAuthController extends Controller
 {
-    public function login(){//(Request $request)
-        //return $request->input();
+    public function login(){
         return view("pages.login");
     }
     public function registration(){
-         //return "Registration";
         return view("pages.registration");
 
     }
@@ -29,9 +27,6 @@ class CustomAuthController extends Controller
             'email' => 'required|email|unique:dolgozos', 
             'jelszo' => 'required|min:6|max:15', 
         ]);
-        // $request ->validate([
-        //     'neve' => 'required';
-        // ]);
         $dolgozo = new dolgozo();
         $dolgozo -> neve = $request -> neve;
         $dolgozo -> szuldatum = $request -> szuldatum;
@@ -39,7 +34,6 @@ class CustomAuthController extends Controller
         $dolgozo -> telefonszam = $request -> telefonszam;
         $dolgozo -> email = $request -> email;
         $dolgozo -> munkakor_id = 2;
-        //$dolgozo -> jelszo = $request -> jelszo;
         $dolgozo -> jelszo = Hash::make($request -> jelszo);
         $res = $dolgozo -> save();
         
@@ -55,11 +49,11 @@ class CustomAuthController extends Controller
             'email' => 'required|email', 
             'jelszo' => 'required|min:6|max:15', 
         ]);
-        $dolgozo = dolgozo :: where('email','=', $request ->email)->first();
+        $dolgozo = dolgozo :: where('email','=', $request ->email)->first(); // elenőrzi hogy van-e az a datbázisban ilyen emailcímmel, jelszóval ember
         if ($dolgozo){
             if(Hash::check($request-> jelszo, $dolgozo -> jelszo)){ 
                 $request -> session()->put('loginId', $dolgozo-> id);
-                return redirect('dashboard');
+                return redirect('profilo');
             }else{
                 return back() -> with('sikertelen', 'Nem jó a jelszó');       
             }
@@ -67,14 +61,17 @@ class CustomAuthController extends Controller
             return back() -> with('sikertelen', 'Még nem regisztráltak ezzel az email címmel');
         }
     }
-    public function dashboard(){
+
+
+    public function profilo(){
         $data = array();
         if (Session::has('loginId')){
-            $data = dolgozo :: where('dolg_id','=', Session::get('loginId'))->first();
-        
-        }
-        return view("pages.profil", compact('data'));
+            $data = dolgozo :: where('id','=', Session::get('loginId'))->first();
+           
+       }
+        return view("pages.profilo", compact('data'));
     }
+
     public function logout(){
         
         if (!Session::has('loginId')){
