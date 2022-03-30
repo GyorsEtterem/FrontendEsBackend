@@ -12,7 +12,7 @@ use App\Http\Controllers\reklamacioController;
 use App\Http\Controllers\menuosszeallController;
 use App\Http\Controllers\munkakorController;
 use App\Http\Controllers\dolgozoController;
-use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\elmult10pRendController;
 
 
 
@@ -31,6 +31,10 @@ use App\Http\Controllers\CustomAuthController;
 //     return $request->user();
 // });
 Route::get('/elmult10perc', [elmult10pRendController::class, 'index']);
+Route::put('/elmult10perc/{id}', [termekController::class, 'update']);
+Route::get('/elmult10perc/{elmult10perc}', [termekController::class, 'show']);
+Route::delete('/elmult10perc/{id}', [termekController::class, 'delete']);
+Route::post('/elmult10perc', [termekController::class, 'store']);
 
 Route::get('/termek', [termekController::class, 'index']);
 Route::put('/termek/{id}', [termekController::class, 'update']);
