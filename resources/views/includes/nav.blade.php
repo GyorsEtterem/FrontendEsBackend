@@ -9,8 +9,8 @@
             <a href="dolgozo">
                 <li>Dolgozók</li>
             </a>
-            <a href="profil">
-                <li>Profil</li>
+            <a href="profilo">
+                <li>Kijelentkezés</li>
             </a>
         </div>
         <div id="menuszet2">

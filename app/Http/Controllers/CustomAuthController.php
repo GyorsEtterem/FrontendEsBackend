@@ -53,23 +53,13 @@ class CustomAuthController extends Controller
         if ($dolgozo){
             if(Hash::check($request-> jelszo, $dolgozo -> jelszo)){ 
                 $request -> session()->put('loginId', $dolgozo-> id);
-                return redirect('profilo');
+                return redirect('index');
             }else{
                 return back() -> with('sikertelen', 'Nem jó a jelszó');       
             }
         }else{
             return back() -> with('sikertelen', 'Még nem regisztráltak ezzel az email címmel');
         }
-    }
-
-
-    public function profilo(){
-        $data = array();
-        if (Session::has('loginId')){
-            $data = dolgozo :: where('id','=', Session::get('loginId'))->first();
-           
-       }
-        return view("pages.profilo", compact('data'));
     }
 
     public function logout(){
