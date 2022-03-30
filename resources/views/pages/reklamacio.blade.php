@@ -46,41 +46,63 @@
             <div class="nagydiv belsoMezo" id="reklamaicorespo">
                 <div class="reklamacio">
                     <h3 class="leiras">Lorem ipsum dolor</h3>
-                    <h3 class="mennyiseg">Lorem ipsum dolor</h3>
-                    <h3 class="datum">Lorem ipsum dolor</h3>
+                    <h3 class="menny">Lorem ipsum dolor</h3>
+                    <h3 class="csere_ideje">Lorem ipsum dolor</h3>
                     <button class="bovebb">LEZÁRÁS</button>
                 </div>
-               
             </div>
+            
             </section>
             <section class="rendelesek10perc">
             <h2>Elmúlt 10perc átadott rendelései:</h2>
             <div class="nagydiv" id="percrespo">
                  <div class="rendeles">
-                    <h3 class="rendelesszam">Lorem ipsum dolor</h3>
-                    <p>Dátum: <p class="datum"></p></p>
-                    <button class="reklamhozza">REKLAMÁCIÓ HOZZÁADÁSA</button>
+
+                    <div id="rendIDele">
+                        
+                    
+                    <p class="nyugta"></p>
+                    </div>
+                    <p>Terméknév: <p class="termek_id"></p></p>
+                    <p>Ár: <p class="termekAr"></p></p>
+                    <p>Mennyiség: <p class="menny"></p></p>
+                    <p class="csere_ideje">Dátum: </p>
+                    <p class="hozzaad"><button>REKLAMÁCIÓ HOZZÁADÁSA</button></p>
                 </div>
-                
-            </div>
             </section>
             <section class="urlap">
+            <form action="{{route('reklam-fel')}}" method="post">
+            @if(Session::has('sikeres'))
+            <div class="alert alert-sikeres">{{Session::get('sikeres')}}</div>
+            @endif
+            @if(Session::has('sikertelen'))
+            <div class="alert alert-danger">{{Session::get('sikertelen')}}</div>
+            @endif
+            @csrf
+            <div class="container">
             <fieldset>
-                <legend>Reklamáció hozzáadáas:</legend>
-                <label for="termeknev">Terménév:</label><br>
-                <input type="text" id="termeknev" name="termeknev"><br><br>
-                <label for="termekMegjegyzes">Megjegyzés:</label><br>
-                <textarea rows="5" cols="30" id="termekMegjegyzes"></textarea><br><br>
-                <label for="termekAr">Ár:</label><br>
-                <input type="text" id="termekAr" name="termekAr"><br><br>
-                <label for="termekAr">Mennyiség:</label><br>
-                <input type="text" id="termekAr" name="termekAr"><br><br>
-                <div>
-                  <input type="button" class="gomb" id="ajaxModosit" value="MÓDOSÍT">
-                </div>
+            <legend>Reklamáció hozzáadáas:</legend>
+                <label for="nyugta">Nyugta megadása:</label><br>
+                <input type="text" id="nyugta" name="nyugta" value="{{old('nyugta')}}"><br><br>
+                
+                <label for="termek_id">Termék:</label><br>
+                <input type="text" id="termek_id" name="termek_id" value="{{old('termek_id')}}"><br><br>
+                
+                <label for="leiras">Megjegyzés:</label><br>
+                <textarea rows="5" cols="30" id="leiras" name="leiras" value="{{old('leiras')}}"></textarea><br><br>
+                
+                <label for="menny">Mennyiség:</label><br>
+                <input type="text" id="menny" name="menny" value="{{old('menny')}}"><br><br>
+                
+                <label for="csere_ideje">Csere dátum:</label><br>
+                <input type="datetime-local" id="csere_ideje" name="csere_ideje" value="{{old('csere_ideje')}}"><br><br>
+                
+                
+                <button type="submit" class="gomb" id="felvesz">Hozzáadás</button>
             </fieldset>
+            </div>
+            </form>
             </section>
-            <div></div>
             
         </article>
         @endsection

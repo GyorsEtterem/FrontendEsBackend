@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\relkamacioFelvitelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +28,15 @@ Route::post('/registration-user', [CustomAuthController::class, 'registerUser'] 
 Route::post('/login-user', [CustomAuthController::class, 'loginUser'] )
 ->name('login-user');
 
-Route::get('/profilo', [CustomAuthController::class, 'profilo'] )->name('profilo');//->middleware('isLoggedIn');
+//Route::get('/profilo', [CustomAuthController::class, 'profilo'] )->name('profilo');//->middleware('isLoggedIn');
 
 Route::get('/logout', [CustomAuthController::class, 'logout'] );
+
+
+Route::post('/registration-user', [CustomAuthController::class, 'registerUser'] )->name('registration-user');
+
+
+Route::post('/reklam-fel', [relkamacioFelvitelController::class, 'reklamFelvitel'] )->name('reklam-fel');
 
 Route::get('index', function () {
     return view('pages.index');
@@ -64,6 +71,6 @@ Route::get('konyha', function () {
 });  
 
 
-Route::get('profil', function () {
-    return view('pages.profil');
+Route::get('profilo', function () {
+    return view('pages.profilo');
 });  

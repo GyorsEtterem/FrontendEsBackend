@@ -7,12 +7,12 @@ $(function () {
     
     myAjax.adatBetolt(apivegpont+"dolgozo", dolgozoTomb, dolgozoKiir);
     myAjax.adatBetolt(apivegpont+"reklamacio", reklamTomb, reklamKiir);
-    myAjax.adatBetolt(apivegpont+"rendelesek10percben", rendelesek10percbenTomb, rend10percKiir);
+    myAjax.adatBetolt(apivegpont+"elmult10perc", rendelesek10percbenTomb, rend10percKiir);
 
     // Dolgozók névsorának olala
     let keresomezo= $("#kereso");
     keresomezo.on("keyup", function(){
-        //function kereses(){
+
             const szuloElem = $(".dolgozok_tabla");
             const sablonElem = $('.dolgozo');
             apivegpont="http://127.0.0.1:8000/api/dolgozo"; //dolgozoKerese
@@ -21,28 +21,13 @@ $(function () {
             dolgozoTomb.splice();
             console.log(apivegpont);
             myAjax.adatBetolt(apivegpont, dolgozoTomb, dolgozoKiir);
-        //}
+
     
     })
-//    $(document).ready(function(e) {
-//     let timeout;
-//     let delay = 1000;
-//     $('#kereso').keyup(function(e) {
-//         console.log("ír");
-//         if(timeout) {
-//             clearTimeout(timeout);
-//             console.log(timeout);
-//         }
-//         timeout = setTimeout(function() {
-//             kereses();
-//         }, delay);
-//     });
-//});
     $("#rendezesiszempont").on("change", function() {
         
         const szuloElem = $(".dolgozok_tabla");
         const sablonElem = $('.dolgozo');
-        //const rendezesElem = $("#rendezesiszempont");
         let ujvegpont="http://127.0.0.1:8000/api/dolgozo";
         szuloElem.children().remove();
         dolgozoTomb.splice();
@@ -52,20 +37,10 @@ $(function () {
       switch(szempont) {
       case "nevRendezNo":
         ujvegpont += "?desc=nevRendezNo";
-        //myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
         break;
         case "nevRendezCsokken":
           ujvegpont +="?desc=nevRendezCsokken";
-          //myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
         break;
-        // case "korRendezNo":
-        //   ujvegpont = apivegpont+"dolgozo" + "?_sort=szuldatum&_order=asc";   
-        //   myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
-        //   break;
-        // case "korRendezCsokken":
-        //   ujvegpont = apivegpont+"dolgozo" + "?_sort=szuldatum&_order=desc";
-        //   myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
-        //   break;
       default:
         break;
       }
@@ -77,8 +52,8 @@ $(function () {
         
         const szuloElem = $(".dolgozok_tabla");
         console.log(dolgozok)
-        const sablonElem = $('#sablonhoz .dolgozo'); //$('.sablonhoz .dolgozo')
-        //sablonElem.show();
+        const sablonElem = $('#sablonhoz .dolgozo');
+
         szuloElem.empty();
         
 
@@ -89,7 +64,6 @@ $(function () {
             
 
         });
-        //sablonElem.hide();
      }
 
      
@@ -145,7 +119,7 @@ $(function () {
     function reklamKiir(reklamaciok){
         const szuloElem = $("#reklamaicorespo");
         console.log(reklamaciok)
-        const sablonElem = $('.reklamacio');
+        const sablonElem = $(' .reklamacio');
         szuloElem.empty();
         sablonElem.show();
         
@@ -158,13 +132,20 @@ $(function () {
         });
         sablonElem.hide();
     }
+
+
     function rend10percKiir(rendelesek10perc){
         const szuloElem = $("#percrespo");
         console.log(rendelesek10perc)
         const sablonElem = $('.rendeles');
         szuloElem.empty();
         sablonElem.show();
-        
+        // document.getElementById("rendIDele").prepend("Rendelés száma: ");
+        //const alap = document.getElementById('rendIDele');
+        //const ele = document.createElement()
+        //alap.innerHTML += "Rendelés száma:";
+        //alap.
+
 
         rendelesek10perc.forEach(function(elem) {
             let node = sablonElem.clone().appendTo(szuloElem);
@@ -174,5 +155,14 @@ $(function () {
         });
         sablonElem.hide();
     }
+
+    $(window).on("hozzaad", (event) => {
+        console.log(event.detail);
+        $("#termek_id").val(event.detail.termek_id);
+        $("#termekAr").val(event.detail.termekar);
+        $("#menny").val(event.detail.menny);
+        $("#rendelesszam").val(event.detail.nyugta);
+        $("#nyugta").val(event.detail.nyugta);
+    });
 
 });

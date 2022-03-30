@@ -9,4 +9,13 @@ class reklamacio extends Model
 {
     use HasFactory;
     protected $primaryKey='reklam_id';
+
+    protected $fillable = [
+         'reklam_id',
+         'termek_id',
+         'mennyiseg',
+         'leiras',
+         'csere_ideje',
+         'nyugta'
+    ];
 }
