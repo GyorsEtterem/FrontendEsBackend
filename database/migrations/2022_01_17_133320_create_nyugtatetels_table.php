@@ -20,7 +20,6 @@ class CreateNyugtatetelsTable extends Migration
             $table->Integer('nyugta')->unsigned();
             $table->index('nyugta');
             $table->foreign('nyugta')->references('nyugtaszam')->on('nyugtas');
-            $table->Integer('mennyiseg');
             $table->boolean('etelAllapot')->default(true);
             $table->timestamp('datumKesz');
             $table->primary(['nyugta','termek_id']);

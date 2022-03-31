@@ -22,7 +22,6 @@ class CreateReklamaciosTable extends Migration
             $table->index('nyugta');
             $table->foreign('nyugta')->references('nyugta')->on('nyugtatetels');
             $table->char('leiras', 50);
-            $table->Integer('menny');
             $table->date('csere_ideje');
             $table->timestamps();
         });
