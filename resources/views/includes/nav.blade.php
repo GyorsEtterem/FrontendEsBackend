@@ -6,19 +6,19 @@
             <a href="konyha">
                 <li>Konyha</li>
             </a>
-            <a href="dolgozo">
-                <li>Dolgozók</li>
+            <a href="rendelesek">
+                <li>Rendelések</li>
             </a>
-            <a href="profilo">
-                <li>Kijelentkezés</li>
+            <a href="logout">
+                <li><button class="kijelentkez">Kijelentkezés</button></li>
             </a>
         </div>
         <div id="menuszet2">
             <a href="kedvezmeny">
                 <li>Kedvezmény</li>
             </a>
-            <a href="rendelesek">
-                <li>Rendelések</li>
+            <a href="dolgozo">
+                <li>Dolgozók</li>
             </a>
             <a href="reklamacio">
                 <li>Reklamáció</li>
@@ -29,9 +29,9 @@
     <div class="dropdown">
         <button class="dropbtn">Menü</button>
         <div class="dropdown-content">
+            <a href="logout"><button class="kijelentkezreszpo">Kijelentkezés</button></a>
             <a href="konyha">Konyha</a>
             <a href="dolgozo">Dolgozók</a>
-            <a href="profil">Profil</a>
             <a href="kedvezmeny">Kedvezmény</a>
             <a href="rendelesek">Rendelések</a>
             <a href="reklamacio">Reklamáció</a>

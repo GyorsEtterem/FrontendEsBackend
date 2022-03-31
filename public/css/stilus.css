@@ -23,7 +23,7 @@ nav ul li {
 nav ul li:hover {
     background-color: rgb(189, 161, 161);
 }
-nav ul a {
+nav ul a, .kijelentkez {
     text-decoration: none;
     color: rgb(243, 237, 229);
     
@@ -38,6 +38,16 @@ button{
     border-radius: 5px;
 }
 
+.kijelentkez:hover{
+    background-color: rgb(189, 161, 161);
+    border: none;
+    
+}
+.kijelentkezreszpo{
+    background-color: #f1f1f1;
+    color: rgb(51, 0, 0);
+    border: none;
+}
 .kozosGomb{
     margin-top: 5pt;
 }
