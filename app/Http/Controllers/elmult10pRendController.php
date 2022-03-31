@@ -25,7 +25,6 @@ class elmult10pRendController extends Controller
             
             'termeks.termek_id as termek_id',
             'termeks.ar as termekar',
-            'nyugtatetels.mennyiseg as menny',
             'nyugtatetels.datumKesz as csere_ideje' ,
             'nyugtatetels.nyugta as nyugta'
         )

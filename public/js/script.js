@@ -3,7 +3,7 @@ $(function () {
     const dolgozoTomb = [];
     const reklamTomb = [];
     const rendelesek10percbenTomb = [];
-    let apivegpont="http://127.0.0.1:8000/api/";
+    let apivegpont="/api/";
     
     myAjax.adatBetolt(apivegpont+"dolgozo", dolgozoTomb, dolgozoKiir);
     myAjax.adatBetolt(apivegpont+"reklamacio", reklamTomb, reklamKiir);
@@ -160,7 +160,6 @@ $(function () {
         console.log(event.detail);
         $("#termek_id").val(event.detail.termek_id);
         $("#termekAr").val(event.detail.termekar);
-        $("#menny").val(event.detail.menny);
         $("#rendelesszam").val(event.detail.nyugta);
         $("#nyugta").val(event.detail.nyugta);
     });

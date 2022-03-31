@@ -15,14 +15,12 @@ class relkamacioFelvitelController extends Controller
             'termek_id' => 'required', 
             'nyugta' => 'required', 
             'leiras' => 'required|unique:reklamacios', 
-            'menny' => 'required', 
             'csere_ideje' => 'required', 
         ]);
         $reklamal = new reklamacio();
             $reklamal -> termek_id = $request -> termek_id;
             $reklamal -> nyugta = $request -> nyugta;
             $reklamal -> leiras = $request -> leiras;
-            $reklamal -> menny = $request -> menny;
             $reklamal -> csere_ideje = $request -> csere_ideje;
             $res = $reklamal -> save();
 

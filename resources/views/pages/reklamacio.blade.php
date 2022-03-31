@@ -46,9 +46,8 @@
             <div class="nagydiv belsoMezo" id="reklamaicorespo">
                 <div class="reklamacio">
                     <h3 class="leiras">Lorem ipsum dolor</h3>
-                    <h3 class="menny">Lorem ipsum dolor</h3>
                     <h3 class="csere_ideje">Lorem ipsum dolor</h3>
-                    <button class="bovebb">LEZÁRÁS</button>
+                    <!-- <button class="bovebb">LEZÁRÁS</button> -->
                 </div>
             </div>
             
@@ -58,11 +57,11 @@
             <div class="nagydiv" id="percrespo">
                  <div class="rendeles">
 
-                    <div id="rendIDele">
-                        
+                    <!-- <div id="rendIDele">
+                    </div>  -->
                     
                     <p class="nyugta"></p>
-                    </div>
+                    
                     <p>Terméknév: <p class="termek_id"></p></p>
                     <p>Ár: <p class="termekAr"></p></p>
                     <p>Mennyiség: <p class="menny"></p></p>
@@ -90,10 +89,7 @@
                 
                 <label for="leiras">Megjegyzés:</label><br>
                 <textarea rows="5" cols="30" id="leiras" name="leiras" value="{{old('leiras')}}"></textarea><br><br>
-                
-                <label for="menny">Mennyiség:</label><br>
-                <input type="text" id="menny" name="menny" value="{{old('menny')}}"><br><br>
-                
+               
                 <label for="csere_ideje">Csere dátum:</label><br>
                 <input type="datetime-local" id="csere_ideje" name="csere_ideje" value="{{old('csere_ideje')}}"><br><br>
                 
