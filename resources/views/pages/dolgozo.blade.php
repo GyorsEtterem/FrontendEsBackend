@@ -92,7 +92,7 @@
                 
                 </tbody>
             </table>
-            <a class="regisztraciofelv" href="regisztracio"><button class="kozosGomb">Új dolgozó regisztrácálása</button></a>
+            <a class="regisztraciofelv" href="registration"><button class="kozosGomb">Új dolgozó regisztrácálása</button></a>
             <br><br>
             <section class="urlap">
             <form action="">
