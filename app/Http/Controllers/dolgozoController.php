@@ -70,7 +70,7 @@ class dolgozoController extends Controller
          'cim' => 'required',
          'telefonszam' => 'required',
          'email' => 'required',
-         //'munkakor_id' => 'required',
+         'munkakor_id' => 'required',
          'jelszo' => 'required'
       ]);
         $dolgozo = dolgozo::find($dolg_id);
@@ -79,6 +79,7 @@ class dolgozoController extends Controller
         $dolgozo-> cim = $request-> cim;
         $dolgozo-> telefonszam = $request-> telefonszam;
         $dolgozo-> email = $request-> email;
+        $dolgozo-> munkakor_id = $request-> munkakor_id;
         $dolgozo-> jelszo = $request-> jelszo;
         $dolgozo->save();
 
