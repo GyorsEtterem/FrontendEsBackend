@@ -132,7 +132,7 @@ footer p{
 }
 
 /************reszponzivitás****************/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
 
     #konyha {
         grid-template-columns: 1fr 1fr;
@@ -166,7 +166,7 @@ footer p{
     
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 1201px) {
     .dropdown, .cimMenunKivul{
         display: none;
     }
