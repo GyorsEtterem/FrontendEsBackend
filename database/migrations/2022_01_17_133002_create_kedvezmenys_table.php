@@ -13,7 +13,7 @@ class CreateKedvezmenysTable extends Migration
      */
     public function up()
     {
-        Schema::create('kedvezmenys', function (Blueprint $table) {
+        Schema::create('kedvezmenies', function (Blueprint $table) {
             $table->increments('kedvezmeny_id')->start_from(400);
             /* $table->smallIncrements('kedvezmeny_id')->primary(); */
             $table->Integer('kedvezmeny');

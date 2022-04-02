@@ -23,7 +23,7 @@ class CreateTermeksTable extends Migration
             $table->char('meret', 8);
             $table->Integer('kedvezmeny_id')->unsigned();
             $table->index('kedvezmeny_id');
-            $table->foreign('kedvezmeny_id')->references('kedvezmeny_id')->on('kedvezmenys');
+            $table->foreign('kedvezmeny_id')->references('kedvezmeny_id')->on('kedvezmenies');
             $table->Integer('ar');
             $table->char('kep',35);
             $table->timestamps();
