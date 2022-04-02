@@ -35,7 +35,7 @@ class kedvezmenyController extends Controller
         //kötelező oszlopok
 
      $request->validate([
-        'poszt' => 'required'
+        //'poszt' => 'required'
         ]);
 
         return kedvezmeny::create($request->all());
@@ -44,14 +44,14 @@ class kedvezmenyController extends Controller
 
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request,string $id)
 
     {
 
         $article = kedvezmeny::find($id);
 
      $request->validate([
-        'poszt' => 'required'
+        //'poszt' => 'required'
      ]);
 
         $article->update($request->all());

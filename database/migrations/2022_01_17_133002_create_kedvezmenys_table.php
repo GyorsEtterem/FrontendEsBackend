@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKedvezmenyesTable extends Migration
+class CreateKedvezmenysTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateKedvezmenyesTable extends Migration
      */
     public function up()
     {
-        Schema::create('kedvezmenyes', function (Blueprint $table) {
+        Schema::create('kedvezmenys', function (Blueprint $table) {
             $table->increments('kedvezmeny_id')->start_from(400);
             /* $table->smallIncrements('kedvezmeny_id')->primary(); */
             $table->Integer('kedvezmeny');
@@ -30,6 +30,6 @@ class CreateKedvezmenyesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kedvezmenies');
+        Schema::dropIfExists('kedvezmenys');
     }
 }

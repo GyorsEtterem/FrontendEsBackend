@@ -9,4 +9,10 @@ class kedvezmeny extends Model
 {
     use HasFactory;
     protected $primaryKey='kedvezmeny_id';
+
+    protected $fillable = [
+        'kedvezmeny',
+        'mettol',
+        'meddig'
+    ];
 }

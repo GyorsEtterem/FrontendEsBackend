@@ -4,31 +4,27 @@ class Kedvezmeny{
         this.node = node;
         /**selectorok elnvezése */
         this.adat = adat;
-        this.termeknev = this.node.children(".termeknev");
-        this.meret = this.node.children(".meret");
-        this.kedvAr = this.node.children(".kedvAr");
-        this.kedvKezd = this.node.children(".kezdet");
-        this.kedvVeg = this.node.children(".veg");
-        this.kedvezmeny = this.node.children(".szazalek");
-        this.termekKep = this.node.children(".kep");
+        this.kedvezmeny_id = adat.kedvezmeny_id;
+        this.kedvSzaz = this.node.children(".kedvSzaz");
+        this.kedvKez = this.node.children(".kedvKez");
+        this.kedvVeg = this.node.children(".kedvVeg");
         this.setAdat(this.adat);
-        this.atszamol(this.adat);
-    }
-    
-    atszamol(adat){
-        let kedvezmenyesAr = adat.ar*((100-adat.kedvezmeny)/100);
-        this.kedvAr.text(kedvezmenyesAr);
+        /* this.termekTorles = this.node.children(".tTorles").children("button");
+        this.termekModosit = this.node.children(".tModositas").children("button");
+        this.termekTorles.on("click ", () => {
+            this.torlesTrigger(this.adat);
+        });
+        this.termekModosit.on("click ", () => {
+            this.modositTrigger();
+        }); */
     }
 
     setAdat(adat) {
         console.log(adat)
         this.adat = adat;
-        this.termeknev.text(adat.termeknev);
-        this.meret.text(adat.meret);
-        this.kedvKezd.text(adat.mettol);
+        this.kedvezmeny_id.text(adat.kedvezmeny_id);
+        this.kedvSzaz.text(adat.kedvezmeny);
+        this.kedvKez.text(adat.mettol);
         this.kedvVeg.text(adat.meddig);
-        this.kedvAr.text(adat.kedvAr);
-        this.kedvezmeny.text(adat.kedvezmeny);
-        this.termekKep.attr("src", adat.kep);
     }
 }
