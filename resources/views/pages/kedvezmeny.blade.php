@@ -46,9 +46,9 @@
                 <div id="kedvezmenySablon">
                     <div class="kedvezmeny">
                         <p>Kedvezmény ID: <p class="kedvId"></p></p>
-                        <b><p>Kedvezmény százaléka: <span class="kedvSzaz"></span></p></b>
-                        <p>Kedvezmény kezdete: <span class="kedvKez"></span></p>
-                        <p>Kedvezmény vége: <span class="kedvVeg"></span></p>
+                        <p>Kedvezmény százaléka: <p class="kedvSzaz"></p></p>
+                        <p>Kedvezmény kezdete: <p class="kedvKez"></p></p>
+                        <p>Kedvezmény vége: <p class="kedvVeg"></p></p>
                         <!-- <button class="modositas">MÓDOSÍT</button> -->
                     </div>
                 </div>

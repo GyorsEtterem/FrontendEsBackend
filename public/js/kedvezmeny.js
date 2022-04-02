@@ -4,7 +4,7 @@ class Kedvezmeny{
         this.node = node;
         /**selectorok elnvezése */
         this.adat = adat;
-        this.kedvezmeny_id = adat.kedvezmeny_id;
+        this.kedvezmeny_id = this.node.children(".kedvId");
         this.kedvSzaz = this.node.children(".kedvSzaz");
         this.kedvKez = this.node.children(".kedvKez");
         this.kedvVeg = this.node.children(".kedvVeg");
