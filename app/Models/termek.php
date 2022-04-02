@@ -9,4 +9,11 @@ class termek extends Model
 {
     use HasFactory;
     protected $primaryKey='termek_id';
+
+    protected $fillable = [
+        'termeknev',
+        'ar',
+        'kedvezmeny_id',
+        'kep'
+    ];
 }
