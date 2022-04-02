@@ -141,8 +141,11 @@ footer p{
         display: none;
     }
     .felsoSav{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:30% 70%;
+    }
           
+    .felsoSav div nav{
+        float: right;
     }
     .szures {
         grid-template-columns: 1fr;
@@ -155,14 +158,18 @@ footer p{
         grid-template-columns: 1fr;
 
     }
-    .felsoSav{
-        grid-template-columns: 1fr 50px;
+    /* .felsoSav{
+        grid-template-columns: 100px 100px;
           
-    }
+    } */
     .logo{
         display: block;
         margin: auto;
     }
+    .felsoSav div nav{
+        float: right;
+    }
+    
     
 }
 
