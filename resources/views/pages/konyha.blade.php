@@ -21,7 +21,7 @@
                 <div>
                     <a href="index"><img src="../kepek/logo.png" alt="Oldalunk logója" class="logo"></a>
                 </div>
-                <div>
+                <div class="cimMenuben">
                     <h1>Készülő rendelések</h1>
                 </div>
                 <div>
@@ -34,6 +34,9 @@
             </div>
         </header>
         <article>
+        <div class="cimMenunKivul">
+                <h1>Készülő rendelések</h1>
+            </div>
             <div class="nagydiv" id="konyha">
                 <div class="termek">
                     <h3 class="termeknev">Lorem ipsum dolor</h3>

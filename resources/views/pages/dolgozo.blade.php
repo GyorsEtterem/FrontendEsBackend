@@ -41,6 +41,9 @@
         </header>
         
         <article>
+        <div class="cimMenunKivul">
+                <h1>Dolgozók</h1>
+        </div>
         <section class="szures">
             <div>
                 <form>
@@ -70,9 +73,7 @@
                     </tr>
                     </table>
         </article>
-            <div class="cimMenunKivul">
-                <h1>Dolgozók</h1>
-            </div>
+            
             <table class="dolgozok">
             <thead>
                     <tr>
