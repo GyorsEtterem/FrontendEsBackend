@@ -10,16 +10,16 @@ $(function () {
     let apiVege = "";
     let apiTomb = "";
     let apiFunc = "";
-    if (window.location.href == apiEleje+"/dolgozo") {
+    if (window.location.href.includes("dolgozo")) {
         apiVege = "dolgozo";
         apiTomb = dolgozoTomb;
         apiFunc = dolgozoKiir;
-    }else if(window.location.href == apiEleje+"/reklamacio"){
+    }else if(window.location.href.includes("reklamacio")){
         apiVege = "reklamacio";
         apiTomb = reklamTomb;
         apiFunc = reklamKiir;
         myAjax.adatBetolt(apivegpont+"elmult10perc", rendelesek10percbenTomb, rend10percKiir);
-    }else if(window.location.href == apiEleje+"/termek"){
+    }else if(window.location.href.includes("termek")){
         apiVege = "termek";
         apiTomb = termekTomb;
         apiFunc = termekKiir;
