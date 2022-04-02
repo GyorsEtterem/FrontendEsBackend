@@ -2,12 +2,35 @@ $(function () {
     const myAjax = new MyAjax;
     const dolgozoTomb = [];
     const reklamTomb = [];
+    const termekTomb = [];
     const rendelesek10percbenTomb = [];
     let apivegpont="/api/";
     
-    myAjax.adatBetolt(apivegpont+"dolgozo", dolgozoTomb, dolgozoKiir);
-    myAjax.adatBetolt(apivegpont+"reklamacio", reklamTomb, reklamKiir);
-    myAjax.adatBetolt(apivegpont+"elmult10perc", rendelesek10percbenTomb, rend10percKiir);
+    let apiEleje = "http://127.0.0.1:8000";
+    let apiVege = "";
+    let apiTomb = "";
+    let apiFunc = "";
+    if (window.location.href.includes("dolgozo")) {
+        apiVege = "dolgozo";
+        apiTomb = dolgozoTomb;
+        apiFunc = dolgozoKiir;
+    }else if(window.location.href.includes("reklamacio")){
+        apiVege = "reklamacio";
+        apiTomb = reklamTomb;
+        apiFunc = reklamKiir;
+        myAjax.adatBetolt(apivegpont+"elmult10perc", rendelesek10percbenTomb, rend10percKiir);
+    }else if(window.location.href.includes("termek")){
+        apiVege = "termek";
+        apiTomb = termekTomb;
+        apiFunc = termekKiir;
+    }
+    myAjax.adatBetolt(apivegpont+apiVege, apiTomb, apiFunc);
+    console.log(window.location.href);
+
+    /* myAjax.adatBetolt(apivegpont+"dolgozo", dolgozoTomb, dolgozoKiir);
+    myAjax.adatBetolt(apivegpont+"reklamacio", reklamTomb, reklamKiir); */
+    /* myAjax.adatBetolt(apivegpont+"elmult10perc", rendelesek10percbenTomb, rend10percKiir); */
+    /* myAjax.adatBetolt(apivegpont+"termek", termekTomb, termekKiir); */
 
     // Dolgozók névsorának olala
     let keresomezo= $("#kereso");
@@ -15,7 +38,7 @@ $(function () {
 
             const szuloElem = $(".dolgozok_tabla");
             const sablonElem = $('.dolgozo');
-            apivegpont="http://127.0.0.1:8000/api/dolgozo"; //dolgozoKerese
+            apivegpont="/api/dolgozo"; //dolgozoKerese
             apivegpont += "?q=" + keresomezo.val();
             szuloElem.children().remove();
             dolgozoTomb.splice();
@@ -28,7 +51,7 @@ $(function () {
         
         const szuloElem = $(".dolgozok_tabla");
         const sablonElem = $('.dolgozo');
-        let ujvegpont="http://127.0.0.1:8000/api/dolgozo";
+        let ujvegpont="/api/dolgozo";
         szuloElem.children().remove();
         dolgozoTomb.splice();
         let szempont = $(this).val();
@@ -46,7 +69,7 @@ $(function () {
       }
       
       myAjax.adatBetolt(ujvegpont, dolgozoTomb, dolgozoKiir);
-      })
+    })
 
     function dolgozoKiir(dolgozok){
         
@@ -77,6 +100,7 @@ $(function () {
         console.log(event.detail);
         console.log(event.detail.dolg_id);
         $("#dolgId").val(event.detail.dolg_id);
+        console.log($("#dolgId").val());
         $("#dolgozonev").val(event.detail.neve);
         $("#szuldatum").val(event.detail.szuldatum);
         $("#cim").val(event.detail.cim);
@@ -115,7 +139,7 @@ $(function () {
     });
 
 
-// Reklamációk oldala
+    // Reklamációk oldala
     function reklamKiir(reklamaciok){
         const szuloElem = $("#reklamaicorespo");
         console.log(reklamaciok)
@@ -164,4 +188,58 @@ $(function () {
         $("#nyugta").val(event.detail.nyugta);
     });
 
+    // termekek oldal
+    function termekKiir(termekek){
+        const szuloElem = $(".nagydiv");
+        console.log(termekek);
+        const sablonElem = $("#termekSablon .termek");
+
+        szuloElem.empty();
+        sablonElem.show();
+        
+        termekek.forEach(function(elem) {
+            let node = sablonElem.clone().appendTo(szuloElem);
+            const obj = new Termek(node, elem);
+        });
+        sablonElem.hide();
+    }
+
+    $(window).on("tTorles", (event) => {
+        console.log(event.detail.termek_id);
+        myAjax.adatTorles(apivegpont+"termek", event.detail.termek_id);
+        window.location.reload();
+    });
+
+    $(window).on("tModositas", (event) => {
+        console.log(event.detail);
+        console.log(event.detail.termek_id);
+        $("#termek_id").val(event.detail.termek_id);
+        console.log($("#termek_id").val());
+        $("#termeknev").val(event.detail.termeknev);
+        $("#termekAr").val(event.detail.ar);
+        $("#szazalek").val(event.detail.kedvezmeny_id);
+        $("#termekKep").val(event.detail.kep);
+    });
+
+    $("#tAjaxModosit").on("click", () =>{
+        
+        let adat= {}
+        adat.termek_id= $("#termek_id").val();
+        adat.termeknev= $("#termeknev").val();
+        adat.ar=$("#termekAr").val();
+        adat.kedvezmeny_id= $("#szazalek").val();
+        adat.termekKep= $("#termekKep").val();
+        
+        console.log(adat);
+        myAjax.adatPut(apivegpont+"termek", adat, adat.termek_id);
+        
+        myAjax.adatBetolt(apivegpont+"termek", termekTomb, termekKiir);
+        
+        $("#termek_id").val('');
+        $("#termeknev").val('');
+        $("#termekAr").val('');
+        $("#szazalek").val('');
+        $("#termekKep").val('');
+        //window.location.reload();
+    });
 });

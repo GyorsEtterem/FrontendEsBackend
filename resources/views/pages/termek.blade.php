@@ -10,6 +10,9 @@
     <link href="../css/stilus.css" rel="stylesheet" type="text/css"/>
     <link href="../css/szerkezet.css" rel="stylesheet" type="text/css"/>
     <link href="../css/termek.css" rel="stylesheet" type="text/css"/>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/termek.js"></script>
+    <script src="../js/script.js"></script>
     <link rel="icon" href="../kepek/icon.png" type="image/png">
     <title>Gyorsétterem</title>
 </head>
@@ -39,32 +42,41 @@
             <div class="cimMenunKivul">
                 <h1>Termékek</h1>
             </div>
-            <div class="nagydiv">
+            <div id="termekSablon">
                 <div class="termek">
                     <h3 class="termeknev">Lorem ipsum dolor</h3>
                     <img src="" alt="" class="termekKep" />
                     <p>Termék méret besorolása: <p class="meret"></p></p>
                     <p>Kedvezmény százaléka: <p class="szazalek"></p></p>
-                    <p>Kedvezményes ár: <span class="kedvAr"></span></p>
-                    <a href="#ulaphozUgro"><button class="modositas">MÓDOSÍT</button></a>
+                    <p>Kedvezményes ár: <p class="kedvAr"></p> Ft</p>
+                    <a class="tTorles"><button>TÖRLÉS</button></a>
+                    <a class="tModositas" href="#ulaphozUgro"><button>MÓDOSÍT</button></a>
                 </div>
             </div>
+            <div class="nagydiv">
+                
+            </div>
             <section class="urlap" id="ulaphozUgro" >
-                <fieldset>
-                    <legend>Termék szerkesztése:</legend>
-                    <label for="termeknev">Terménév:</label><br>
-                    <input type="text" id="termeknev" name="termeknev"><br><br>
-                    <label for="termekAr">Ár:</label><br>
-                    <input type="text" id="termekAr" name="termekAr"><br><br>
-                    <label for="szazalek">Kedvezmény:</label><br>
-                    <input type="text" id="szazalek" name="szazalek"><br><br>
-                    <label for="kep">Válasszon képet:</label>
-                      <input type="file" id="kep" name="kep"><br><br>
-                      <div>
-                    <div>
-                        <input type="button" class="gomb" id="ajaxModosit" value="MÓDOSÍT">
-                    </div>
-                </fieldset>
+                <form action="">
+                    <fieldset>
+                        <legend>Termék szerkesztése:</legend>
+                        <input type="number" name="termek_id" id="termek_id" >
+                        <label for="termeknev">Terménév:</label><br>
+                        <input type="text" id="termeknev" name="termeknev"><br><br>
+                        <label for="termekAr">Ár:</label><br>
+                        <input type="text" id="termekAr" name="termekAr"><br><br>
+                        <label for="szazalek">Kedvezmény:</label><br>
+                        <input type="text" id="szazalek" name="szazalek"><br><br>
+                        <label for="termekKep">Kép:</label><br>
+                        <input type="text" id="termekKep" name="termekKep"><br><br>
+                        <label for="kep">Válasszon képet:</label>
+                        <input type="file" id="kep" name="kep"><br><br>
+                        <div>
+                        <div>
+                            <input type="submit" class="gomb" id="tAjaxModosit" value="MÓDOSÍT">
+                        </div>
+                    </fieldset>
+                </form>
             </section>
         </section>
             <section class="kosar">

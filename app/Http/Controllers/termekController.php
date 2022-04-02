@@ -32,8 +32,8 @@ class termekController extends Controller
 
         //kötelező oszlopok
 
-     $request->validate([
-        'poszt' => 'required'
+        $request->validate([
+        //'poszt' => 'required'
         ]);
 
         return termek::create($request->all());
@@ -42,21 +42,28 @@ class termekController extends Controller
 
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request,string $termek_id)
 
     {
 
-        $article = termek::find($id);
+        // $article = termek::find($id);
 
-     $request->validate([
-        'poszt' => 'required'
-     ]);
+        $request->validate([
+            'termeknev' => 'required',
+            'ar' => 'required',
+            'kedvezmeny_id' => 'required',
+            'kep' => 'required'
+        ]);
 
-        $article->update($request->all());
+        $termek = termek::find($termek_id);
+        $termek -> termeknev = $request -> termeknev;
+        $termek -> ar = $request -> ar;
+        $termek -> kedvezmeny_id = $request -> kedvezmeny_id;
+        $termek -> kep = $request -> kep;
+        $termek -> save();
 
 
-
-        return $article;
+        return ['message' => 'Módosítva'];
 
     }
 
