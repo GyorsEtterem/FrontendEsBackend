@@ -56,16 +56,10 @@
             <h2>Elmúlt 10perc átadott rendelései:</h2>
             <div class="nagydiv" id="percrespo">
                  <div class="rendeles">
-
-                    <!-- <div id="rendIDele">
-                    </div>  -->
-                    
                     <p class="nyugta"></p>
-                    
-                    <p>Terméknév: <p class="termek_id"></p></p>
-                    <p>Ár: <p class="termekAr"></p></p>
-                    <p>Mennyiség: <p class="menny"></p></p>
-                    <p class="csere_ideje">Dátum: </p>
+                    <p class="termek_id"></p>
+                    <p class="termekAr"></p>
+                    <p class="csere_ideje"></p>
                     <p class="hozzaad"><button>REKLAMÁCIÓ HOZZÁADÁSA</button></p>
                 </div>
             </section>

@@ -41,10 +41,10 @@ class Rendelesek10percben extends Rendeles {
 
     setAdat(adat) {
         this.adat = adat;
-        this.rendTermek.text(adat.termek_id);
-        this.rendAr.text(adat.termekar);
-        this.rendNyugta.text(adat.nyugta);
-        this.rendIdeje.text(adat.csere_ideje);
+        this.rendTermek.text("Termék száma: " + adat.termek_id);
+        this.rendAr.text("Termék ára: " + adat.termekar);
+        this.rendNyugta.text("Rendelés sorszáma: " + adat.nyugta);
+        this.rendIdeje.text("Rendelés ideje: " + adat.csere_ideje);
     }
 
     hozzaadTrigger(){
