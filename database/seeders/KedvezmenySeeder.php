@@ -14,7 +14,7 @@ class KedvezmenySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('kedvezmenyes')->insert([
+        DB::table('kedvezmenys')->insert([
             ['kedvezmeny' =>0, 'mettol' =>'2021-01-01', 'meddig' =>'2023-01-01'],
             ['kedvezmeny' =>5, 'mettol' =>'2021-01-01', 'meddig' =>'2023-01-01'],
             ['kedvezmeny' =>10, 'mettol' =>'2021-01-01', 'meddig' =>'2023-01-01']

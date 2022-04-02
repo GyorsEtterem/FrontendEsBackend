@@ -4,9 +4,9 @@ $(function () {
     const reklamTomb = [];
     const termekTomb = [];
     const rendelesek10percbenTomb = [];
+    const kedvezmenyTomb = [];
     let apivegpont="/api/";
     
-    let apiEleje = "http://127.0.0.1:8000";
     let apiVege = "";
     let apiTomb = "";
     let apiFunc = "";
@@ -23,6 +23,12 @@ $(function () {
         apiVege = "termek";
         apiTomb = termekTomb;
         apiFunc = termekKiir;
+    }else if(window.location.href.includes("kedvezmeny")){
+        console.log("kedvezmenyek");
+        apiVege = "kedvezmeny";
+        apiTomb = kedvezmenyTomb;
+        apiFunc = kedvezmenyKiir;
+        console.log(apivegpont+apiVege);
     }
     myAjax.adatBetolt(apivegpont+apiVege, apiTomb, apiFunc);
     console.log(window.location.href);
@@ -139,7 +145,7 @@ $(function () {
     });
 
 
-    // Reklamációk oldala
+    // Reklamációk oldala ----------------------------------------
     function reklamKiir(reklamaciok){
         const szuloElem = $("#reklamaicorespo");
         console.log(reklamaciok)
@@ -188,7 +194,7 @@ $(function () {
         $("#nyugta").val(event.detail.nyugta);
     });
 
-    // termekek oldal
+    // termekek oldal ----------------------------------------
     function termekKiir(termekek){
         const szuloElem = $(".nagydiv");
         console.log(termekek);
@@ -242,4 +248,20 @@ $(function () {
         $("#termekKep").val('');
         //window.location.reload();
     });
+
+    // kedvezmenyek oldal ----------------------------------------
+    function kedvezmenyKiir(kedvezmenyek){
+        const szuloElem = $(".nagydiv");
+        console.log(kedvezmenyek);
+        const sablonElem = $("#kedvezmenySablon .kedvezmeny");
+
+        szuloElem.empty();
+        sablonElem.show();
+        
+        kedvezmenyek.forEach(function(elem) {
+            let node = sablonElem.clone().appendTo(szuloElem);
+            const obj = new Kedvezmeny(node, elem);
+        });
+        sablonElem.hide();
+    }
 });
