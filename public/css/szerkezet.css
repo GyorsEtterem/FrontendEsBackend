@@ -56,7 +56,9 @@ article {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #c1abad; /* 916848 #E3E4E0; #DAE3D9;*/
+    background-color: #ddd2d3;/*#c1abad; /* 916848 #E3E4E0; #DAE3D9;*/
+    border-radius: 5px;
+    border: 1px solid rgb(51, 0, 0);
     min-width: 160px;
     right: 0;
     z-index: 1;
@@ -64,7 +66,8 @@ article {
 .dropdown-content2 {
     display: none;
     position: absolute;
-    background-color: #c1abad;
+    background-color: #ddd2d3;
+    border: 1px solid rgb(51, 0, 0);
     border-radius: 5px;
     min-width: 160px;
     z-index: 2;
