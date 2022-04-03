@@ -62,7 +62,7 @@
                         <p class="termek_id"></p>
                         <p class="termekAr"></p>
                         <p class="csere_ideje"></p>
-                        <p class="hozzaad"><button>REKLAMÁCIÓ HOZZÁADÁSA</button></p>
+                        <p class="hozzaad"><button>Reklamáció hozzáadása</button></p>
                     </div>
             </section>
             <section class="urlap">

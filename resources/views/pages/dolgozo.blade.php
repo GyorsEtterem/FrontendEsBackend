@@ -120,7 +120,7 @@
                         <input type="text" id="telefonszam" placeholder="06301234567" name="telefonszam"></br></br>
 
                         <div>
-                            <input type="submit" id="ajaxModosit" value="MÓDOSÍT">
+                            <input type="submit" id="ajaxModosit" class="gomb" value="Módosít">
                         </div>
                     </fieldset>
                 </form>
