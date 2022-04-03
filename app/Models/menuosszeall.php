@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class menuosszeall extends Model
 {
     use HasFactory;
-    protected $primaryKey='menu_id';
+    protected $primaryKey = 'menu_id';
 }

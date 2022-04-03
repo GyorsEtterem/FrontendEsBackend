@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class reklamacio extends Model
 {
     use HasFactory;
-    protected $primaryKey='reklam_id';
+    protected $primaryKey = 'reklam_id';
 
     protected $fillable = [
-         'reklam_id',
-         'termek_id',
-         'mennyiseg',
-         'leiras',
-         'csere_ideje',
-         'nyugta'
+        'reklam_id',
+        'termek_id',
+        'mennyiseg',
+        'leiras',
+        'csere_ideje',
+        'nyugta'
     ];
 }

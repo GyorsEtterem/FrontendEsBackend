@@ -1,44 +1,59 @@
-.dolgozok{
-    width:100%; 
-    border:1px solid rgb(51, 0, 0);
+.dolgozok {
+    background-color: #cab8b9;
+    width: 100%;
+    border: 1px solid rgb(51, 0, 0);
     padding: 10px;
 }
 
-#dolgId{
+#dolgId {
     display: none;
 }
 
-#sablonhoz .dolgozo{
+#sablonhoz .dolgozo {
     display: none;
 }
-
-tr{
+table,
+td {
+    border: 1px solid rgb(51, 0, 0);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+tr {
     padding: 10px;
     margin: 1px;
 }
-
-td{
-    padding-bottom: 10px;
-    padding-left: 50px;
+th,
+td,
+tr {
+    padding: 8px;
+}
+th {
 }
 /************reszponzivitás****************/
- @media screen and (max-width: 1200px) {
-     .dolgozok{
-         padding: 0px;
-     }
-    tr{
+@media screen and (max-width: 1200px) {
+    .dolgozok {
+        padding: 0px;
+    }
+    tr {
         display: grid;
         grid-template-columns: 1fr;
-        border:1px solid rgb(51, 0, 0);
-    } 
-    
-    thead{
+        border: 1px solid rgb(51, 0, 0);
+    }
+    table,
+    td {
+        border: none;
+    }
+    thead {
         display: none;
     }
-    .dolgozok .torles, .dolgozok .modositas, .urlap{
+    .dolgozok .torles,
+    .dolgozok .modositas,
+    .urlap {
         display: none;
     }
-    .regisztraciofelv{
+    .regisztraciofelv {
         display: none;
     }
 }

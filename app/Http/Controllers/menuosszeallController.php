@@ -13,17 +13,15 @@ class menuosszeallController extends Controller
     {
 
         return menuosszeall::all();
-
     }
 
- 
+
 
     public function show($id)
 
     {
 
         return menuosszeall::find($id);
-
     }
 
 
@@ -34,12 +32,11 @@ class menuosszeallController extends Controller
 
         //kötelező oszlopok
 
-     $request->validate([
-        'poszt' => 'required'
+        $request->validate([
+            'poszt' => 'required'
         ]);
 
         return menuosszeall::create($request->all());
-
     }
 
 
@@ -50,16 +47,15 @@ class menuosszeallController extends Controller
 
         $article = menuosszeall::find($id);
 
-     $request->validate([
-        'poszt' => 'required'
-     ]);
+        $request->validate([
+            'poszt' => 'required'
+        ]);
 
         $article->update($request->all());
 
 
 
         return $article;
-
     }
 
 
@@ -73,6 +69,5 @@ class menuosszeallController extends Controller
         $article->delete();
 
         return ['message' => 'Törölve'];
-
     }
 }

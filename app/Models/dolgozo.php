@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class dolgozo extends Model
 {
     use HasFactory;
-    protected $primaryKey='dolg_id';
+    protected $primaryKey = 'dolg_id';
 
     protected $fillable = [
         'neve',

@@ -1,4 +1,4 @@
-class Rendeles{
+class Rendeles {
     constructor(node, adat) {
         this.node = node;
         /**selectorok elnvezése */
@@ -17,11 +17,9 @@ class Rendeles{
         this.rendNyugta.text(adat.nyugta);
         this.rendIdeje.text(adat.csere_ideje);
     }
-    
-
 }
 class Rendelesek10percben extends Rendeles {
-    constructor(node, adat){
+    constructor(node, adat) {
         super(node, adat);
         this.node = node;
         /**selectorok elnvezése */
@@ -33,7 +31,9 @@ class Rendelesek10percben extends Rendeles {
         this.rendIdeje = this.node.children(".csere_ideje");
         this.setAdat(this.adat);
 
-        this.reklamacioHozza = this.node.children(".hozzaad").children("button");
+        this.reklamacioHozza = this.node
+            .children(".hozzaad")
+            .children("button");
         this.reklamacioHozza.on("click ", () => {
             this.hozzaadTrigger();
         });
@@ -47,12 +47,10 @@ class Rendelesek10percben extends Rendeles {
         this.rendIdeje.text("Rendelés ideje: " + adat.csere_ideje);
     }
 
-    hozzaadTrigger(){
-        let esemeny  = new CustomEvent("hozzaad", {
-
-            detail: this.adat, 
+    hozzaadTrigger() {
+        let esemeny = new CustomEvent("hozzaad", {
+            detail: this.adat,
         });
-        window.dispatchEvent(esemeny); 
+        window.dispatchEvent(esemeny);
     }
-
 }

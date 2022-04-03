@@ -13,17 +13,15 @@ class reklamacioController extends Controller
     {
 
         return reklamacio::all();
-
     }
 
- 
+
 
     public function show($id)
 
     {
 
         return reklamacio::find($id);
-
     }
 
     public function store(Request $request)
@@ -32,12 +30,11 @@ class reklamacioController extends Controller
 
         //kötelező oszlopok
 
-     $request->validate([
-        'poszt' => 'required'
+        $request->validate([
+            'poszt' => 'required'
         ]);
 
         return reklamacio::create($request->all());
-
     }
 
 
@@ -48,16 +45,15 @@ class reklamacioController extends Controller
 
         $article = reklamacio::find($id);
 
-     $request->validate([
-        'poszt' => 'required'
-     ]);
+        $request->validate([
+            'poszt' => 'required'
+        ]);
 
         $article->update($request->all());
 
 
 
         return $article;
-
     }
 
 
@@ -71,6 +67,5 @@ class reklamacioController extends Controller
         $article->delete();
 
         return ['message' => 'Törölve'];
-
     }
 }

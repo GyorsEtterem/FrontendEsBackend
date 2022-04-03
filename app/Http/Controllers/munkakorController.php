@@ -13,17 +13,15 @@ class munkakorController extends Controller
     {
 
         return munkakor::all();
-
     }
 
- 
+
 
     public function show($id)
 
     {
 
         return munkakor::find($id);
-
     }
 
 
@@ -34,12 +32,11 @@ class munkakorController extends Controller
 
         //kötelező oszlopok
 
-     $request->validate([
-        'poszt' => 'required'
+        $request->validate([
+            'poszt' => 'required'
         ]);
 
         return munkakor::create($request->all());
-
     }
 
 
@@ -50,16 +47,15 @@ class munkakorController extends Controller
 
         $article = munkakor::find($id);
 
-     $request->validate([
-        'poszt' => 'required'
-     ]);
+        $request->validate([
+            'poszt' => 'required'
+        ]);
 
         $article->update($request->all());
 
 
 
         return $article;
-
     }
 
 
@@ -73,6 +69,5 @@ class munkakorController extends Controller
         $article->delete();
 
         return ['message' => 'Törölve'];
-
     }
 }

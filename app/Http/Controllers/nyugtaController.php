@@ -13,17 +13,15 @@ class nyugtaController extends Controller
     {
 
         return nyugta::all();
-
     }
 
- 
+
 
     public function show($id)
 
     {
 
         return nyugta::find($id);
-
     }
 
 
@@ -34,12 +32,11 @@ class nyugtaController extends Controller
 
         //kötelező oszlopok
 
-     $request->validate([
-        'poszt' => 'required'
+        $request->validate([
+            'poszt' => 'required'
         ]);
 
         return nyugta::create($request->all());
-
     }
 
 
@@ -50,16 +47,15 @@ class nyugtaController extends Controller
 
         $article = nyugta::find($id);
 
-     $request->validate([
-        'poszt' => 'required'
-     ]);
+        $request->validate([
+            'poszt' => 'required'
+        ]);
 
         $article->update($request->all());
 
 
 
         return $article;
-
     }
 
 
@@ -73,6 +69,5 @@ class nyugtaController extends Controller
         $article->delete();
 
         return ['message' => 'Törölve'];
-
     }
 }

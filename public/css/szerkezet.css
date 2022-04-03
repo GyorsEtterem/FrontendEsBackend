@@ -1,41 +1,39 @@
 @charset "utf-8";
 
-main{
+main {
     max-width: 100%;
     max-height: 100%;
     margin: auto;
 }
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
     min-height: 100%;
     position: relative;
 }
-article{
+article {
     max-width: 1200px;
     margin: auto;
     margin-bottom: 30px;
     padding: 15px;
 }
 /*******menü kialakítása*******/
-.felsoSav{
+.felsoSav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 15px;
     gap: 10px;
 }
-#menuszet1{
+#menuszet1 {
     display: grid;
-    grid-template-columns: 1fr  1fr  1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1px;
     padding: 0px;
-
 }
-#menuszet2{
+#menuszet2 {
     display: grid;
-    grid-template-columns: 1fr  1fr  1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1px;
     padding: 0px;
-
 }
 
 /*
@@ -43,144 +41,151 @@ article{
 */
 
 .dropbtn {
-    background-color: rgb(243, 237, 229);
+    background-color: #cab8b9;
     color: rgb(51, 0, 0);
     padding: 16px;
     font-size: 16px;
     border: none;
-  }
-  
-  .dropdown {
+}
+
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    border-radius: 5px;
+    background-color: #c1abad; /* 916848 #E3E4E0; #DAE3D9;*/
     min-width: 160px;
     right: 0;
     z-index: 1;
-  }
-  .dropdown-content2 {
+}
+.dropdown-content2 {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #c1abad;
     border-radius: 5px;
     min-width: 160px;
     z-index: 2;
-  }
-  
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     color: rgb(51, 0, 0);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     border-radius: 5px;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown2:hover .dropdown-content2 {display: block;}
+}
 
-  .dropdown:hover .dropbtn {background-color: rgb(189, 161, 161);}
+.dropdown-content a:hover {
+    background-color: #cab8b9;
+}
 
-  .dropdown2:hover .dropbtn2 {background-color: rgb(189, 161, 161);}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #c1abad;
+}
+
+.dropdown2:hover .dropbtn2 {
+    background-color: #cab8b9;
+}
 
 /******/
 
-.szures{
+.szures {
     display: grid;
-    grid-template-columns: 250px 1fr; 
+    grid-template-columns: 250px 1fr;
 }
 
-.nagydiv{
+.nagydiv {
     display: grid;
-    grid-template-columns: 1fr  1fr  1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1px;
     padding: 0px;
 }
-.nagydiv div{
-    margin:10px;
+.nagydiv div {
+    margin: 10px;
 }
-.belsoMezo{
+.belsoMezo {
     max-height: 445px;
     overflow: auto;
     margin-top: 5px;
 }
-.termekarticle{
+.termekarticle {
     display: grid;
-    grid-template-columns: 3fr  1fr;
+    grid-template-columns: 3fr 1fr;
     padding: 15px;
-    
 }
-.termekarticle section{
+.termekarticle section {
     padding: 35px;
 }
-footer{
-	position:absolute;
-	bottom: 0;
+footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: auto;
 }
-footer p{
+footer p {
     margin: 5pt;
 }
 
 /************reszponzivitás****************/
 @media screen and (max-width: 1200px) {
-
     #konyha {
         grid-template-columns: 1fr 1fr;
     }
-    #menuszet1, #menuszet2, .cimMenuben{
+    #menuszet1,
+    #menuszet2,
+    .cimMenuben {
         display: none;
     }
-    .felsoSav{
-        grid-template-columns:30% 70%;
+    .felsoSav {
+        grid-template-columns: 30% 70%;
     }
-          
-    .felsoSav div nav{
+
+    .felsoSav div nav {
         float: right;
     }
     .szures {
         grid-template-columns: 1fr;
-
     }
 }
 
 @media screen and (max-width: 413px) {
-    #konyha{
+    #konyha {
         grid-template-columns: 1fr;
-
     }
     /* .felsoSav{
         grid-template-columns: 100px 100px;
           
     } */
-    .logo{
+    .logo {
         display: block;
         margin: auto;
     }
-    .felsoSav div nav{
+    .felsoSav div nav {
         float: right;
     }
-    
-    
 }
 
 @media screen and (min-width: 1201px) {
-    .dropdown, .cimMenunKivul{
+    .dropdown,
+    .cimMenunKivul {
         display: none;
     }
 }
 
 @media screen and (max-width: 315px) {
-    header, footer{
+    header,
+    footer {
         width: 315px;
     }
 }

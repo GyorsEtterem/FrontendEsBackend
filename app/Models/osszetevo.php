@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class osszetevo extends Model
 {
     use HasFactory;
-    protected $primaryKey='termek_id';
+    protected $primaryKey = 'termek_id';
 }

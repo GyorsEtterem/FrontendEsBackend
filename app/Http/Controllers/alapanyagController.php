@@ -13,17 +13,15 @@ class alapanyagController extends Controller
     {
 
         return alapanyag::all();
-
     }
 
- 
+
 
     public function show($id)
 
     {
 
         return alapanyag::find($id);
-
     }
 
 
@@ -34,12 +32,11 @@ class alapanyagController extends Controller
 
         //kötelező oszlopok
 
-     $request->validate([
-        'poszt' => 'required'
+        $request->validate([
+            'poszt' => 'required'
         ]);
 
         return alapanyag::create($request->all());
-
     }
 
 
@@ -50,16 +47,15 @@ class alapanyagController extends Controller
 
         $article = alapanyag::find($id);
 
-     $request->validate([
-        'poszt' => 'required'
-     ]);
+        $request->validate([
+            'poszt' => 'required'
+        ]);
 
         $article->update($request->all());
 
 
 
         return $article;
-
     }
 
 
@@ -73,6 +69,5 @@ class alapanyagController extends Controller
         $article->delete();
 
         return ['message' => 'Törölve'];
-
     }
 }

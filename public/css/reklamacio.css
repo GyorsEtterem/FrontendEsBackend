@@ -1,28 +1,36 @@
 @charset "utf-8";
 
-.rendeles, .reklamacio{
-    /* background-color: rgb(189, 161, 161); */
-    border: 2px solid  rgb(51, 0, 0);
-    
+.rendeles,
+.reklamacio {
+    background-color: #cab8b9;
+    border: 2px solid rgb(51, 0, 0);
 }
 
-.rendeles h3, .reklamacio p{
+.rendeles h3,
+.reklamacio p {
     padding: 4px;
     padding-left: 4px;
     padding-right: 4px;
 }
 
-/**reszponzivitás**/ 
-@media screen and (max-width: 1200px) {      
-    #reklamaicorespo,#percrespo{         
-        grid-template-columns: 1fr 1fr;     
-    }     
-    .urlap, .reklamhozza, .hozzaad {         
-        display: none;     
-    } 
-}  
-@media screen and (max-width: 400px) {     
-    #reklamaicorespo, #percrespo{         
-        grid-template-columns: 1fr;      
-    }      
+rend10 {
+    text-align: center;
+}
+/**reszponzivitás**/
+@media screen and (max-width: 1200px) {
+    #reklamaicorespo,
+    #percrespo {
+        grid-template-columns: 1fr 1fr;
+    }
+    .urlap,
+    .reklamhozza,
+    .hozzaad {
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    #reklamaicorespo,
+    #percrespo {
+        grid-template-columns: 1fr;
+    }
 }

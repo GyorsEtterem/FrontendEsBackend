@@ -1,4 +1,4 @@
-class Reklamacio{
+class Reklamacio {
     constructor(node, adat) {
         this.node = node;
         /**selectorok elnvezése */

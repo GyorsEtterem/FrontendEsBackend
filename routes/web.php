@@ -19,24 +19,22 @@ Route::get('/', function () {
     return view('pages.login');
 });
 
-Route::get('/login', [CustomAuthController::class, 'login'] ); //->middleware('isLoggedIn');
+Route::get('/login', [CustomAuthController::class, 'login']); //->middleware('isLoggedIn');
 Route::get('/registration', [CustomAuthController::class, 'registration']);
 
-Route::post('/registration-user', [CustomAuthController::class, 'registerUser'] )
-->name('registration-user');
+Route::post('/registration-user', [CustomAuthController::class, 'registerUser'])
+    ->name('registration-user');
 
-Route::post('/login-user', [CustomAuthController::class, 'loginUser'] )
-->name('login-user');
+Route::post('/login-user', [CustomAuthController::class, 'loginUser'])
+    ->name('login-user');
 
-//Route::get('/profilo', [CustomAuthController::class, 'profilo'] )->name('profilo');//->middleware('isLoggedIn');
-
-Route::get('/logout', [CustomAuthController::class, 'logout'] );
+Route::get('/logout', [CustomAuthController::class, 'logout']);
 
 
-Route::post('/registration-user', [CustomAuthController::class, 'registerUser'] )->name('registration-user');
+Route::post('/registration-user', [CustomAuthController::class, 'registerUser'])->name('registration-user');
 
 
-Route::post('/reklam-fel', [relkamacioFelvitelController::class, 'reklamFelvitel'] )->name('reklam-fel');
+Route::post('/reklam-fel', [relkamacioFelvitelController::class, 'reklamFelvitel'])->name('reklam-fel');
 
 Route::get('index', function () {
     return view('pages.index');
@@ -60,17 +58,17 @@ Route::get('rendelesek', function () {
 
 Route::get('atadottrendelesek', function () {
     return view('pages.atadottrendelesek');
-});    
+});
 
 Route::get('kedvezmeny', function () {
     return view('pages.kedvezmeny');
-});    
+});
 
 Route::get('konyha', function () {
     return view('pages.konyha');
-});  
+});
 
 
 Route::get('profilo', function () {
     return view('pages.profilo');
-});  
+});

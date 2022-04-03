@@ -12,21 +12,18 @@ class dolgozoController extends Controller
 
     {
 
-        $neve = $request->query('q','');
-    $keres=dolgozo::where('neve','like',"%$neve%");
-    $sort = $request->query('desc','');
-        $a='';
-        if($sort==""){
+        $neve = $request->query('q', '');
+        $keres = dolgozo::where('neve', 'like', "%$neve%");
+        $sort = $request->query('desc', '');
+        $a = '';
+        if ($sort == "") {
             return $keres->get();
+        } else if ($sort == "nevRendezNo") {
+            $a = 'ASC';
+        } else if ($sort == "nevRendezCsokken") {
+            $a = 'DESC';
         }
-        else if($sort=="nevRendezNo"){
-            $a='ASC';
-        }
-        else if($sort=="nevRendezCsokken"){
-            $a='DESC';
-        }
-    return $keres->orderBy('neve', $a)->get();
-
+        return $keres->orderBy('neve', $a)->get();
     }
 
 
@@ -36,7 +33,6 @@ class dolgozoController extends Controller
     {
 
         return dolgozo::find($id);
-
     }
 
 
@@ -45,47 +41,39 @@ class dolgozoController extends Controller
 
     {
 
-        //kötelező oszlopok
 
-     $request->validate([
-        // 'poszt' => 'required',
-        // 'munkakor_id' => 'required'
-        ]);
+        $request->validate([]);
 
         return dolgozo::create($request->all());
-
     }
 
 
 
-    public function update(Request $request,string $dolg_id)  //
+    public function update(Request $request, string $dolg_id)
 
     {
 
-        //$article = dolgozo::find($dolg_id);
-
-      $request->validate([
-         'neve' => 'required',
-         'szuldatum' => 'required',
-         'cim' => 'required',
-         'telefonszam' => 'required',
-         'email' => 'required',
-         'munkakor_id' => 'required',
-         'jelszo' => 'required'
-      ]);
+        $request->validate([
+            'neve' => 'required',
+            'szuldatum' => 'required',
+            'cim' => 'required',
+            'telefonszam' => 'required',
+            'email' => 'required',
+            'munkakor_id' => 'required',
+            'jelszo' => 'required'
+        ]);
         $dolgozo = dolgozo::find($dolg_id);
-        $dolgozo-> neve = $request-> neve;
-        $dolgozo-> szuldatum = $request-> szuldatum;
-        $dolgozo-> cim = $request-> cim;
-        $dolgozo-> telefonszam = $request-> telefonszam;
-        $dolgozo-> email = $request-> email;
-        $dolgozo-> munkakor_id = $request-> munkakor_id;
-        $dolgozo-> jelszo = $request-> jelszo;
+        $dolgozo->neve = $request->neve;
+        $dolgozo->szuldatum = $request->szuldatum;
+        $dolgozo->cim = $request->cim;
+        $dolgozo->telefonszam = $request->telefonszam;
+        $dolgozo->email = $request->email;
+        $dolgozo->munkakor_id = $request->munkakor_id;
+        $dolgozo->jelszo = $request->jelszo;
         $dolgozo->save();
 
 
         return ['message' => 'Módosítva'];
-
     }
 
 
@@ -99,6 +87,5 @@ class dolgozoController extends Controller
         $article->delete();
 
         return ['message' => 'Törölve'];
-
     }
 }

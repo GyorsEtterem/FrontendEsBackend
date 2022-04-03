@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class nyugtatetel extends Model
 {
     use HasFactory;
-    protected $primaryKey='nyugta';
+    protected $primaryKey = 'nyugta';
 }

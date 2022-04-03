@@ -13,17 +13,15 @@ class osszetevoController extends Controller
     {
 
         return osszetevo::all();
-
     }
 
- 
+
 
     public function show($id)
 
     {
 
         return osszetevo::find($id);
-
     }
 
 
@@ -34,12 +32,11 @@ class osszetevoController extends Controller
 
         //kötelező oszlopok
 
-     $request->validate([
-        'poszt' => 'required'
+        $request->validate([
+            'poszt' => 'required'
         ]);
 
         return osszetevo::create($request->all());
-
     }
 
 
@@ -50,16 +47,15 @@ class osszetevoController extends Controller
 
         $article = osszetevo::find($id);
 
-     $request->validate([
-        'poszt' => 'required'
-     ]);
+        $request->validate([
+            'poszt' => 'required'
+        ]);
 
         $article->update($request->all());
 
 
 
         return $article;
-
     }
 
 
@@ -73,6 +69,5 @@ class osszetevoController extends Controller
         $article->delete();
 
         return ['message' => 'Törölve'];
-
     }
 }

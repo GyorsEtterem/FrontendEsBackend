@@ -15,9 +15,8 @@ class MunkakorSeeder extends Seeder
     public function run()
     {
         DB::table('munkakors')->insert([
-            ['megnevezes' =>'Konyhás'],
-            ['megnevezes' =>'Pénztáros'],
-            ['megnevezes' =>'Manager']
+            ['megnevezes' => 'Manager'],
+            ['megnevezes' => 'Dolgozó']
         ]);
     }
 }

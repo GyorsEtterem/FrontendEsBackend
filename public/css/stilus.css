@@ -1,13 +1,14 @@
 @charset "utf-8";
-html, body{
+html,
+body {
     margin: auto;
 }
 
-body{
+body {
     background-color: rgb(243, 237, 229);
     color: rgb(51, 0, 0);
 }
-main{
+main {
     background-color: rgb(243, 237, 229);
 }
 nav ul li {
@@ -17,116 +18,117 @@ nav ul li {
     border-radius: 5px;
     list-style-type: none;
     background-color: rgb(51, 0, 0);
-    width:auto;
+    width: auto;
     text-align: center;
 }
 nav ul li:hover {
     background-color: rgb(189, 161, 161);
 }
-nav ul a, .kijelentkez {
+nav ul a,
+.kijelentkez {
     text-decoration: none;
     color: rgb(243, 237, 229);
-    
 }
-article div{
+article div {
     padding: 5px;
     border-radius: 12px;
 }
-button{
+button {
     background-color: rgb(51, 0, 0);
     color: rgb(243, 237, 229);
     border-radius: 5px;
 }
 
-.kijelentkez:hover{
+.kijelentkez:hover {
     background-color: rgb(189, 161, 161);
     border: none;
-    
 }
-.kijelentkezreszpo{
+.kijelentkezreszpo {
     background-color: #f1f1f1;
     color: rgb(51, 0, 0);
     border: none;
 }
-.kozosGomb{
+.kozosGomb {
     margin-top: 5pt;
 }
 
-h1{
+h1 {
     text-align: center;
     text-transform: uppercase;
 }
 
-header{
+header {
     background-color: rgb(51, 0, 0);
     width: 100%;
     margin: 0;
     color: rgb(243, 237, 229);
 }
-footer{
+footer {
     background-color: rgb(51, 0, 0);
-    width:100%;
+    width: 100%;
     height: 5vw;
     color: rgb(243, 237, 229);
 }
-footer p{
+footer p {
     text-align: center;
 }
 
-.logo{
+.logo {
     width: 100px;
 }
-.kosar, .urlap{
+.kosar,
+.urlap {
     background-color: rgb(51, 0, 0);
-    border: 1px solid  rgb(51, 0, 0);
+    border: 1px solid rgb(51, 0, 0);
     border-radius: 12px;
     padding: 10px;
     font-size: 10pt;
-    color:rgb(243, 237, 229);
+    color: rgb(243, 237, 229);
     margin-bottom: 30px;
 }
-.kosar{
+.kosar {
     height: 440pt;
     padding-bottom: 0;
 }
 
-.belsoMezo::-webkit-scrollbar{
+.belsoMezo::-webkit-scrollbar {
     width: 20px;
     background-color: rgb(243, 237, 229);
-    border: 1px solid  rgb(51, 0, 0);
+    border: 1px solid rgb(51, 0, 0);
     border-radius: 50px;
 }
-.belsoMezo::-webkit-scrollbar-thumb{
+.belsoMezo::-webkit-scrollbar-thumb {
     width: 15px;
     background-color: rgb(51, 0, 0);
     border-radius: 50px;
 }
 
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
     width: 20px;
     background-color: rgb(51, 0, 0);
-    border: 1px solid  rgb(51, 0, 0);
+    border: 1px solid rgb(51, 0, 0);
 }
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
     width: 15px;
     height: 50px;
     background-color: rgb(243, 237, 229);
-    border: 1px solid  rgb(51, 0, 0);
+    border: 1px solid rgb(51, 0, 0);
     border-radius: 50px;
 }
 
-.kep{
+.kep {
     width: 250px;
     display: block;
-    margin: auto; 
+    margin: auto;
 }
-.kosar button, .urlap button{
+.kosar button,
+.urlap button {
     border-radius: 5px;
-    border: 1px solid rgb(243, 237, 229);;
+    border: 1px solid rgb(243, 237, 229);
 }
-.gomb{
-    background-color:  rgb(243, 237, 229);
-    color:rgb(51, 0, 0);
+.gomb {
+    background-color: rgb(243, 237, 229);
+    color: rgb(51, 0, 0);
     font-weight: bold;
     border-radius: 5pt;
 }

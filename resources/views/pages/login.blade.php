@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,19 +14,19 @@
 </head>
 
 <body>
-<main>
-        <header> 
+    <main>
+        <header>
             <div class="felsoSav">
-            <div>
-                <a href="index"><img src="../kepek/logo.png" alt="Oldalunk logója" class="logo"></a>
-            </div>
-            <div>
-                <h1>Bejelentkezés</h1>
-            </div>
-            <div>
-                <nav>
-                </nav>
-            </div>
+                <div>
+                    <a href="index"><img src="../kepek/logo.png" alt="Oldalunk logója" class="logo"></a>
+                </div>
+                <div>
+                    <h1>Bejelentkezés</h1>
+                </div>
+                <div>
+                    <nav>
+                    </nav>
+                </div>
             </div>
         </header>
         <article>
@@ -39,11 +40,11 @@
                 @csrf
                 <div class="container">
                     <label for="email"><b>Email:</b></label><br>
-                    <input type="text" placeholder="Írja be az emailcímét" name="email" value="{{old('email')}}"><br><br> 
+                    <input type="text" placeholder="Írja be az emailcímét" name="email" value="{{old('email')}}"><br><br>
                     <span>@error('email'){{$message}} @enderror</span><br>
 
                     <label for="jelszo"><b>Jelszó:</b></label><br>
-                    <input type="password" placeholder="Írja be a jelszavát" name="jelszo" value="{{old('jelszo')}}"><br><br> 
+                    <input type="password" placeholder="Írja be a jelszavát" name="jelszo" value="{{old('jelszo')}}"><br><br>
                     <span>@error('jelszo'){{$message}} @enderror</span><br>
 
                     <button type="submit">Bejelentkezés</button>
@@ -51,5 +52,6 @@
 
             </form>
         </article>
-        </body>
+</body>
+
 </html>

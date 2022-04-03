@@ -31,10 +31,6 @@ use App\Http\Controllers\elmult10pRendController;
 //     return $request->user();
 // });
 Route::get('/elmult10perc', [elmult10pRendController::class, 'index']);
-/* Route::put('/elmult10perc/{id}', [termekController::class, 'update']);
-Route::get('/elmult10perc/{elmult10perc}', [termekController::class, 'show']);
-Route::delete('/elmult10perc/{id}', [termekController::class, 'delete']);
-Route::post('/elmult10perc', [termekController::class, 'store']); */
 
 Route::get('/termek', [termekController::class, 'index']);
 Route::put('/termek/{id}', [termekController::class, 'update']);
@@ -90,12 +86,8 @@ Route::get('/munkakor/{munkakor}', [munkakorController::class, 'show']);
 Route::delete('/munkakor/{id}', [munkakorController::class, 'delete']);
 Route::post('/munkakor', [munkakorController::class, 'store']);
 
- Route::get('/dolgozo', [dolgozoController::class, 'index']);
- Route::put('/dolgozo/{id}', [dolgozoController::class, 'update']);
- Route::get('/dolgozo/{dolgozo}', [dolgozoController::class, 'show']);
- Route::delete('/dolgozo/{id}', [dolgozoController::class, 'delete']);
- Route::post('/dolgozo', [dolgozoController::class, 'store']);
-//Route::apiResource('dolgozo', dolgozoController::class);
-//Route::apiResource('dolgozoKerese', dolgozoController::class);
-
-//Route::get('/dolgozoKerese', [dolgozoController::class, 'index']);
+Route::get('/dolgozo', [dolgozoController::class, 'index']);
+Route::put('/dolgozo/{id}', [dolgozoController::class, 'update']);
+Route::get('/dolgozo/{dolgozo}', [dolgozoController::class, 'show']);
+Route::delete('/dolgozo/{id}', [dolgozoController::class, 'delete']);
+Route::post('/dolgozo', [dolgozoController::class, 'store']);
