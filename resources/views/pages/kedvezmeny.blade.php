@@ -49,12 +49,30 @@
                         <p>Kedvezmény százaléka: <p class="kedvSzaz"></p></p>
                         <p>Kedvezmény kezdete: <p class="kedvKez"></p></p>
                         <p>Kedvezmény vége: <p class="kedvVeg"></p></p>
-                        <!-- <button class="modositas">MÓDOSÍT</button> -->
+                        <a class="kTorles"><button>TÖRLÉS</button></a>
                     </div>
                 </div>
                 <div class="nagydiv">
                     
                 </div>
+            </section>
+            <section class="urlap">
+            <div class="container">
+            <fieldset>
+            <legend>Kedvezmény hozzáadása:</legend>
+                <label for="uKedvSzaz">Kedvezmény százaléka:</label><br>
+                <input type="text" id="uKedvSzaz" name="uKedvSzaz" value="{{old('uKedvSzaz')}}"><br><br>
+                
+                <label for="uKedvKez">Kedvezmény kezdete:</label><br>
+                <input type="date" id="uKedvKez" name="uKedvKez" value="{{old('uKedvKez')}}"><br><br>
+
+                <label for="uKedvVeg">Kedvezmény vége::</label><br>
+                <input type="date" id="uKedvVeg" name="uKedvVeg" value="{{old('uKedvVeg')}}"><br><br>
+                
+                
+                <button type="submit" class="gomb" id="kedvFelvesz">Hozzáadás</button>
+            </fieldset>
+            </div>
             </section>
         </article>
         @endsection
