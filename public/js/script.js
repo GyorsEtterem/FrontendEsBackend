@@ -1,6 +1,5 @@
 $(function () {
     const myAjax = new MyAjax;
-    const kosar = new Kosar();
     const dolgozoTomb = [];
     const reklamTomb = [];
     const termekTomb = [];
@@ -21,9 +20,11 @@ $(function () {
         apiFunc = reklamKiir;
         myAjax.adatBetolt(apivegpont+"elmult10perc", rendelesek10percbenTomb, rend10percKiir);
     }else if(window.location.href.includes("termek")){
+        const kosar = new Kosar();
         apiVege = "termek";
         apiTomb = termekTomb;
         apiFunc = termekKiir;
+        kosar.megjelenit();
     }else if(window.location.href.includes("kedvezmeny")){
         console.log("kedvezmenyek");
         apiVege = "kedvezmeny";
@@ -32,7 +33,6 @@ $(function () {
         console.log(apivegpont+apiVege);
     }
     myAjax.adatBetolt(apivegpont+apiVege, apiTomb, apiFunc);
-    kosar.megjelenit();
     console.log(window.location.href);
 
     /* myAjax.adatBetolt(apivegpont+"dolgozo", dolgozoTomb, dolgozoKiir);
@@ -252,6 +252,7 @@ $(function () {
     });
 
     $(window).on("kosarbarak", (event) => {
+        const kosar = new Kosar();
         console.log(event.detail);
         kosar.setKosar(event.detail);
     });
