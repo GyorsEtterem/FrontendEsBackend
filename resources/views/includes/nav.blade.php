@@ -10,7 +10,7 @@
                 <li>Rendelések</li>
             </a>
             <a href="logout">
-                <li><button class="kijelentkez">Kijelentkezés</button></li>
+                <li>Kijelentkezés</li>
             </a>
         </div>
         <div id="menuszet2">
@@ -29,7 +29,7 @@
     <div class="dropdown">
         <button class="dropbtn">Menü</button>
         <div class="dropdown-content">
-            <a href="logout"><button class="kijelentkezreszpo">Kijelentkezés</button></a>
+            <a href="logout">Kijelentkezés</a>
             <a href="konyha">Konyha</a>
             <a href="dolgozo">Dolgozók</a>
             <a href="kedvezmeny">Kedvezmény</a>
