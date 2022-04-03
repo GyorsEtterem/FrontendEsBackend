@@ -11,6 +11,7 @@
     <link href="../css/szerkezet.css" rel="stylesheet" type="text/css"/>
     <link href="../css/termek.css" rel="stylesheet" type="text/css"/>
     <script src="../js/ajax.js"></script>
+    <script src="../js/kosar.js"></script>
     <script src="../js/termek.js"></script>
     <script src="../js/script.js"></script>
     <link rel="icon" href="../kepek/icon.png" type="image/png">
@@ -46,9 +47,9 @@
                 <div class="termek">
                     <h3 class="termeknev">Lorem ipsum dolor</h3>
                     <img src="" alt="" class="termekKep" />
-                    <p>Termék méret besorolása: <p class="meret"></p></p>
-                    <p>Kedvezmény százaléka: <p class="szazalek"></p></p>
-                    <p>Kedvezményes ár: <p class="kedvAr"></p> Ft</p>
+                    <p class="meret"></p>
+                    <p class="szazalek"></p>
+                    <p class="kedvAr"></p>
                     <a class="tTorles"><button>TÖRLÉS</button></a>
                     <a class="tModositas" href="#ulaphozUgro"><button>MÓDOSÍT</button></a>
                 </div>
@@ -60,7 +61,8 @@
                 <form action="">
                     <fieldset>
                         <legend>Termék szerkesztése:</legend>
-                        <input type="number" name="termek_id" id="termek_id" >
+                        <label for="termek_id">Termék ID:</label><br>
+                        <input type="number" name="termek_id" id="termek_id" ><br><br>
                         <label for="termeknev">Terménév:</label><br>
                         <input type="text" id="termeknev" name="termeknev"><br><br>
                         <label for="termekAr">Ár:</label><br>
@@ -81,10 +83,9 @@
         </section>
             <section class="kosar">
                 <h3>Rendelési tételek</h3>
-                <div id="kosaram">
-                    <!-- ide kerülnek majd a rendelésbe felvett termékek + mindhez egy x gomb -->
-                </div>
+                <div id="kosaram"></div>
                 <span id="osszar"></span>
+
                 <a href="rendelesek.html"><button class="rendel">Véglegesítés</button></a>
             </section>
         </article>

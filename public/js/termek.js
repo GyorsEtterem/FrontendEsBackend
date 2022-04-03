@@ -20,6 +20,16 @@ class Termek{
         this.termekModosit.on("click ", () => {
             this.modositTrigger();
         });
+        this.termeknev.on("click", () => {
+            this.termekreKatt(adat);
+        });
+    }
+
+    termekreKatt(adat){
+        let esemeny = new CustomEvent("kosarbarak", {
+            detail: this.adat,
+        });
+        window.dispatchEvent(esemeny);
     }
 
     atszamol(adat){
@@ -27,14 +37,13 @@ class Termek{
         this.kedvAr.text(kedvezmenyesAr);
     }
     
-
     setAdat(adat) {
-        console.log(adat)
+        console.log(adat);
         this.adat = adat;
         this.termeknev.text(adat.termeknev);
-        this.meret.text(adat.meret);
-        this.ara.text(adat.ar);
-        this.kedvezmeny.text(adat.kedvezmeny_id);
+        this.meret.text("Termék méret besorolása: " + adat.meret);
+        this.ara.text("Termék ára: " + adat.ar + " Ft");
+        this.kedvezmeny.text("Kedvezmény százaléka: " + adat.kedvezmeny_id);
         this.termekKep.attr("src", adat.kep);
     }
 
@@ -55,3 +64,17 @@ class Termek{
     }
      
 }
+
+/* class TermekAruhaz extends Termek {
+    constructor(node, adat){
+        super(node, adat);
+        this.termekKep = this.node.children(".kep ");
+
+        //this.setAdat(this.adat);
+        this.termekKosar = this.node.children(".termekTerulet");
+
+        this.termekKosar.on("click ", () => {
+            this.kattintasTrigger("termekKosarba");
+        });
+    }
+} */
