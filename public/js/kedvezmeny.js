@@ -9,13 +9,14 @@ class Kedvezmeny{
         this.kedvKez = this.node.children(".kedvKez");
         this.kedvVeg = this.node.children(".kedvVeg");
         this.setAdat(this.adat);
-        /* this.termekTorles = this.node.children(".tTorles").children("button");
-        this.termekModosit = this.node.children(".tModositas").children("button");
-        this.termekTorles.on("click ", () => {
+
+        this.kedvTorles = this.node.children(".kTorles").children("button");
+        this.kedvTorles.on("click ", () => {
             this.torlesTrigger(this.adat);
         });
-        this.termekModosit.on("click ", () => {
-            this.modositTrigger();
+        /* this.reklamacioHozza = this.node.children(".kedvFelvesz").children("button");
+        this.reklamacioHozza.on("click ", () => {
+            this.hozzaadTrigger();
         }); */
     }
 
@@ -27,4 +28,19 @@ class Kedvezmeny{
         this.kedvKez.text(adat.mettol);
         this.kedvVeg.text(adat.meddig);
     }
+
+    torlesTrigger(adat){
+        let esemeny  = new CustomEvent("kTorles", {
+            detail: this.adat,
+        });
+        
+        window.dispatchEvent(esemeny); 
+    }
+
+    /* hozzaadTrigger(){
+        let esemeny  = new CustomEvent("kHozzaad", {
+            detail: this.adat, 
+        });
+        window.dispatchEvent(esemeny); 
+    } */
 }

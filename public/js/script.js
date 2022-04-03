@@ -264,4 +264,18 @@ $(function () {
         });
         sablonElem.hide();
     }
+
+    $(window).on("kTorles", (event) => {
+        console.log(event.detail.kedvezmeny_id);
+        myAjax.adatTorles(apivegpont+"kedvezmeny", event.detail.kedvezmeny_id);
+        window.location.reload();
+    });
+
+    /* $(window).on("kHozzaad", (event) => {
+        console.log(event.detail);
+        $("#uKedvSzaz").val(event.detail.kedvezmeny);
+        $("#uKedvKez").val(event.detail.mettol);
+        $("#uKedvVeg").val(event.detail.meddig);
+    }); */
+
 });
