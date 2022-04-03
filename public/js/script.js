@@ -1,5 +1,6 @@
 $(function () {
     const myAjax = new MyAjax;
+    const kosar = new Kosar();
     const dolgozoTomb = [];
     const reklamTomb = [];
     const termekTomb = [];
@@ -31,6 +32,7 @@ $(function () {
         console.log(apivegpont+apiVege);
     }
     myAjax.adatBetolt(apivegpont+apiVege, apiTomb, apiFunc);
+    kosar.megjelenit();
     console.log(window.location.href);
 
     /* myAjax.adatBetolt(apivegpont+"dolgozo", dolgozoTomb, dolgozoKiir);
@@ -247,6 +249,11 @@ $(function () {
         $("#szazalek").val('');
         $("#termekKep").val('');
         //window.location.reload();
+    });
+
+    $(window).on("kosarbarak", (event) => {
+        console.log(event.detail);
+        kosar.setKosar(event.detail);
     });
 
     // kedvezmenyek oldal ----------------------------------------
