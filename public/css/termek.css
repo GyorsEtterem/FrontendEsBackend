@@ -1,5 +1,46 @@
 @charset "utf-8";
 
+.termek{
+    border: 1px solid rgb(51, 0, 0);
+    align-content: center;
+}
+
+.termek>h3, .termek>a{
+    margin: auto;
+}
+
+.termek>p{
+    text-align: center;
+    margin: 1pt;
+}
+
+.tTorles>button, .tModositas>button{
+    margin-top: 5pt;
+}
+
+.tModositas{
+    float: right;
+}
+
+.termeknev{
+    font-size: x-large;
+    width: fit-content;
+    padding: 4pt;
+    background-color: #ddd2d3;
+    border-radius: 5pt;
+    border: 1px solid rgb(51, 0, 0);
+}
+
+/* KOSÁR */
+table{
+    width: 100%;
+}
+.kosarTorol{
+    float: right;
+}
+#osszar{
+    font-size: large;
+}
 
 /************reszponzivitás****************/
 @media screen and (max-width: 1110px) {

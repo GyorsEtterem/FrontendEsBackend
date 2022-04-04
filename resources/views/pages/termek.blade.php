@@ -83,8 +83,8 @@
         </section>
             <section class="kosar">
                 <h3>Rendelési tételek</h3>
-                <div id="kosaram"></div>
-                <span id="osszar"></span>
+                <div id="kosaram"></div><br>
+                <span id="osszar"></span><br><br>
 
                 <a href="rendelesek.html"><button class="rendel">Véglegesítés</button></a>
             </section>

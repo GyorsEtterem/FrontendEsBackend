@@ -20,7 +20,9 @@ class Kosar {
 
     megjelenit(){
         let txt = '<table>';
+        let aruk = 0;
         this.kosarTomb.forEach((elem, index) => {
+            aruk += elem.ar;
             txt += 
                 '<tr><td>' +
                 elem.termeknev +
@@ -33,6 +35,7 @@ class Kosar {
         txt += '</table>';
 
         this.kosarElem.html(txt);
+        this.osszarElem.html("Összesen: " + aruk + " Ft");
         this.kosarbaGombElem = $('.kosarTorol');
         this.kosarbaGombElem.on('click', (event) => {
             let id = $(event.target).attr('data-id');
