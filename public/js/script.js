@@ -10,6 +10,7 @@ $(function () {
     let apiVege = "";
     let apiTomb = "";
     let apiFunc = "";
+    let volt = true;
     if (window.location.href.includes("dolgozo")) {
         apiVege = "dolgozo";
         apiTomb = dolgozoTomb;
@@ -31,8 +32,17 @@ $(function () {
         apiTomb = kedvezmenyTomb;
         apiFunc = kedvezmenyKiir;
         console.log(apivegpont+apiVege);
+    }else if(window.location.href.includes("index")){
+        const kosar = new Kosar();
+        volt = false;
+        kosar.megjelenit();
     }
-    myAjax.adatBetolt(apivegpont+apiVege, apiTomb, apiFunc);
+
+    if (volt) {
+        myAjax.adatBetolt(apivegpont+apiVege, apiTomb, apiFunc);
+    }else{
+        volt = true;
+    }
     console.log(window.location.href);
 
     /* myAjax.adatBetolt(apivegpont+"dolgozo", dolgozoTomb, dolgozoKiir);

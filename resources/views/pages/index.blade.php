@@ -10,6 +10,10 @@
     <link href="../css/stilus.css" rel="stylesheet" type="text/css"/>
     <link href="../css/fooldal.css" rel="stylesheet" type="text/css"/>
     <link href="../css/szerkezet.css" rel="stylesheet" type="text/css"/>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/kosar.js"></script>
+    <script src="../js/termek.js"></script>
+    <script src="../js/script.js"></script>
     <title>Gyorsétterem</title>
     <!-- <link rel="icon" href="icon_path" type="image/icon type"> -->
     <link rel="icon" href="../kepek/icon.png" type="image/png">
@@ -92,14 +96,11 @@
             </div>
             </div>
             <aside class="kosar">
-                <h3>Rendelési tételek</h3>
-                <div class="kosaram belsoMezo">
-                    <!-- ide kerülnek majd a rendelésbe felvett termékek + mindhez egy x gomb -->
-                    <p>ez egy termék</p>
-                    <p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p><p>ez egy termék</p>
-                </div>
-                <h3>Összesen: <span id="osszar">999</span> Ft</h3>
-                <a href="rendelesek"><button class="rendel">Véglegesítés</button></a>
+            <h3>Rendelési tételek</h3>
+                <div id="kosaram"></div><br>
+                <span id="osszar"></span><br><br>
+
+                <button class="rendel">Véglegesítés</button>
             </aside>
             
         </article>

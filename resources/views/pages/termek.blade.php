@@ -86,7 +86,7 @@
                 <div id="kosaram"></div><br>
                 <span id="osszar"></span><br><br>
 
-                <a href="rendelesek.html"><button class="rendel">Véglegesítés</button></a>
+                <a href="index"><button class="rendel">Véglegesítés</button></a>
             </section>
         </article>
         @endsection

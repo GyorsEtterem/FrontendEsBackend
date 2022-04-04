@@ -13,6 +13,7 @@ class Termek{
         this.setAdat(this.adat);
         this.termekTorles = this.node.children(".tTorles").children("button");
         this.termekModosit = this.node.children(".tModositas").children("button");
+        this.keszRend = $('.rendel').children("button");
         /* this.atszamol(this.adat); */
         this.termekTorles.on("click ", () => {
             this.torlesTrigger(this.adat);
@@ -23,6 +24,13 @@ class Termek{
         this.termeknev.on("click", () => {
             this.termekreKatt(adat);
         });
+        this.keszRend.on("click", () => {
+            this.termeketAtad();
+        });
+    }
+
+    termeketAtad(){
+        console.log("local törölve");
     }
 
     termekreKatt(adat){
