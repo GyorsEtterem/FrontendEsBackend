@@ -31,6 +31,15 @@
     border: 1px solid rgb(51, 0, 0);
 }
 
+#termek_id{
+    display: none;
+    height: 0;
+}
+
+#ajaxUjTermek{
+    margin-left: 15pt;
+}
+
 /* KOSÁR */
 table{
     width: 100%;

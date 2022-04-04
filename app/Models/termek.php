@@ -11,9 +11,13 @@ class termek extends Model
     protected $primaryKey='termek_id';
 
     protected $fillable = [
+        'fajta',
         'termeknev',
-        'ar',
+        'eladhato',
+        'raktaron',
+        'meret',
         'kedvezmeny_id',
+        'ar',
         'kep'
     ];
 }

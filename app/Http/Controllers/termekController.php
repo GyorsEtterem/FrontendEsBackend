@@ -42,23 +42,31 @@ class termekController extends Controller
 
 
 
-    public function update(Request $request,string $termek_id)
+    public function update(Request $request, $termek_id)
 
     {
 
         // $article = termek::find($id);
 
         $request->validate([
+            'fajta' => 'required',
             'termeknev' => 'required',
-            'ar' => 'required',
+            'eladhato' => 'required',
+            'raktaron' => 'required',
+            'meret' => 'required',
             'kedvezmeny_id' => 'required',
+            'ar' => 'required',
             'kep' => 'required'
         ]);
 
         $termek = termek::find($termek_id);
+        $termek -> fajta = $request -> fajta;
         $termek -> termeknev = $request -> termeknev;
-        $termek -> ar = $request -> ar;
+        $termek -> eladhato = $request -> eladhato;
+        $termek -> raktaron = $request -> raktaron;
+        $termek -> meret = $request -> meret;
         $termek -> kedvezmeny_id = $request -> kedvezmeny_id;
+        $termek -> ar = $request -> ar;
         $termek -> kep = $request -> kep;
         $termek -> save();
 

@@ -61,10 +61,19 @@
                 <form action="">
                     <fieldset>
                         <legend>Termék szerkesztése:</legend>
-                        <label for="termek_id">Termék ID:</label><br>
-                        <input type="number" name="termek_id" id="termek_id" ><br><br>
+                        <input type="number" name="termek_id" id="termek_id" >
+                        <label for="termekFaj">Termék fajta:</label><br>
+                        <input type="text" name="termekFaj" id="termekFaj" ><br><br>
                         <label for="termeknev">Terménév:</label><br>
                         <input type="text" id="termeknev" name="termeknev"><br><br>
+
+                        <label for="termekEladhat">Termék eladható(1/0):</label><br>
+                        <input type="text" name="termekEladhat" id="termekEladhat" ><br><br>
+                        <label for="termekRaktar">Termék raktáron(1/0):</label><br>
+                        <input type="text" name="termekRaktar" id="termekRaktar" ><br><br>
+                        <label for="termekMeret">Termék méret besorolása:</label><br>
+                        <input type="text" name="termekMeret" id="termekMeret" ><br><br>
+
                         <label for="termekAr">Ár:</label><br>
                         <input type="text" id="termekAr" name="termekAr"><br><br>
                         <label for="szazalek">Kedvezmény:</label><br>
@@ -76,6 +85,7 @@
                         <div>
                         <div>
                             <input type="submit" class="gomb" id="tAjaxModosit" value="MÓDOSÍT">
+                            <input type="submit" class="gomb" id="ajaxUjTermek" value="ÚJ TERMÉK">
                         </div>
                     </fieldset>
                 </form>
@@ -86,7 +96,7 @@
                 <div id="kosaram"></div><br>
                 <span id="osszar"></span><br><br>
 
-                <a href="index"><button class="rendel">Véglegesítés</button></a>
+                <a href="index" id="rendAtad"><button>Véglegesítés</button></a>
             </section>
         </article>
         @endsection

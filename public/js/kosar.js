@@ -3,6 +3,7 @@ class Kosar {
       //mutatók a grafikus elemekhez
       this.kosarElem = $('#kosaram');
       this.osszarElem = $('#osszar');
+      this.rendetAtad = $('#rendAtad');
       this.kosarTomb = [];
       //localstorage-ból beolvassuk az adatokat és betesszük a tömbbe
       // console.log(localStorage.getItem('kosaram'))
@@ -10,7 +11,16 @@ class Kosar {
         this.kosarTomb = JSON.parse(localStorage.getItem('kosaram'));
         this.megjelenit();
       }
+      this.rendetAtad.on("click", () => {
+        this.rendelesAtadasa();
+      });
     }
+
+    rendelesAtadasa(){
+      localStorage.clear();
+      window.location.reload();
+    }
+
     setKosar(termek) {
       this.kosarTomb.push(termek);
       localStorage.setItem('kosaram', JSON.stringify(this.kosarTomb));
@@ -28,7 +38,7 @@ class Kosar {
                 elem.termeknev +
                 '</td><td>' +
                 elem.ar +
-                '</td><td><button data-id="' +
+                ' Ft</td><td><button data-id="' +
                 index +
                 '" class="kosarTorol">X</button></td></tr>'
         });

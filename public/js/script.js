@@ -232,21 +232,28 @@ $(function () {
         console.log(event.detail);
         console.log(event.detail.termek_id);
         $("#termek_id").val(event.detail.termek_id);
+        $("#termekFaj").val(event.detail.fajta);
         console.log($("#termek_id").val());
         $("#termeknev").val(event.detail.termeknev);
-        $("#termekAr").val(event.detail.ar);
+        $("#termekEladhat").val(event.detail.eladhato);
+        $("#termekRaktar").val(event.detail.raktaron);
+        $("#termekMeret").val(event.detail.meret);
         $("#szazalek").val(event.detail.kedvezmeny_id);
+        $("#termekAr").val(event.detail.ar);
         $("#termekKep").val(event.detail.kep);
     });
 
     $("#tAjaxModosit").on("click", () =>{
-        
-        let adat= {}
-        adat.termek_id= $("#termek_id").val();
-        adat.termeknev= $("#termeknev").val();
-        adat.ar=$("#termekAr").val();
-        adat.kedvezmeny_id= $("#szazalek").val();
-        adat.termekKep= $("#termekKep").val();
+        let adat = {}
+        adat.termek_id = $("#termek_id").val();
+        adat.fajta = $("#termekFaj").val();
+        adat.termeknev = $("#termeknev").val();
+        adat.eladhato = $("#termekEladhat").val();
+        adat.raktaron = $("#termekRaktar").val();
+        adat.meret = $("#termekMeret").val();
+        adat.kedvezmeny_id = $("#szazalek").val();
+        adat.ar = $("#termekAr").val();
+        adat.kep = $("#termekKep").val();
         
         console.log(adat);
         myAjax.adatPut(apivegpont+"termek", adat, adat.termek_id);
@@ -254,11 +261,41 @@ $(function () {
         myAjax.adatBetolt(apivegpont+"termek", termekTomb, termekKiir);
         
         $("#termek_id").val('');
+        $("#termekFaj").val('');
         $("#termeknev").val('');
-        $("#termekAr").val('');
+        $("#termekEladhat").val('');
+        $("#termekRaktar").val('');
+        $("#termekMeret").val('');
         $("#szazalek").val('');
+        $("#termekAr").val('');
         $("#termekKep").val('');
-        //window.location.reload();
+    });
+
+    $("#ajaxUjTermek").on("click", () =>{
+        let adat = {}
+        adat.fajta = $("#termekFaj").val();
+        adat.termeknev = $("#termeknev").val();
+        adat.eladhato = $("#termekEladhat").val();
+        adat.raktaron = $("#termekRaktar").val();
+        adat.meret = $("#termekMeret").val();
+        adat.kedvezmeny_id = $("#szazalek").val();
+        adat.ar = $("#termekAr").val();
+        adat.kep = $("#termekKep").val();
+        
+        console.log(adat);
+        myAjax.adatPost(apivegpont+"termek", adat);
+        
+        myAjax.adatBetolt(apivegpont+"termek", termekTomb, termekKiir);
+        
+        $("#termek_id").val('');
+        $("#termekFaj").val('');
+        $("#termeknev").val('');
+        $("#termekEladhat").val('');
+        $("#termekRaktar").val('');
+        $("#termekMeret").val('');
+        $("#szazalek").val('');
+        $("#termekAr").val('');
+        $("#termekKep").val('');
     });
 
     $(window).on("kosarbarak", (event) => {
@@ -266,6 +303,10 @@ $(function () {
         console.log(event.detail);
         kosar.setKosar(event.detail);
     });
+
+    // index oldal -----------------------------------------------
+    
+
 
     // kedvezmenyek oldal ----------------------------------------
     function kedvezmenyKiir(kedvezmenyek){

@@ -100,7 +100,7 @@
                 <div id="kosaram"></div><br>
                 <span id="osszar"></span><br><br>
 
-                <button class="rendel">Véglegesítés</button>
+                <a id="rendAtad"><button>Véglegesítés</button></a>
             </aside>
             
         </article>
