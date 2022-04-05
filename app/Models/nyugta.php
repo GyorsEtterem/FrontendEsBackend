@@ -9,4 +9,13 @@ class nyugta extends Model
 {
     use HasFactory;
     protected $primaryKey = 'nyugtaszam';
+
+    protected $fillable = [
+        'vegsoOsszeg',
+        'fizetesAllapot',
+        'fizetesMod',
+        'datumrend',
+        'datumkifizet',
+        'megjegyzes'
+    ];
 }

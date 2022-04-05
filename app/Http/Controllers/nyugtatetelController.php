@@ -17,11 +17,11 @@ class nyugtatetelController extends Controller
 
 
 
-    public function show($id)
+    public function show($termek_id)
 
     {
 
-        return nyugtatetel::find($id);
+        return nyugtatetel::find($termek_id);
     }
 
 
@@ -32,8 +32,8 @@ class nyugtatetelController extends Controller
 
         //kötelező oszlopok
 
-        $request->validate([
-            'poszt' => 'required'
+        $request->validate([/* 
+            'poszt' => 'required' */
         ]);
 
         return nyugtatetel::create($request->all());
@@ -41,14 +41,14 @@ class nyugtatetelController extends Controller
 
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $termek_id)
 
     {
 
-        $article = nyugtatetel::find($id);
+        $article = nyugtatetel::find($termek_id);
 
-        $request->validate([
-            'poszt' => 'required'
+        $request->validate([/* 
+            'poszt' => 'required' */
         ]);
 
         $article->update($request->all());
@@ -60,11 +60,11 @@ class nyugtatetelController extends Controller
 
 
 
-    public function delete(Request $request, $id)
+    public function delete(Request $request, $termek_id)
 
     {
 
-        $article = nyugtatetel::find($id);
+        $article = nyugtatetel::find($termek_id);
 
         $article->delete();
 

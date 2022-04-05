@@ -96,7 +96,10 @@
                 <div id="kosaram"></div><br>
                 <span id="osszar"></span><br><br>
 
-                <a href="index" id="rendAtad"><button>Véglegesítés</button></a>
+                <!-- <label for="megjegy">Megjegyzés:</label><br>
+                <textarea rows="5" cols="20" id="megjegy" name="megjegy"></textarea><br><br> -->
+
+                <a href="index"><button>Főoldalra</button></a>
             </section>
         </article>
         @endsection

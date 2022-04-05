@@ -306,6 +306,25 @@ $(function () {
 
     // index oldal -----------------------------------------------
     
+    $(window).on("rendelesFel", (event) =>{
+        let kosarTomb = [];
+        let adatok = {};
+        kosarTomb = JSON.parse(localStorage.getItem('kosaram'));
+        console.log(event.detail);
+        console.log(kosarTomb);
+        if (kosarTomb != null) {
+            kosarTomb.forEach((elem, index) => {
+                adatok.termek_id = elem.termek_id;
+                adatok.nyugta = event.detail;
+                adatok.etelAllapot = 0;
+
+                myAjax.adatPost(apivegpont+"nyugtatetel", adatok);
+            });
+        }
+        localStorage.clear();
+        window.location.reload();
+    });
+    
 
 
     // kedvezmenyek oldal ----------------------------------------

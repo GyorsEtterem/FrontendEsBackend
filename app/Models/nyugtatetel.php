@@ -9,4 +9,10 @@ class nyugtatetel extends Model
 {
     use HasFactory;
     protected $primaryKey = 'nyugta';
+
+    protected $fillable = [
+        'nyugta',
+        'termek_id',
+        'etelAllapot'
+    ];
 }
