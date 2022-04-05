@@ -330,11 +330,19 @@ $(function () {
         window.location.reload();
     });
 
-    /* $(window).on("kHozzaad", (event) => {
-        console.log(event.detail);
-        $("#uKedvSzaz").val(event.detail.kedvezmeny);
-        $("#uKedvKez").val(event.detail.mettol);
-        $("#uKedvVeg").val(event.detail.meddig);
-    }); */
-
+    $("#ajaxUjKedvezmeny").on("click", () =>{
+        let adat = {}
+        adat.kedvezmeny = $("#uKedvSzaz").val();
+        adat.mettol = $("#uKedvKez").val();
+        adat.meddig = $("#uKedvVeg").val();
+        
+        console.log(adat);
+        myAjax.adatPost(apivegpont+"kedvezmeny", adat);
+        
+        myAjax.adatBetolt(apivegpont+"kedvezmeny", kedvezmenyTomb, kedvezmenyKiir);
+        
+        $("#uKedvSzaz").val('');
+        $("#uKedvKez").val('');
+        $("#uKedvVeg").val('');
+    });
 });

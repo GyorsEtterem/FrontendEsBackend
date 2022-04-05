@@ -14,10 +14,6 @@ class Kedvezmeny{
         this.kedvTorles.on("click ", () => {
             this.torlesTrigger(this.adat);
         });
-        /* this.reklamacioHozza = this.node.children(".kedvFelvesz").children("button");
-        this.reklamacioHozza.on("click ", () => {
-            this.hozzaadTrigger();
-        }); */
     }
 
     setAdat(adat) {
@@ -36,11 +32,4 @@ class Kedvezmeny{
         
         window.dispatchEvent(esemeny); 
     }
-
-    /* hozzaadTrigger(){
-        let esemeny  = new CustomEvent("kHozzaad", {
-            detail: this.adat, 
-        });
-        window.dispatchEvent(esemeny); 
-    } */
 }
