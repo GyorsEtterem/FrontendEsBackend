@@ -51,7 +51,7 @@
                         <td class="szuldatum"></td>
                         <td class="cim"></td>
                         <td class="telszam"></td>
-                        <td class="munkakor"></td>
+                        <td class="megnevezes"></td>
                         <td class="email"></td>
                         <td class="torles"><button>Törlés</button></td>
                         <td class="modositas"><button>Módosítás</button></td>

@@ -60,6 +60,7 @@
                     <div class="rendeles">
                         <p class="nyugta"></p>
                         <p class="termek_id"></p>
+                        <p class="termeknev"></p>
                         <p class="termekAr"></p>
                         <p class="csere_ideje"></p>
                         <p class="hozzaad"><button>Reklamáció hozzáadása</button></p>
@@ -78,6 +79,7 @@
                         <fieldset>
                             <legend>Reklamáció hozzáadáas</legend>
                             <label for="nyugta">Nyugta megadása:</label><br>
+                            <!-- <p id="nyugta" name="nyugta" value="{{old('nyugta')}}"></p><br><br> -->
                             <input type="text" id="nyugta" name="nyugta" value="{{old('nyugta')}}"><br><br>
 
                             <label for="termek_id">Termék:</label><br>

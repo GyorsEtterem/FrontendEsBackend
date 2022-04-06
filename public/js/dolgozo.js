@@ -11,6 +11,7 @@ class Dolgozo {
         this.dolgTel = this.node.children(".telszam");
         this.dolgJelszo = this.node.children(".jelszo");
         this.dolgMunka = this.node.children(".munkakor");
+        this.dolgMunkaNev = this.node.children(".megnevezes");
         this.setAdat(this.adat);
 
         this.dolgozoTorles = this.node.children(".torles").children("button");
@@ -34,6 +35,7 @@ class Dolgozo {
         this.dolgTel.html(adat.telefonszam);
         this.dolgJelszo.html(adat.jelszo);
         this.dolgMunka.html(adat.munkakor_id);
+        this.dolgMunkaNev.html(adat.megnevezes);
     }
 
     torlesTrigger(adat) {

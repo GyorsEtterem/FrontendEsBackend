@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\dolgozo;
+use Illuminate\Support\Facades\DB;
 
 class dolgozoController extends Controller
 {
@@ -11,9 +12,52 @@ class dolgozoController extends Controller
     public function index(Request $request)
 
     {
+        // DB::table('dolgozos')
+        // -> join( 'munkakors', 'dolgozos.munkakor_id', '=' ,'munkakors.munkakor_id')
+        // -> select(
+        //     'dolgozos.neve',
+        //     'dolgozos.telefonszam',
+        //     'dolgozos.szuldatum',
+        //     'dolgozos.cim',
+        //     'dolgozos.email',
+        //     'dolgozos.jelszo',
+        //     'munkakors.megnevezes',
+        //     'munkakors.munkakor_id'
+        // )
+        // // ->query('q', '')->where('neve', 'like', "%$neve%");
+
+        // ->get();
 
         $neve = $request->query('q', '');
-        $keres = dolgozo::where('neve', 'like', "%$neve%");
+        
+        if($neve===null){
+            $keres = DB::table('dolgozos')
+            -> join( 'munkakors', 'dolgozos.munkakor_id', '=' ,'munkakors.munkakor_id')
+            -> select(
+                'dolgozos.dolg_id',
+                'dolgozos.neve',
+                'dolgozos.telefonszam',
+                'dolgozos.szuldatum',
+                'dolgozos.cim',
+                'dolgozos.email',
+                'dolgozos.jelszo',
+                'munkakors.megnevezes',
+                'munkakors.munkakor_id'
+            );
+        }else{
+            $keres = dolgozo::where('neve', 'like', "%$neve%")-> join( 'munkakors', 'dolgozos.munkakor_id', '=' ,'munkakors.munkakor_id')
+            -> select(
+                'dolgozos.dolg_id',
+                'dolgozos.neve',
+                'dolgozos.telefonszam',
+                'dolgozos.szuldatum',
+                'dolgozos.cim',
+                'dolgozos.email',
+                'dolgozos.jelszo',
+                'munkakors.megnevezes',
+                'munkakors.munkakor_id'
+            );
+        }
         $sort = $request->query('desc', '');
         $a = '';
         if ($sort == "") {

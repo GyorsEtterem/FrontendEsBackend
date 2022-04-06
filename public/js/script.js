@@ -12,9 +12,12 @@ $(function () {
     let apiFunc = "";
     let volt = true;
     if (window.location.href.includes("dolgozo")) {
-        apiVege = "dolgozo";
+        apiVege = "dolgozoMunka";
         apiTomb = dolgozoTomb;
         apiFunc = dolgozoKiir;
+        apivegpont="/api/dolgozoMunka"; //dolgozoKerese
+        apivegpont += "?q=" ;// + keresomezo.val()
+        myAjax.adatBetolt(apivegpont + "dolgozoMunka", dolgozoTomb, dolgozoKiir);
     }else if(window.location.href.includes("reklamacio")){
         apiVege = "reklamacio";
         apiTomb = reklamTomb;
@@ -90,20 +93,15 @@ $(function () {
     })
 
     function dolgozoKiir(dolgozok){
-        
-        const szuloElem = $(".dolgozok_tabla");
         console.log(dolgozok)
+        const szuloElem = $(".dolgozok_tabla");
         const sablonElem = $('#sablonhoz .dolgozo');
-
         szuloElem.empty();
         
-
         dolgozok.forEach(function(elem) {
 
             let node = sablonElem.clone().appendTo(szuloElem);
             const obj = new Dolgozo(node, elem);
-            
-
         });
      }
 
@@ -141,7 +139,6 @@ $(function () {
         adat.jelszo= $("#jelszo").val();
         console.log(adat);
         myAjax.adatPut(apivegpont+"dolgozo", adat, adat.dolg_id);
-        
         myAjax.adatBetolt(apivegpont+"dolgozo",dolgozoTomb, dolgozoKiir);
         
         $("#dolgId").val('');
@@ -164,13 +161,10 @@ $(function () {
         const sablonElem = $(' .reklamacio');
         szuloElem.empty();
         sablonElem.show();
-        
 
         reklamaciok.forEach(function(elem) {
             let node = sablonElem.clone().appendTo(szuloElem);
             const obj = new Reklamacio(node, elem);
-            
-
         });
         sablonElem.hide();
     }
@@ -182,18 +176,10 @@ $(function () {
         const sablonElem = $('.rendeles');
         szuloElem.empty();
         sablonElem.show();
-        // document.getElementById("rendIDele").prepend("Rendelés száma: ");
-        //const alap = document.getElementById('rendIDele');
-        //const ele = document.createElement()
-        //alap.innerHTML += "Rendelés száma:";
-        //alap.
-
 
         rendelesek10perc.forEach(function(elem) {
             let node = sablonElem.clone().appendTo(szuloElem);
             const obj = new Rendelesek10percben(node, elem);
-            
-
         });
         sablonElem.hide();
     }

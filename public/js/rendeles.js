@@ -9,6 +9,7 @@ class Rendeles {
         /* az utolsó 3 csak az átadott rendelésekhez kell */
         this.rendTermek = this.node.children(".termek_id");
         this.rendAr = this.node.children(".termekAr");
+        this.termekNev = this.node.children(".termeknev");
         this.setAdat(this.adat);
     }
 
@@ -27,6 +28,7 @@ class Rendelesek10percben extends Rendeles {
         this.rendelesId = adat.rendeles_id;
         this.rendTermek = this.node.children(".termek_id");
         this.rendAr = this.node.children(".termekAr");
+        this.termekNev = this.node.children(".termeknev");
         this.rendNyugta = this.node.children(".nyugta");
         this.rendIdeje = this.node.children(".csere_ideje");
         this.setAdat(this.adat);
@@ -42,6 +44,7 @@ class Rendelesek10percben extends Rendeles {
     setAdat(adat) {
         this.adat = adat;
         this.rendTermek.text("Termék száma: " + adat.termek_id);
+        this.termekNev.text("Termék neve: " + adat.termeknev);
         this.rendAr.text("Termék ára: " + adat.termekar);
         this.rendNyugta.text("Rendelés sorszáma: " + adat.nyugta);
         this.rendIdeje.text("Rendelés ideje: " + adat.csere_ideje);

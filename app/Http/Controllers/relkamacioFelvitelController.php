@@ -12,7 +12,6 @@ class relkamacioFelvitelController extends Controller
     {
 
         $request->validate([
-
             'termek_id' => 'required',
             'nyugta' => 'required',
             'leiras' => 'required|unique:reklamacios',
@@ -27,8 +26,6 @@ class relkamacioFelvitelController extends Controller
 
         if ($res) {
             return back()->with('sikeres', 'A reklamációt rögzítettük');
-        } else {
-            return back()->with('sikertelen', 'Valamelyik adatot nem jól adta meg');
-        }
+        } 
     }
 }

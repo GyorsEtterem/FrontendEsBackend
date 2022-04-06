@@ -14,17 +14,13 @@ class elmult10pRendController extends Controller
     public function index()
 
     {
-        $date = new DateTime;
-        $date->modify('-5 minutes');
-        $formatted_date = $date->format('Y-m-d H:i:s');
-
-
         $lekerdez = DB::table('nyugtatetels')
             ->join('termeks', 'termeks.termek_id', '=', 'nyugtatetels.termek_id')
             ->select(
 
                 'termeks.termek_id as termek_id',
                 'termeks.ar as termekar',
+                'termeks.termeknev as termeknev',
                 'nyugtatetels.datumKesz as csere_ideje',
                 'nyugtatetels.nyugta as nyugta'
             )

@@ -13,6 +13,7 @@ use App\Http\Controllers\menuosszeallController;
 use App\Http\Controllers\munkakorController;
 use App\Http\Controllers\dolgozoController;
 use App\Http\Controllers\elmult10pRendController;
+use App\Http\Controllers\munkaKapcsController;
 
 
 
@@ -31,6 +32,7 @@ use App\Http\Controllers\elmult10pRendController;
 //     return $request->user();
 // });
 Route::get('/elmult10perc', [elmult10pRendController::class, 'index']);
+Route::get('/dolgozoMunka', [munkaKapcsController::class, 'index']);
 
 Route::get('/termek', [termekController::class, 'index']);
 Route::put('/termek/{id}', [termekController::class, 'update']);
