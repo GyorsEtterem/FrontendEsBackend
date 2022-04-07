@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('pages.login');
 });
 
-Route::middleware(['first', 'second'])->group(function () {
+/* Route::middleware(['first', 'second'])->group(function () {
     Route::get('/', function () {
         // Uses first & second middleware...
     });
@@ -27,7 +27,7 @@ Route::middleware(['first', 'second'])->group(function () {
     Route::get('/user/profile', function () {
         // Uses first & second middleware...
     });
-});
+}); */
 
 Route::get('/login', [CustomAuthController::class, 'login']); //->middleware('isLoggedIn');
 Route::get('/registration', [CustomAuthController::class, 'registration']);
