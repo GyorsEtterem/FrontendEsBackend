@@ -20,7 +20,6 @@ class CreateMenuosszeallsTable extends Migration
             $table->Integer("termek_id")->unsigned();
             $table->index('termek_id');
             $table->foreign('termek_id')->references('termek_id')->on('termeks');
-            $table->Integer('mennyiseg');
             $table->primary(['menu_id','termek_id']);
             $table->timestamps();
             
