@@ -38,6 +38,11 @@
 
 #ajaxUjTermek{
     margin-left: 15pt;
+    float: right;
+}
+
+#tAjaxModosit{
+    float: left;
 }
 
 /* KOSÁR */
