@@ -76,15 +76,20 @@
 
                         <label for="termekAr">Ár:</label><br>
                         <input type="text" id="termekAr" name="termekAr"><br><br>
-                        <label for="szazalek">Kedvezmény:</label><br>
-                        <input type="text" id="szazalek" name="szazalek"><br><br>
+                        <label for="termekSzaz">Kedvezmény:</label><br>
+                        <!-- <input type="text" id="szazalek" name="szazalek"><br><br> -->
+                        <form action = "">
+                            <select name = "termekSzaz" id="termekSzaz">
+                            <option value="0">0%</option>
+                            </select>
+                        </form><br><br>
                         <label for="termekKep">Kép:</label><br>
                         <input type="text" id="termekKep" name="termekKep"><br><br>
                         <label for="kep">Válasszon képet:</label>
                         <input type="file" id="kep" name="kep"><br><br>
                         <div>
                         <div>
-                            <input type="submit" class="gomb" id="tAjaxModosit" value="MÓDOSÍT">
+                            <input type="submit" class="gomb" id="tAjaxModosit" value="MÓDOSÍT" style="display: none">
                             <input type="submit" class="gomb" id="ajaxUjTermek" value="ÚJ TERMÉK">
                         </div>
                     </fieldset>
