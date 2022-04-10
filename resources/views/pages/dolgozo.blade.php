@@ -67,6 +67,7 @@
                 </div>
                 <div>
                     <select id="rendezesiszempont">
+                        <option value="alap">Rendezés abc sorrend alapján</option>
                         <option value="nevRendezNo">Név szerint növekvő</option>
                         <option value="nevRendezCsokken">Név szerint csökkenő</option>
                     </select>
@@ -113,7 +114,7 @@
                         <label for="szuldatum">Születési dátum:</label><br>
                         <input type="date" id="szuldatum" name="szuldatum"><br><br>
 
-                        <label for="munkakor">munkakor :</label><br>
+                        <label for="munkakor">Munkakör: (kérjük 1-est adj meg ha menedzserré szeretnéd tenni ezt a személyt és 2-est ha dolgozóvá)</label><br>
                         <input type="text" id="munkakor" name="munkakor"><br><br>
 
                         <label for="telefonszam">Telefonszám:</label><br>
