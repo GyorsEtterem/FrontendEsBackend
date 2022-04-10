@@ -14,16 +14,10 @@ class Kosar {
         this.megjelenit();
       }
       this.rendetAtad.on("click", () => {
-        this.rendelesAtadasa();
+        if (localStorage.getItem('kosaram') !== null) {
+          this.rendelesAtadasa();
+        }
       });
-    }
-
-    osszeszamol(){
-      let osszAr = 0;
-      this.kosarTomb.forEach((elem, index) => {
-        osszAr += elem.ar;
-      });
-      return osszAr;
     }
 
     rendelesAtadasa(){
@@ -32,8 +26,8 @@ class Kosar {
       let nyugta = {};
       let current = new Date();
       let jelenDatum = current.getFullYear() + "-0" + (current.getMonth()+1) + "-0" + current.getDate();
-      adat.vegsoOsszeg = this.osszeszamol();
-      console.log(this.osszeszamol());
+      adat.vegsoOsszeg = osszeszamol(this.kosarTomb);
+      console.log(osszeszamol(this.kosarTomb));
       adat.fizetesAllapot = 1;
       adat.fizetesMod = 1;
       adat.datumrend = jelenDatum;
@@ -45,28 +39,18 @@ class Kosar {
     }
 
     setKosar(termek) {
+      const myAjax = new MyAjax;
+      const kedvezTomb = [];
       this.kosarTomb.push(termek);
       localStorage.setItem('kosaram', JSON.stringify(this.kosarTomb));
-  
+      
+      ajaxKedvez();
+
       this.megjelenit();
     }
 
     megjelenit(){
-        let txt = '<table>';
-        this.kosarTomb.forEach((elem, index) => {
-            txt += 
-                '<tr><td>' +
-                elem.termeknev +
-                '</td><td>' +
-                elem.ar +
-                ' Ft</td><td><button data-id="' +
-                index +
-                '" class="kosarTorol">X</button></td></tr>'
-        });
-        txt += '</table>';
-
-        this.kosarElem.html(txt);
-        this.osszarElem.html("Összesen: " + this.osszeszamol() + " Ft");
+        tablazatEpito(this.kosarTomb);
         this.kosarbaGombElem = $('.kosarTorol');
         this.kosarbaGombElem.on('click', (event) => {
             let id = $(event.target).attr('data-id');
@@ -76,6 +60,47 @@ class Kosar {
         });
     }
 }
+
+function osszeszamol(tomb){
+  let osszAr = 0;
+  tomb.forEach((elem, index) => {
+    osszAr += elem.kedvezmenyes_ar;
+  });
+  return osszAr;
+}
+
+function tablazatEpito(tomb){
+  let txt = '<table>';
+  tomb.forEach((elem, index) => {
+    txt += 
+      '<tr><td>' +
+        elem.termeknev +
+      '</td><td>' +
+        elem.kedvezmenyes_ar +
+      ' Ft</td><td><button data-id="' +
+        index +
+      '" class="kosarTorol">X</button></td></tr>'
+  });
+  txt += '</table>';
+  $('#kosaram').html(txt);
+
+  $('#osszar').html("Összesen: " + osszeszamol(tomb) + " Ft");
+
+  let kosarbaGombElem = $('.kosarTorol');
+  kosarbaGombElem.on('click', (event) => {
+    let id = $(event.target).attr('data-id');
+    tomb.splice(id, 1);
+    localStorage.setItem('kosaram', JSON.stringify(tomb));
+    ajaxKedvez();
+  });
+}
+
+function ajaxKedvez(){
+  const myAjax = new MyAjax;
+  const kedvezTomb = [];
+  myAjax.adatBetolt("/api/kedvezmeny", kedvezTomb, localValtoz);
+}
+
 function maxNyugtaszam(tomb){
   let maxErtek = -1;
   tomb.forEach((elem, index) => {
@@ -89,4 +114,21 @@ function maxNyugtaszam(tomb){
     detail: maxErtek,
   });
   window.dispatchEvent(esemeny); 
+}
+function localValtoz(adat){
+  let tarolo = JSON.parse(localStorage.getItem("kosaram"));
+  console.log(tarolo);
+
+  for (let szam1 = 0; szam1 < tarolo.length; szam1++) {
+    for (let szam2 = 0; szam2 < adat.length; szam2++) {
+      if (tarolo[szam1].kedvezmeny_id == adat[szam2].kedvezmeny_id) {
+        tarolo[szam1].kedvezmenyes_ar = (tarolo[szam1].ar*(1-(adat[szam2].kedvezmeny/100)));
+        console.log(tarolo[szam1].kedvezmeny_id);
+        console.log(adat[szam2].kedvezmeny_id);
+      }
+    }
+  }
+  localStorage.setItem('kosaram', JSON.stringify(tarolo));
+  tablazatEpito(tarolo);
+  console.log("halo4");
 }

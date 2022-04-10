@@ -55,11 +55,6 @@ $(function () {
         console.log(id);
     }
 
-    /* myAjax.adatBetolt(apivegpont+"dolgozo", dolgozoTomb, dolgozoKiir);
-    myAjax.adatBetolt(apivegpont+"reklamacio", reklamTomb, reklamKiir); */
-    /* myAjax.adatBetolt(apivegpont+"elmult10perc", rendelesek10percbenTomb, rend10percKiir); */
-    /* myAjax.adatBetolt(apivegpont+"termek", termekTomb, termekKiir); */
-
     // Dolgozók névsorának olala
     let keresomezo= $("#kereso");
     keresomezo.on("keyup", function(){
@@ -201,18 +196,48 @@ $(function () {
 
     // termekek oldal ----------------------------------------
     function termekKiir(termekek){
+        const myAjax = new MyAjax;
+        const termekSzazTomb = [];
         const szuloElem = $(".nagydiv");
         console.log(termekek);
         const sablonElem = $("#termekSablon .termek");
+        let obj;
 
         szuloElem.empty();
         sablonElem.show();
-        
+
+        for (let szam = 0; szam < termekek.length; szam++) {
+            termekek[szam].kedvezmenyes_ar = termekek[szam].ar;
+            console.log(termekek[szam]);
+        }
+
         termekek.forEach(function(elem) {
             let node = sablonElem.clone().appendTo(szuloElem);
             const obj = new Termek(node, elem);
         });
         sablonElem.hide();
+
+
+        myAjax.adatBetolt("/api/kedvezmeny", termekSzazTomb, kedvezmenyAtad);
+    }
+
+    function kedvezmenyAtad(adat){
+        let pKedvAr = $('.kedvAr');
+        let pSzazId = $('.szazalekId');
+        let pSzaz = $('.szazalek');
+        let pKedvAr2 = $('.titkosKedvAr');
+        let kieg = 0;
+
+        for (let rSzam = 0; rSzam < pKedvAr.length; rSzam++) {
+                adat.forEach((elem, index) => {
+                    if (elem.kedvezmeny_id == pSzazId[rSzam].textContent) {
+                        pSzaz[rSzam].textContent = "Kedvezmény: " + elem.kedvezmeny + "%";
+                        kieg = pKedvAr[rSzam].textContent;
+                        pKedvAr2[rSzam].textContent = kieg;
+                        pKedvAr[rSzam].textContent = "Kedvezményes ár: " + (kieg*(1-(elem.kedvezmeny/100))) + " Ft";
+                    }
+                });
+        }
     }
 
     function szazalekKiir(adat){

@@ -48,7 +48,9 @@
                     <h3 class="termeknev">Lorem ipsum dolor</h3>
                     <img src="" alt="" class="termekKep" />
                     <p class="meret"></p>
+                    <p class="szazalekId"></p>
                     <p class="szazalek"></p>
+                    <p class="titkosKedvAr"></p>
                     <p class="kedvAr"></p>
                     <a class="tTorles"><button>TÖRLÉS</button></a>
                     <a class="tModositas" href="#ulaphozUgro"><button>MÓDOSÍT</button></a>
@@ -74,7 +76,7 @@
                         <label for="termekMeret">Termék méret besorolása:</label><br>
                         <input type="text" name="termekMeret" id="termekMeret" ><br><br>
 
-                        <label for="termekAr">Ár:</label><br>
+                        <label for="termekAr">Teljes ár:</label><br>
                         <input type="text" id="termekAr" name="termekAr"><br><br>
                         <label for="termekSzaz">Kedvezmény:</label><br>
                         <!-- <input type="text" id="szazalek" name="szazalek"><br><br> -->
@@ -82,7 +84,7 @@
                             <select name = "termekSzaz" id="termekSzaz">
                             <option value="0">0%</option>
                             </select>
-                        </form><br><br>
+                        </form> --> Ft<br><br>
                         <label for="termekKep">Kép:</label><br>
                         <input type="text" id="termekKep" name="termekKep"><br><br>
                         <label for="kep">Válasszon képet:</label>

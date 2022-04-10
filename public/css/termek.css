@@ -31,7 +31,7 @@
     border: 1px solid rgb(51, 0, 0);
 }
 
-#termek_id{
+#termek_id, .titkosKedvAr, .szazalekId{
     display: none;
     height: 0;
 }

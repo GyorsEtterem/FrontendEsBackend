@@ -8,12 +8,11 @@ class Termek{
         this.termeknev = this.node.children(".termeknev");
         this.meret = this.node.children(".meret");
         this.ara = this.node.children(".kedvAr");
-        this.kedvezmeny = this.node.children(".szazalek");
+        this.kedvezmeny = this.node.children(".szazalekId");
         this.kep = this.node.children(".kep");
         this.setAdat(this.adat);
         this.termekTorles = this.node.children(".tTorles").children("button");
         this.termekModosit = this.node.children(".tModositas").children("button");
-        /* this.atszamol(this.adat); */
         this.termekTorles.on("click ", () => {
             this.torlesTrigger(this.adat);
         });
@@ -32,18 +31,13 @@ class Termek{
         window.dispatchEvent(esemeny);
     }
 
-    atszamol(adat){
-        let kedvezmenyesAr = adat.ar*((100-adat.kedvezmeny)/100);
-        this.kedvAr.text(kedvezmenyesAr);
-    }
-    
     setAdat(adat) {
         console.log(adat);
         this.adat = adat;
         this.termeknev.text(adat.termeknev);
         this.meret.text("Termék méret besorolása: " + adat.meret);
-        this.ara.text("Termék ára: " + adat.ar + " Ft");
-        this.kedvezmeny.text("Kedvezmény százaléka: " + adat.kedvezmeny_id);
+        this.ara.text(adat.ar);
+        this.kedvezmeny.text(adat.kedvezmeny_id);
         this.kep.attr("src", adat.kep);
     }
 
@@ -51,7 +45,6 @@ class Termek{
         let esemeny  = new CustomEvent("tTorles", {
             detail: this.adat,
         });
-        
         window.dispatchEvent(esemeny); 
     }
 
