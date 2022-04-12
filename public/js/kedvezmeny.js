@@ -19,10 +19,10 @@ class Kedvezmeny{
     setAdat(adat) {
         console.log(adat)
         this.adat = adat;
-        this.kedvezmeny_id.text(adat.kedvezmeny_id);
-        this.kedvSzaz.text(adat.kedvezmeny);
-        this.kedvKez.text(adat.mettol);
-        this.kedvVeg.text(adat.meddig);
+        this.kedvezmeny_id.text("Kedvezmény ID: " + adat.kedvezmeny_id);
+        this.kedvSzaz.text("Kedvezmény: " + adat.kedvezmeny + "%");
+        this.kedvKez.text("Kedvezmény kezdete: " + adat.mettol);
+        this.kedvVeg.text("Kedvezmény vége: " + adat.meddig);
     }
 
     torlesTrigger(adat){

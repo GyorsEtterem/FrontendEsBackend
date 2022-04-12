@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="../css/stilus.css" rel="stylesheet" type="text/css" />
+    <link href="../css/kedvezmeny.css" rel="stylesheet" type="text/css" />
     <link href="../css/szerkezet.css" rel="stylesheet" type="text/css" />
     <script src="../js/ajax.js"></script>
     <script src="../js/kedvezmeny.js"></script>
@@ -45,10 +46,10 @@
                 </div>
                 <div id="kedvezmenySablon">
                     <div class="kedvezmeny">
-                        <p>Kedvezmény ID: <p class="kedvId"></p></p>
-                        <p>Kedvezmény százaléka: <p class="kedvSzaz"></p></p>
-                        <p>Kedvezmény kezdete: <p class="kedvKez"></p></p>
-                        <p>Kedvezmény vége: <p class="kedvVeg"></p></p>
+                        <p class="kedvId"></p>
+                        <p class="kedvSzaz"></p>
+                        <p class="kedvKez"></p>
+                        <p class="kedvVeg"></p>
                         <a class="kTorles"><button>TÖRLÉS</button></a>
                     </div>
                 </div>
@@ -61,7 +62,6 @@
             <fieldset>
             <legend>Kedvezmény hozzáadása:</legend>
                 <label for="uKedvSzaz">Kedvezmény százaléka:</label><br>
-                <!-- <input type="text" id="uKedvSzaz" name="uKedvSzaz"><br><br> -->
                 <select name="uKedvSzaz" id="uKedvSzaz" default="0">
                     <option value="0">0</option>
                     <option value="5">5</option>

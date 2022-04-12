@@ -87,9 +87,9 @@
                         </form> --> Ft<br><br>
                         <label for="termekKep">Kép:</label><br>
                         <input type="text" id="termekKep" name="termekKep"><br><br>
-                        <label for="kep">Válasszon képet:</label>
+                        <!-- <label for="kep">Válasszon képet:</label>
                         <input type="file" id="kep" name="kep"><br><br>
-                        <div>
+                        <div> -->
                         <div>
                             <input type="submit" class="gomb" id="tAjaxModosit" value="MÓDOSÍT" style="display: none">
                             <input type="submit" class="gomb" id="ajaxUjTermek" value="ÚJ TERMÉK">
