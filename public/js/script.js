@@ -161,7 +161,6 @@ $(function () {
         $("#email").val('');
         $("#jelszo").val('');
         console.log("asd");
-        //window.location.reload();
     });
 
 

@@ -49,7 +49,8 @@
                     <div class="reklamacio">
                         <h3 class="leiras">Lorem ipsum dolor</h3>
                         <h3 class="csere_ideje">Lorem ipsum dolor</h3>
-                        <!-- <button class="bovebb">LEZÁRÁS</button> -->
+                        <h3 class="termek_id">Lorem ipsum dolor</h3>
+                        <h3 class="nyugta">Lorem ipsum dolor</h3>
                     </div>
                 </div>
 
