@@ -114,8 +114,15 @@
                         <label for="szuldatum">Születési dátum:</label><br>
                         <input type="date" id="szuldatum" name="szuldatum"><br><br>
 
-                        <label for="munkakor">Munkakör: (kérjük 1-est adj meg ha menedzserré szeretnéd tenni ezt a személyt és 2-est ha dolgozóvá)</label><br>
-                        <input type="text" id="munkakor" name="munkakor"><br><br>
+                        <label for="munkakor">Munkakör: </label><br>
+                        <form action = "">
+                            <select name = "munkakor" id="munkakor">
+                            <option value="1">Manager</option>
+                            <option value="2">Dolgozó</option>
+                            </select>
+                        </form><br><br>
+                        <!-- <input type="text" id="munkakor" name="munkakor"> -->
+                        
 
                         <label for="telefonszam">Telefonszám:</label><br>
                         <input type="text" id="telefonszam" placeholder="06301234567" name="telefonszam"></br></br>
