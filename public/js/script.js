@@ -7,13 +7,13 @@ $(function () {
     const rendelesek10percbenTomb = [];
     const kedvezmenyTomb = [];
     let apivegpont="/api/";
-    let tTipus = "";
     let termekModositGomb = true;
     
     let apiVege = "";
     let apiTomb = "";
     let apiFunc = "";
     let volt = true;
+
     if (window.location.href.includes("dolgozo")) {
         apiVege = "dolgozoMunka";
         apiTomb = dolgozoTomb;
@@ -205,12 +205,13 @@ $(function () {
 
     // termekek oldal ----------------------------------------
     function termekKiir(termekek){
+        const termekAllito = new TermekAllito();
         const myAjax = new MyAjax;
         const termekSzazTomb = [];
         const szuloElem = $(".nagydiv");
         console.log(termekek);
         const sablonElem = $("#termekSablon .termek");
-        let obj;
+        let tTipus = termekAllito.getTipus();
 
         szuloElem.empty();
         sablonElem.show();
@@ -357,6 +358,31 @@ $(function () {
 
     // index oldal -----------------------------------------------
     
+    $('#bKategoria').on("click", () => {
+        const termekAllito = new TermekAllito();
+        termekAllito.setTipus("B");
+    });
+    $('#kKategoria').on("click", () => {
+        const termekAllito = new TermekAllito();
+        termekAllito.setTipus("K");
+    });
+    $('#iKategoria').on("click", () => {
+        const termekAllito = new TermekAllito();
+        termekAllito.setTipus("I");
+    });
+    $('#dKategoria').on("click", () => {
+        const termekAllito = new TermekAllito();
+        termekAllito.setTipus("D");
+    });
+    $('#szKategoria').on("click", () => {
+        const termekAllito = new TermekAllito();
+        termekAllito.setTipus("SZ");
+    });
+    $('#mKategoria').on("click", () => {
+        const termekAllito = new TermekAllito();
+        termekAllito.setTipus("M");
+    });
+
     $(window).on("rendelesFel", (event) =>{
         let kosarTomb = [];
         let adatok = {};
@@ -375,28 +401,6 @@ $(function () {
         localStorage.clear();
         window.location.reload();
     });
-    
-    function tipusValaszt(){
-        switch (tTipus) {
-            case 0:
-              console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
-              break;
-            case 1:
-                console.log("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK");
-              break;
-            case 2:
-                console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
-              break;
-            case 3:
-                console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
-              break;
-            case 4:
-                console.log("SZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZSZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
-              break;
-            case 5:
-                console.log("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
-          }
-    }
 
 
     // kedvezmenyek oldal ----------------------------------------

@@ -13,6 +13,7 @@
     <script src="../js/ajax.js"></script>
     <script src="../js/kosar.js"></script>
     <script src="../js/termek.js"></script>
+    <script src="../js/indexJs.js"></script>
     <script src="../js/script.js"></script>
     <title>Gyorsétterem</title>
     <!-- <link rel="icon" href="icon_path" type="image/icon type"> -->
@@ -51,42 +52,42 @@
             <div class="kategoriak">
                 
             <div class="kategoria">
-                <a href="termek" id="szB"><img src="../kepek/kep1.jpg" alt="Burgerek kategória" class="kep" >
+                <a href="termek" id="bKategoria"><img src="../kepek/kep1.jpg" alt="Burgerek kategória" class="kep" >
                     <div class="KKepCim">
                         Burgerek
                     </div>
                 </a>
             </div>
             <div class="kategoria">
-                <a href="termek" id="szK"><img src="../kepek/kep2.jpg" alt="Köretek kategória" class="kep" >
+                <a href="termek" id="kKategoria"><img src="../kepek/kep2.jpg" alt="Köretek kategória" class="kep" >
                     <div class="KKepCim">
                         Köretek
                     </div>
                 </a>
             </div>
             <div class="kategoria">
-                <a href="termek" id="szI"><img src="../kepek/kep3.jpg" alt="Italok kategória" class="kep" >
+                <a href="termek" id="iKategoria"><img src="../kepek/kep3.jpg" alt="Italok kategória" class="kep" >
                     <div class="KKepCim">
                         Italok
                     </div>
                 </a>
             </div>
             <div class="kategoria">
-                <a href="termek" id="szD"><img src="../kepek/kep4.jpg" alt="Desszertek kategória" class="kep" >
+                <a href="termek" id="dKategoria"><img src="../kepek/kep4.jpg" alt="Desszertek kategória" class="kep" >
                     <div class="KKepCim">
                         Desszertek
                     </div>
                 </a>
             </div>
             <div class="kategoria">
-                <a href="termek" id="szT"><img src="../kepek/kep5.jpg" alt="Szószok kategória" class="kep" >
+                <a href="termek" id="szKategoria"><img src="../kepek/kep5.jpg" alt="Szószok kategória" class="kep" >
                     <div class="KKepCim">
                         Szószok
                     </div>
                 </a>
             </div>
             <div class="kategoria">
-                <a href="termek" id="szM"><img src="../kepek/kep8.jpg" alt="Menük kategória" class="kep" >
+                <a href="termek" id="mKategoria"><img src="../kepek/kep8.jpg" alt="Menük kategória" class="kep" >
                     <div class="KKepCim">
                         Menük
                     </div>

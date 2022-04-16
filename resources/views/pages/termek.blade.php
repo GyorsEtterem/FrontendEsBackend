@@ -13,6 +13,7 @@
     <script src="../js/ajax.js"></script>
     <script src="../js/kosar.js"></script>
     <script src="../js/termek.js"></script>
+    <script src="../js/indexJs.js"></script>
     <script src="../js/script.js"></script>
     <link rel="icon" href="../kepek/icon.png" type="image/png">
     <title>Gyorsétterem</title>
