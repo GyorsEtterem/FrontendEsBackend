@@ -52,10 +52,6 @@
                     <label for="email"><b>Email:</b></label>
                     <input type="text" placeholder="Enter Email" name="email" id="email" value="{{old('email')}}">
 
-                    <!-- <label for="username"><b>Felhasználónév:</b></label>
-    <input type="text" placeholder="Enter username" name="username" id="username" required>  -->
-
-
                     <label for="jelszo"><b>Jelszó:</b></label>
                     <input type="password" placeholder="Enter jelszo" name="jelszo" id="jelszo">
 
