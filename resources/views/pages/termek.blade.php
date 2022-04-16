@@ -65,26 +65,50 @@
                         <legend>Termék szerkesztése:</legend>
                         <input type="number" name="termek_id" id="termek_id" >
                         <label for="termekFaj">Termék fajta:</label><br>
-                        <input type="text" name="termekFaj" id="termekFaj" ><br><br>
+                        <form action = "">
+                            <select name = "termekFaj" id="termekFaj">
+                            <option value="B">B</option>
+                            <option value="K">K</option>
+                            <option value="I">I</option>
+                            <option value="D">D</option>
+                            <option value="SZ">SZ</option>
+                            <option value="M">M</option>
+                            </select>
+                        </form><br><br>
+                        <!-- <input type="text" name="termekFaj" id="termekFaj" ><br><br> -->
                         <label for="termeknev">Terménév:</label><br>
                         <input type="text" id="termeknev" name="termeknev"><br><br>
 
-                        <label for="termekEladhat">Termék eladható(1/0):</label><br>
-                        <input type="text" name="termekEladhat" id="termekEladhat" ><br><br>
-                        <label for="termekRaktar">Termék raktáron(1/0):</label><br>
-                        <input type="text" name="termekRaktar" id="termekRaktar" ><br><br>
+                        <label for="termekEladhat">Termék eladható:</label><br>
+                        <form action = "">
+                            <select name = "termekEladhat" id="termekEladhat">
+                            <option value="1">igen</option>
+                            <option value="0">nem</option>
+                            </select>
+                        </form><br>
+                        <label for="termekRaktar">Termék raktáron:</label><br>
+                        <form action = "">
+                            <select name = "termekRaktar" id="termekRaktar">
+                            <option value="1">igen</option>
+                            <option value="0">nem</option>
+                            </select>
+                        </form><br>
                         <label for="termekMeret">Termék méret besorolása:</label><br>
-                        <input type="text" name="termekMeret" id="termekMeret" ><br><br>
-
+                        <form action = "">
+                            <select name = "termekMeret" id="termekMeret">
+                            <option value="kicsi">kicsi</option>
+                            <option value="közepes">közepes</option>
+                            <option value="nagy">nagy</option>
+                            </select>
+                        </form><br>
                         <label for="termekAr">Teljes ár:</label><br>
                         <input type="text" id="termekAr" name="termekAr"><br><br>
                         <label for="termekSzaz">Kedvezmény:</label><br>
-                        <!-- <input type="text" id="szazalek" name="szazalek"><br><br> -->
                         <form action = "">
                             <select name = "termekSzaz" id="termekSzaz">
                             <option value="0">0%</option>
                             </select>
-                        </form> --> Ft<br><br>
+                        </form><br>
                         <label for="termekKep">Kép:</label><br>
                         <input type="text" id="termekKep" name="termekKep"><br><br>
                         <!-- <label for="kep">Válasszon képet:</label>

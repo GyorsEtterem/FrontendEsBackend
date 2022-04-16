@@ -35,7 +35,7 @@ class Termek{
         console.log(adat);
         this.adat = adat;
         this.termeknev.text(adat.termeknev);
-        this.meret.text("Termék méret besorolása: " + adat.meret);
+        this.meret.text("Méret besorolás: " + adat.meret);
         this.ara.text(adat.ar);
         this.kedvezmeny.text(adat.kedvezmeny_id);
         this.kep.attr("src", adat.kep);

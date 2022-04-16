@@ -122,7 +122,7 @@ function localValtoz(adat){
   for (let szam1 = 0; szam1 < tarolo.length; szam1++) {
     for (let szam2 = 0; szam2 < adat.length; szam2++) {
       if (tarolo[szam1].kedvezmeny_id == adat[szam2].kedvezmeny_id) {
-        tarolo[szam1].kedvezmenyes_ar = (tarolo[szam1].ar*(1-(adat[szam2].kedvezmeny/100)));
+        tarolo[szam1].kedvezmenyes_ar = Math.round(tarolo[szam1].ar*(1-(adat[szam2].kedvezmeny/100)));
         console.log(tarolo[szam1].kedvezmeny_id);
         console.log(adat[szam2].kedvezmeny_id);
       }

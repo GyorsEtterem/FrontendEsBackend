@@ -7,6 +7,8 @@ $(function () {
     const rendelesek10percbenTomb = [];
     const kedvezmenyTomb = [];
     let apivegpont="/api/";
+    let tTipus = "";
+    let termekModositGomb = true;
     
     let apiVege = "";
     let apiTomb = "";
@@ -51,7 +53,14 @@ $(function () {
     console.log(window.location.href);
 
     function megjelenit(id){
-        document.getElementById(id).style.display = "block";
+        if (termekModositGomb) {
+            if (document.getElementById(id).style.display == "block") {
+                document.getElementById(id).style.display = "none";
+            }else{
+                document.getElementById(id).style.display = "block";
+            }
+        }
+        
         console.log(id);
     }
 
@@ -212,8 +221,10 @@ $(function () {
         }
 
         termekek.forEach(function(elem) {
-            let node = sablonElem.clone().appendTo(szuloElem);
-            const obj = new Termek(node, elem);
+            if (elem.fajta == tTipus) {
+                let node = sablonElem.clone().appendTo(szuloElem);
+                const obj = new Termek(node, elem);
+            }
         });
         sablonElem.hide();
 
@@ -234,7 +245,7 @@ $(function () {
                         pSzaz[rSzam].textContent = "Kedvezmény: " + elem.kedvezmeny + "%";
                         kieg = pKedvAr[rSzam].textContent;
                         pKedvAr2[rSzam].textContent = kieg;
-                        pKedvAr[rSzam].textContent = "Kedvezményes ár: " + (kieg*(1-(elem.kedvezmeny/100))) + " Ft";
+                        pKedvAr[rSzam].textContent = "Kedvezményes ár: " + Math.round(kieg*(1-(elem.kedvezmeny/100))) + " Ft";
                     }
                 });
         }
@@ -276,9 +287,11 @@ $(function () {
         $("#termekAr").val(event.detail.ar);
         $("#termekKep").val(event.detail.kep);
         megjelenit(modositGomb);
+        termekModositGomb = false;;
     });
 
     $("#tAjaxModosit").on("click", () =>{
+        let modositGomb = "tAjaxModosit";
         let adat = {}
         adat.termek_id = $("#termek_id").val();
         adat.fajta = $("#termekFaj").val();
@@ -304,6 +317,8 @@ $(function () {
         $("#termekSzaz").val(0);
         $("#termekAr").val('');
         $("#termekKep").val('');
+        termekModositGomb = true;
+        megjelenit(modositGomb);
     });
 
     $("#ajaxUjTermek").on("click", () =>{
@@ -331,6 +346,7 @@ $(function () {
         $("#termekSzaz").val(0);
         $("#termekAr").val('');
         $("#termekKep").val('');
+        termekModositGomb = false;
     });
 
     $(window).on("kosarbarak", (event) => {
@@ -360,6 +376,27 @@ $(function () {
         window.location.reload();
     });
     
+    function tipusValaszt(){
+        switch (tTipus) {
+            case 0:
+              console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+              break;
+            case 1:
+                console.log("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK");
+              break;
+            case 2:
+                console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+              break;
+            case 3:
+                console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
+              break;
+            case 4:
+                console.log("SZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZSZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
+              break;
+            case 5:
+                console.log("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
+          }
+    }
 
 
     // kedvezmenyek oldal ----------------------------------------
