@@ -131,7 +131,7 @@
                 <!-- <label for="megjegy">Megjegyzés:</label><br>
                 <textarea rows="5" cols="20" id="megjegy" name="megjegy"></textarea><br><br> -->
 
-                <a href="index"><button>Főoldalra</button></a>
+                <a href="index" class="cursor"><button>Főoldalra</button></a>
             </section>
         </article>
         @endsection

@@ -3,6 +3,7 @@
 .termek{
     border: 1px solid rgb(51, 0, 0);
     align-content: center;
+    background-color: #ddd2d3;
 }
 
 .termek>h3, .termek>a{
@@ -16,6 +17,7 @@
 
 .tTorles>button, .tModositas>button{
     margin-top: 5pt;
+    cursor: pointer;
 }
 
 .tModositas{
@@ -29,6 +31,12 @@
     background-color: #ddd2d3;
     border-radius: 5pt;
     border: 1px solid rgb(51, 0, 0);
+    cursor: pointer;
+}
+
+.termeknev:hover{
+    background-color: rgb(51, 0, 0);
+    color: #ddd2d3;
 }
 
 #termek_id, .titkosKedvAr, .szazalekId{
@@ -65,12 +73,9 @@ table{
     
 }
 
-@media screen and (max-width: 820px) {
-    .nagydiv{
-        grid-template-columns: 1fr 1fr;
-    }
+@media screen and (max-width: 850px) {
     .termekarticle{
-        grid-template-columns: 2fr  1fr;
+        grid-template-columns: 1fr;
     }
     .urlap{
         display: none;
@@ -78,18 +83,16 @@ table{
     .kep{   
         width: 100px;
     }
+    .kosar{
+        margin: 40px;
+    }
+    .tTorles, .tModositas{
+        display: none;
+    }
 }
 
-@media screen and (max-width: 600px) {
-    .termekarticle{
+@media screen and (max-width: 550px){
+    .nagydiv{
         grid-template-columns: 1fr;
     }
-    .nagydiv div{
-        margin:0px;
-    }
-    .termekarticle section{
-        padding: 5px;
-    }
-    
-    
 }
