@@ -71,16 +71,4 @@ class kedvezmenyController extends Controller
         return ['message' => 'Törölve'];
 
     }
-
-    /* public function kedvFelvitel(Request $request){
-        $request -> validate([
-            'kedvezmeny' => 'required',
-            'mettol' => 'required',
-            'meddig' => 'required'
-        ]);
-        $kedvez = new kedvezmeny();
-        $kedvez -> kedvezmeny = $request -> kedvezmeny;
-        $kedvez -> mettol = $request -> mettol;
-        $kedvez -> meddig = $request -> meddig;
-    } */
 }
