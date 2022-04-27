@@ -13,6 +13,7 @@ article{
     width: 200px;
     border-radius: 12px;
     height: 450pt;
+    cursor: default;
 }
 #kategoriaCim{
     text-align: center;
@@ -32,7 +33,6 @@ article{
 .kep{
     opacity: 1;
     transition: .2s ease;
-    
 }
 
 .kategoria a{
@@ -63,7 +63,7 @@ article{
 
 /************reszponzivitás****************/
 @media screen and (max-width: 1215px) {
-    .nagykep{
+    .nagykep, .eltun{
         display: none;
     }
     article{

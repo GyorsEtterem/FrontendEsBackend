@@ -357,27 +357,27 @@ $(function () {
 
     // index oldal -----------------------------------------------
     
-    $('#bKategoria').on("click", () => {
+    $('.bKategoria').on("click", () => {
         const termekAllito = new TermekAllito();
         termekAllito.setTipus("B");
     });
-    $('#kKategoria').on("click", () => {
+    $('.kKategoria').on("click", () => {
         const termekAllito = new TermekAllito();
         termekAllito.setTipus("K");
     });
-    $('#iKategoria').on("click", () => {
+    $('.iKategoria').on("click", () => {
         const termekAllito = new TermekAllito();
         termekAllito.setTipus("I");
     });
-    $('#dKategoria').on("click", () => {
+    $('.dKategoria').on("click", () => {
         const termekAllito = new TermekAllito();
         termekAllito.setTipus("D");
     });
-    $('#szKategoria').on("click", () => {
+    $('.szKategoria').on("click", () => {
         const termekAllito = new TermekAllito();
         termekAllito.setTipus("SZ");
     });
-    $('#mKategoria').on("click", () => {
+    $('.mKategoria').on("click", () => {
         const termekAllito = new TermekAllito();
         termekAllito.setTipus("M");
     });

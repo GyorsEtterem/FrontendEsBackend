@@ -3,3 +3,18 @@
     background-color: #ddd2d3;
     border: 1px solid rgb(51, 0, 0);
 }
+
+@media screen and (max-width: 820px){
+    .nagydiv{
+        grid-template-columns: 1fr 1fr;
+    }
+    .urlap, .kTorles{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .nagydiv{
+        grid-template-columns: 1fr;
+    }
+}

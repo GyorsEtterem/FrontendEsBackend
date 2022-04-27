@@ -38,12 +38,12 @@
         <div class="dropdown2">
             <a href="#" class="dropbtn2">Termékek</a>
             <div class="dropdown-content2">
-                <a href="termek">Burgerek</a>
-                <a href="termek">Köretek</a>
-                <a href="termek">Italok</a>
-                <a href="termek">Desszertek</a>
-                <a href="termek">Szószok</a>
-                <a href="termek">Menük</a>
+                <a href="termek" class="bKategoria">Burgerek</a>
+                <a href="termek" class="kKategoria">Köretek</a>
+                <a href="termek" class="iKategoria">Italok</a>
+                <a href="termek" class="dKategoria">Desszertek</a>
+                <a href="termek" class="szKategoria">Szószok</a>
+                <a href="termek" class="mKategoria">Menük</a>
             </div>
         </div>
     </div>

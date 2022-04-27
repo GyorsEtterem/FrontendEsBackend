@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="../css/stilus.css" rel="stylesheet" type="text/css" />
-    <link href="../css/kedvezmeny.css" rel="stylesheet" type="text/css" />
     <link href="../css/szerkezet.css" rel="stylesheet" type="text/css" />
+    <link href="../css/kedvezmeny.css" rel="stylesheet" type="text/css" />
     <script src="../js/ajax.js"></script>
     <script src="../js/kedvezmeny.js"></script>
     <script src="../js/script.js"></script>
@@ -50,7 +50,7 @@
                         <p class="kedvSzaz"></p>
                         <p class="kedvKez"></p>
                         <p class="kedvVeg"></p>
-                        <a class="kTorles"><button>TÖRLÉS</button></a>
+                        <a class="kTorles cursor"><button>TÖRLÉS</button></a>
                     </div>
                 </div>
                 <div class="nagydiv">
