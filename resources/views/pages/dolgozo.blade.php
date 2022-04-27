@@ -53,8 +53,8 @@
                         <td class="telszam"></td>
                         <td class="megnevezes"></td>
                         <td class="email"></td>
-                        <td class="torles"><button>Törlés</button></td>
-                        <td class="modositas"><button>Módosítás</button></td>
+                        <td class="torles"><button class="cursor">Törlés</button></td>
+                        <td class="modositas"><button class="cursor">Módosítás</button></td>
                     </tr>
                 </table>
             </article>
@@ -90,7 +90,7 @@
 
                 </tbody>
             </table>
-            <a class="regisztraciofelv" href="registration"><button class="kozosGomb">Új dolgozó regisztrácálása</button></a>
+            <a class="regisztraciofelv cursor" href="registration"><button class="kozosGomb">Új dolgozó regisztrácálása</button></a>
             <br><br>
             <section class="urlap">
                 <form action="">
@@ -121,8 +121,6 @@
                             <option value="2">Dolgozó</option>
                             </select>
                         </form><br><br>
-                        <!-- <input type="text" id="munkakor" name="munkakor"> -->
-                        
 
                         <label for="telefonszam">Telefonszám:</label><br>
                         <input type="text" id="telefonszam" placeholder="06301234567" name="telefonszam"></br></br>

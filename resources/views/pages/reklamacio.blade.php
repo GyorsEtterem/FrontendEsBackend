@@ -56,7 +56,7 @@
 
             </section>
             <section class="rendelesek10perc">
-                <h1 class="rend10">Elmúlt 10perc átadott rendelései</h1>
+                <h1 class="rend10">Elmúlt 10percben átadott termékek</h1>
                 <div class="nagydiv" id="percrespo">
                     <div class="rendeles">
                         <p class="nyugta"></p>
@@ -64,7 +64,7 @@
                         <p class="termeknev"></p>
                         <p class="termekAr"></p>
                         <p class="csere_ideje"></p>
-                        <p class="hozzaad"><button>Reklamáció hozzáadása</button></p>
+                        <p class="hozzaad"><button class="cursor">Reklamáció hozzáadása</button></p>
                     </div>
             </section>
             <section class="urlap">
@@ -80,7 +80,6 @@
                         <fieldset>
                             <legend>Reklamáció hozzáadáas</legend>
                             <label for="nyugta">Nyugta megadása:</label><br>
-                            <!-- <p id="nyugta" name="nyugta" value="{{old('nyugta')}}"></p><br><br> -->
                             <input type="text" id="nyugta" name="nyugta" value="{{old('nyugta')}}"><br><br>
 
                             <label for="termek_id">Termék:</label><br>

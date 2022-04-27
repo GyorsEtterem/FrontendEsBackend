@@ -4,6 +4,10 @@
     border: 1px solid rgb(51, 0, 0);
 }
 
+.nagydiv{
+    margin-bottom: 20pt;
+}
+
 @media screen and (max-width: 820px){
     .nagydiv{
         grid-template-columns: 1fr 1fr;

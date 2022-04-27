@@ -53,7 +53,7 @@
                         <a class="kTorles cursor"><button>TÖRLÉS</button></a>
                     </div>
                 </div>
-                <div class="nagydiv">
+                <div class="nagydiv belsoMezo">
                     
                 </div>
             </section>
