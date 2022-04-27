@@ -16,7 +16,6 @@ class CreateAlapanyagsTable extends Migration
         Schema::create('alapanyags', function (Blueprint $table) {
             $table->increments('alapa_id')->start_from(200);
             $table->char('otNeve', 30);
-            // $table->primary('alapa_id');
             $table->timestamps();
         });
     }

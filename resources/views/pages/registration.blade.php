@@ -69,21 +69,9 @@
 
 
                     <label for="telefonszam">Telefonszám:</label><br>
-                    <input type="text" id="telefonszam" placeholder="06301234567" name="telefonszam" value="{{old('telefonszam')}}"></br></br> <!-- pattern="[0-9]{10,}" maxlength="11"  -->
-
-                    <!-- <label for="munkakor_id">Munkakör:</label><br>
-          <select name="munkakor_id" id="munkakor_id" required>
-            <option value="munkakor_id">Pénztáros</option>
-            <option value="munkakor_id">Konyhai dolgozó</option>
-            <option value="munkakor_id">Menedzser</option>
-          </select>  
-    <hr> -->
-
-                    <!-- <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
+                    <input type="text" id="telefonszam" placeholder="06301234567" name="telefonszam" value="{{old('telefonszam')}}"></br></br>
                     <button type="submit" class="registerbtn">Regisztráció</button>
                 </div>
-
-                <!-- <p>Már van fiókod?<a class="login" href="/login"><button class="kozosGomb">Bejelentkezés</button></a>.</p> -->
                 <p>Már van fiókod?<a class="login" class="kozosGomb" href="/login">Bejelentkezés</a></p>
                 </div>
             </form>

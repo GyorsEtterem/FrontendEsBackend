@@ -25,8 +25,7 @@ class CreateNyugtatetelsTable extends Migration
             $table->primary(['nyugta','termek_id']);
             $table->timestamps();
         });
-        //DB::unprepared('ALTER TABLE nyugtatetels DROP PRIMARY KEY, ADD PRIMARY KEY (  termek_id ,  nyugta )');
-    }// megkérdezni
+    }
     
 
     /**

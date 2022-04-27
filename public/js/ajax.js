@@ -1,7 +1,6 @@
 class MyAjax {
     constructor() {}
     adatBetolt(apivegpont, tomb, myCallback) {
-        //tomb.splice(0,tomb.length);
         tomb = [];
         $.ajax({
             url: apivegpont,

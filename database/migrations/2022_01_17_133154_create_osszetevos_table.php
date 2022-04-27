@@ -14,7 +14,6 @@ class CreateOsszetevosTable extends Migration
     public function up()
     {
         Schema::create('osszetevos', function (Blueprint $table) {
-            //$table->primary('termek_id');
             $table->Integer('termek_id')->unsigned();
             $table->index('termek_id');
             $table->foreign('termek_id')->references('termek_id')->on('termeks');

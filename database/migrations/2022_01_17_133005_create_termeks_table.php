@@ -14,7 +14,6 @@ class CreateTermeksTable extends Migration
     public function up()
     {
         Schema::create('termeks', function (Blueprint $table) {
-            //unsignedBigInteger
             $table->increments('termek_id')->start_from(100);
             $table->char('fajta', 2);
             $table->char('termeknev', 30);
