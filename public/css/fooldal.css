@@ -1,3 +1,4 @@
+@charset "utf-8";
 article{
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;

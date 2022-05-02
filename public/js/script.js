@@ -18,8 +18,6 @@ $(function () {
         apiVege = "dolgozoMunka";
         apiTomb = dolgozoTomb;
         apiFunc = dolgozoKiir;
-        // apivegpont="/api/dolgozoMunka"; //dolgozoKerese
-        // apivegpont += "?q=" ;// + keresomezo.val()
         myAjax.adatBetolt(apivegpont + "dolgozoMunka", dolgozoTomb, dolgozoKiir);
     }else if(window.location.href.includes("reklamacio")){
         apiVege = "reklamacio";
@@ -70,7 +68,7 @@ $(function () {
 
             const szuloElem = $(".dolgozok_tabla");
             const sablonElem = $('.dolgozo');
-            apivegpont="/api/dolgozo"; //dolgozoKerese
+            apivegpont="/api/dolgozo";
             apivegpont += "?q=" + keresomezo.val();
             szuloElem.children().remove();
             dolgozoTomb.splice();

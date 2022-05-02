@@ -18,14 +18,10 @@
         <header>
             <div class="felsoSav">
                 <div>
-                    <a href="index"><img src="../kepek/logo.png" alt="Oldalunk logója" class="logo"></a>
+                    <img src="../kepek/logo.png" alt="Oldalunk logója" class="logo">
                 </div>
                 <div>
                     <h1>Bejelentkezés</h1>
-                </div>
-                <div>
-                    <nav>
-                    </nav>
                 </div>
             </div>
         </header>

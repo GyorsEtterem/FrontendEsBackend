@@ -14,7 +14,7 @@ class relkamacioFelvitelController extends Controller
         $request->validate([
             'termek_id' => 'required',
             'nyugta' => 'required',
-            'leiras' => 'required|unique:reklamacios',
+            'leiras' => 'required',
             'csere_ideje' => 'required',
         ]);
         $reklamal = new reklamacio();

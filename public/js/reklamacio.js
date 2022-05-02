@@ -13,7 +13,6 @@ class Reklamacio {
     }
 
     setAdat(adat) {
-        //this.adat = adat;
         console.log(adat.nyugta);
         this.reklTermek.text("Termék id: " + adat.termek_id);
         this.reklLeiras.text("Probléma: " + adat.leiras);

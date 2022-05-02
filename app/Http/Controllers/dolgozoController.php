@@ -12,22 +12,6 @@ class dolgozoController extends Controller
     public function index(Request $request)
 
     {
-        // DB::table('dolgozos')
-        // -> join( 'munkakors', 'dolgozos.munkakor_id', '=' ,'munkakors.munkakor_id')
-        // -> select(
-        //     'dolgozos.neve',
-        //     'dolgozos.telefonszam',
-        //     'dolgozos.szuldatum',
-        //     'dolgozos.cim',
-        //     'dolgozos.email',
-        //     'dolgozos.jelszo',
-        //     'munkakors.megnevezes',
-        //     'munkakors.munkakor_id'
-        // )
-        // // ->query('q', '')->where('neve', 'like', "%$neve%");
-
-        // ->get();
-
         $neve = $request->query('q', '');
         
         if($neve===null){

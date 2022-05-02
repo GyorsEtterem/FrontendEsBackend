@@ -76,7 +76,6 @@
                             <option value="M">M</option>
                             </select>
                         </form><br><br>
-                        <!-- <input type="text" name="termekFaj" id="termekFaj" ><br><br> -->
                         <label for="termeknev">Terménév:</label><br>
                         <input type="text" id="termeknev" name="termeknev"><br><br>
 
@@ -112,9 +111,6 @@
                         </form><br>
                         <label for="termekKep">Kép:</label><br>
                         <input type="text" id="termekKep" name="termekKep"><br><br>
-                        <!-- <label for="kep">Válasszon képet:</label>
-                        <input type="file" id="kep" name="kep"><br><br>
-                        <div> -->
                         <div>
                             <input type="submit" class="gomb" id="tAjaxModosit" value="MÓDOSÍT" style="display: none">
                             <input type="submit" class="gomb" id="ajaxUjTermek" value="ÚJ TERMÉK">
@@ -127,10 +123,6 @@
                 <h3>Rendelési tételek</h3>
                 <div id="kosaram"></div><br>
                 <span id="osszar"></span><br><br>
-
-                <!-- <label for="megjegy">Megjegyzés:</label><br>
-                <textarea rows="5" cols="20" id="megjegy" name="megjegy"></textarea><br><br> -->
-
                 <a href="index" class="cursor"><button>Főoldalra</button></a>
             </section>
         </article>

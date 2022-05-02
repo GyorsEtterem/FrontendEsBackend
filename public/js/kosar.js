@@ -8,7 +8,6 @@ class Kosar {
       this.kosarTomb = [];
       this.kosarMegjegyzes = "";
       //localstorage-ból beolvassuk az adatokat és betesszük a tömbbe
-      // console.log(localStorage.getItem('kosaram'))
       if (localStorage.getItem('kosaram') !== null) {
         this.kosarTomb = JSON.parse(localStorage.getItem('kosaram'));
         this.megjelenit();
@@ -39,8 +38,6 @@ class Kosar {
     }
 
     setKosar(termek) {
-      const myAjax = new MyAjax;
-      const kedvezTomb = [];
       this.kosarTomb.push(termek);
       localStorage.setItem('kosaram', JSON.stringify(this.kosarTomb));
       
@@ -51,13 +48,6 @@ class Kosar {
 
     megjelenit(){
         tablazatEpito(this.kosarTomb);
-        this.kosarbaGombElem = $('.kosarTorol');
-        this.kosarbaGombElem.on('click', (event) => {
-            let id = $(event.target).attr('data-id');
-            this.kosarTomb.splice(id, 1);
-            localStorage.setItem('kosaram', JSON.stringify(this.kosarTomb))
-            this.megjelenit();
-        });
     }
 }
 
@@ -72,15 +62,8 @@ function osszeszamol(tomb){
 function tablazatEpito(tomb){
   let txt = '<table>';
   tomb.forEach((elem, index) => {
-    txt += 
-      '<tr><td>' +
-        elem.termeknev +
-      '</td><td>' +
-        elem.kedvezmenyes_ar +
-      ' Ft</td><td><button data-id="' +
-        index +
-      '" class="kosarTorol">X</button></td></tr>'
-  });
+    txt += '<tr><td>' + elem.termeknev + '</td><td>' + elem.kedvezmenyes_ar +
+      ' Ft</td><td><button data-id="'+ index +'" class="kosarTorol cursor">X</button></td></tr>' });
   txt += '</table>';
   $('#kosaram').html(txt);
 

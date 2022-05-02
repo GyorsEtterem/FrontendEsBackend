@@ -46,8 +46,6 @@ class termekController extends Controller
 
     {
 
-        // $article = termek::find($id);
-
         $request->validate([
             'fajta' => 'required',
             'termeknev' => 'required',

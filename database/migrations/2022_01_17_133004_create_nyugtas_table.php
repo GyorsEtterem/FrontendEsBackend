@@ -20,9 +20,6 @@ class CreateNyugtasTable extends Migration
             $table->boolean('fizetesMod')->default(true);
             $table->date('datumrend');
             $table->date('datumkifizet');
-            // $table->Integer('dolg_id')->unsigned();
-            // $table->index('dolg_id');
-            // $table->foreign('dolg_id')->references('dolg_id')->on('dolgozos');
             $table->char('megjegyzes', 100)->nullable();
             $table->timestamps();
         });

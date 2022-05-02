@@ -28,9 +28,6 @@ use App\Http\Controllers\munkaKapcsController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/login', function (Request $request) {
-//     return $request->user();
-// });
 Route::get('/elmult10perc', [elmult10pRendController::class, 'index']);
 Route::get('/dolgozoMunka', [munkaKapcsController::class, 'index']);
 

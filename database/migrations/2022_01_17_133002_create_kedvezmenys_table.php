@@ -15,7 +15,6 @@ class CreateKedvezmenysTable extends Migration
     {
         Schema::create('kedvezmenies', function (Blueprint $table) {
             $table->increments('kedvezmeny_id')->start_from(400);
-            /* $table->smallIncrements('kedvezmeny_id')->primary(); */
             $table->Integer('kedvezmeny');
             $table->date('mettol');
             $table->date('meddig');

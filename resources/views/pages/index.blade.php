@@ -16,7 +16,6 @@
     <script src="../js/indexJs.js"></script>
     <script src="../js/script.js"></script>
     <title>Gyorsétterem</title>
-    <!-- <link rel="icon" href="icon_path" type="image/icon type"> -->
     <link rel="icon" href="../kepek/icon.png" type="image/png">
     </head>
 <body>
