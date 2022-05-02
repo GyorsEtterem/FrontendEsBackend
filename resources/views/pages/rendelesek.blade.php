@@ -17,8 +17,8 @@
 
 <body>
     <main>
-    @endsection
-    @section('header')
+        @endsection
+        @section('header')
         <header>
             <div class="felsoSav">
                 <div>
@@ -30,7 +30,7 @@
                 <div>
                     <nav>
                         @endsection
-                        
+
                         @section('content')
                     </nav>
                 </div>
@@ -59,8 +59,8 @@
                     <p class="rendelesAll"></p>
                     </p>
                     <p>Rendelés állapota:
-                        <p class="rendelesAll"></p>
-                        </p>
+                    <p class="rendelesAll"></p>
+                    </p>
                     <p>Termék:
                     <p class="termeknev"></p>
                     </p>

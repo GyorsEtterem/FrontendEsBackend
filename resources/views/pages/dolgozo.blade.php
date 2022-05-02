@@ -115,10 +115,10 @@
                         <input type="date" id="szuldatum" name="szuldatum"><br><br>
 
                         <label for="munkakor">Munkakör: </label><br>
-                        <form action = "">
-                            <select name = "munkakor" id="munkakor">
-                            <option value="1">Manager</option>
-                            <option value="2">Dolgozó</option>
+                        <form action="">
+                            <select name="munkakor" id="munkakor">
+                                <option value="1">Manager</option>
+                                <option value="2">Dolgozó</option>
                             </select>
                         </form><br><br>
 
