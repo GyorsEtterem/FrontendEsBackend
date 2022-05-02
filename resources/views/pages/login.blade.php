@@ -20,12 +20,15 @@
                 <div>
                     <img src="../kepek/logo.png" alt="Oldalunk logója" class="logo">
                 </div>
-                <div>
+                <div class="cimMenuben">
                     <h1>Bejelentkezés</h1>
                 </div>
             </div>
         </header>
         <article>
+            <div class="cimMenunKivul">
+                <h1>Készülő rendelések</h1>
+            </div>
             <form action="{{route('login-user')}}" method="post">
                 @if(Session::has('sikeres'))
                 <div class="alert alert-sikeres">{{Session::get('sikeres')}}</div>
