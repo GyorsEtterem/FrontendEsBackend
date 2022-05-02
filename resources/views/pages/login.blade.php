@@ -27,7 +27,7 @@
         </header>
         <article>
             <div class="cimMenunKivul">
-                <h1>Készülő rendelések</h1>
+                <h1>Bejelentkezés</h1>
             </div>
             <form action="{{route('login-user')}}" method="post">
                 @if(Session::has('sikeres'))
