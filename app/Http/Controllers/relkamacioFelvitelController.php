@@ -26,6 +26,6 @@ class relkamacioFelvitelController extends Controller
 
         if ($res) {
             return back()->with('sikeres', 'A reklamációt rögzítettük');
-        } 
+        }
     }
 }

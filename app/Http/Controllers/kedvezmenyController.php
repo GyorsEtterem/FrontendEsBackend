@@ -13,17 +13,15 @@ class kedvezmenyController extends Controller
     {
 
         return kedvezmeny::all();
-
     }
 
- 
+
 
     public function show($id)
 
     {
 
         return kedvezmeny::find($id);
-
     }
 
 
@@ -34,30 +32,28 @@ class kedvezmenyController extends Controller
 
         //kötelező oszlopok
 
-     $request->validate([
-        //'poszt' => 'required'
+        $request->validate([
+            //'poszt' => 'required'
         ]);
 
         return kedvezmeny::create($request->all());
-
     }
 
-    public function update(Request $request,string $id)
+    public function update(Request $request, string $id)
 
     {
 
         $article = kedvezmeny::find($id);
 
-     $request->validate([
-        //'poszt' => 'required'
-     ]);
+        $request->validate([
+            //'poszt' => 'required'
+        ]);
 
         $article->update($request->all());
 
 
 
         return $article;
-
     }
 
     public function delete(Request $request, $id)
@@ -69,6 +65,5 @@ class kedvezmenyController extends Controller
         $article->delete();
 
         return ['message' => 'Törölve'];
-
     }
 }

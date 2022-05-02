@@ -1,6 +1,6 @@
-class Kedvezmeny{
+class Kedvezmeny {
     constructor(node, adat) {
-        console.log(adat)
+        console.log(adat);
         this.node = node;
         /**selectorok elnvezése */
         this.adat = adat;
@@ -17,7 +17,7 @@ class Kedvezmeny{
     }
 
     setAdat(adat) {
-        console.log(adat)
+        console.log(adat);
         this.adat = adat;
         this.kedvezmeny_id.text("Kedvezmény ID: " + adat.kedvezmeny_id);
         this.kedvSzaz.text("Kedvezmény: " + adat.kedvezmeny + "%");
@@ -25,11 +25,11 @@ class Kedvezmeny{
         this.kedvVeg.text("Kedvezmény vége: " + adat.meddig);
     }
 
-    torlesTrigger(adat){
-        let esemeny  = new CustomEvent("kTorles", {
+    torlesTrigger(adat) {
+        let esemeny = new CustomEvent("kTorles", {
             detail: this.adat,
         });
-        
-        window.dispatchEvent(esemeny); 
+
+        window.dispatchEvent(esemeny);
     }
 }

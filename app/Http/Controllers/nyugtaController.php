@@ -33,8 +33,7 @@ class nyugtaController extends Controller
         //kötelező oszlopok
 
         $request->validate([/* 
-            'poszt' => 'required' */
-        ]);
+            'poszt' => 'required' */]);
 
         return nyugta::create($request->all());
     }
@@ -48,8 +47,7 @@ class nyugtaController extends Controller
         $article = nyugta::find($nyugtaszam);
 
         $request->validate([/* 
-            'poszt' => 'required' */
-        ]);
+            'poszt' => 'required' */]);
 
         $article->update($request->all());
 

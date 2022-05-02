@@ -33,8 +33,7 @@ class nyugtatetelController extends Controller
         //kötelező oszlopok
 
         $request->validate([/* 
-            'poszt' => 'required' */
-        ]);
+            'poszt' => 'required' */]);
 
         return nyugtatetel::create($request->all());
     }
@@ -48,8 +47,7 @@ class nyugtatetelController extends Controller
         $article = nyugtatetel::find($termek_id);
 
         $request->validate([/* 
-            'poszt' => 'required' */
-        ]);
+            'poszt' => 'required' */]);
 
         $article->update($request->all());
 

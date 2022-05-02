@@ -13,34 +13,34 @@ class dolgozoController extends Controller
 
     {
         $neve = $request->query('q', '');
-        
-        if($neve===null){
+
+        if ($neve === null) {
             $keres = DB::table('dolgozos')
-            -> join( 'munkakors', 'dolgozos.munkakor_id', '=' ,'munkakors.munkakor_id')
-            -> select(
-                'dolgozos.dolg_id',
-                'dolgozos.neve',
-                'dolgozos.telefonszam',
-                'dolgozos.szuldatum',
-                'dolgozos.cim',
-                'dolgozos.email',
-                'dolgozos.jelszo',
-                'munkakors.megnevezes',
-                'munkakors.munkakor_id'
-            );
-        }else{
-            $keres = dolgozo::where('neve', 'like', "%$neve%")-> join( 'munkakors', 'dolgozos.munkakor_id', '=' ,'munkakors.munkakor_id')
-            -> select(
-                'dolgozos.dolg_id',
-                'dolgozos.neve',
-                'dolgozos.telefonszam',
-                'dolgozos.szuldatum',
-                'dolgozos.cim',
-                'dolgozos.email',
-                'dolgozos.jelszo',
-                'munkakors.megnevezes',
-                'munkakors.munkakor_id'
-            );
+                ->join('munkakors', 'dolgozos.munkakor_id', '=', 'munkakors.munkakor_id')
+                ->select(
+                    'dolgozos.dolg_id',
+                    'dolgozos.neve',
+                    'dolgozos.telefonszam',
+                    'dolgozos.szuldatum',
+                    'dolgozos.cim',
+                    'dolgozos.email',
+                    'dolgozos.jelszo',
+                    'munkakors.megnevezes',
+                    'munkakors.munkakor_id'
+                );
+        } else {
+            $keres = dolgozo::where('neve', 'like', "%$neve%")->join('munkakors', 'dolgozos.munkakor_id', '=', 'munkakors.munkakor_id')
+                ->select(
+                    'dolgozos.dolg_id',
+                    'dolgozos.neve',
+                    'dolgozos.telefonszam',
+                    'dolgozos.szuldatum',
+                    'dolgozos.cim',
+                    'dolgozos.email',
+                    'dolgozos.jelszo',
+                    'munkakors.megnevezes',
+                    'munkakors.munkakor_id'
+                );
         }
         $sort = $request->query('desc', '');
         $a = '';

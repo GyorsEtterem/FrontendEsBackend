@@ -16,7 +16,7 @@ class Reklamacio {
         console.log(adat.nyugta);
         this.reklTermek.text("Termék id: " + adat.termek_id);
         this.reklLeiras.text("Probléma: " + adat.leiras);
-        this.reklIdeje.text("Csere megtörtént: "+adat.csere_ideje);
-        this.reklNyugta.text("Rendelés sorszáma: "+adat.nyugta);
+        this.reklIdeje.text("Csere megtörtént: " + adat.csere_ideje);
+        this.reklNyugta.text("Rendelés sorszáma: " + adat.nyugta);
     }
 }

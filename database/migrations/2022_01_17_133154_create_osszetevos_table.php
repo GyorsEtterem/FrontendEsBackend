@@ -20,7 +20,7 @@ class CreateOsszetevosTable extends Migration
             $table->Integer('alapa_id')->unsigned();
             $table->index('alapa_id');
             $table->foreign('alapa_id')->references('alapa_id')->on('alapanyags');
-            $table->primary(['alapa_id','termek_id']);
+            $table->primary(['alapa_id', 'termek_id']);
             $table->timestamps();
         });
     }

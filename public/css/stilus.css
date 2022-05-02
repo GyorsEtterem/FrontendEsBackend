@@ -134,6 +134,7 @@ html::-webkit-scrollbar-thumb {
     border-radius: 5pt;
     cursor: pointer;
 }
-.cursor>button, .cursor{
+.cursor > button,
+.cursor {
     cursor: pointer;
 }

@@ -1,22 +1,24 @@
 @charset "utf-8";
 
-/**reszponzivitás**/ 
-@media screen and (max-width: 1200px) {      
-    #rendelesek, #atrendelesek{         
-        grid-template-columns: 1fr 1fr;     
-    }     
-    .urlap, #rendeleshozza, .szerkesztes { 
-                display: none;     
-            }
-         
-        }  
-        
-        @media screen and (max-width: 400px) {     
-            #rendelesek{         
-                grid-template-columns: 1fr;      
-            }      
-        }
+/**reszponzivitás**/
+@media screen and (max-width: 1200px) {
+    #rendelesek,
+    #atrendelesek {
+        grid-template-columns: 1fr 1fr;
+    }
+    .urlap,
+    #rendeleshozza,
+    .szerkesztes {
+        display: none;
+    }
+}
 
-article .buttonok{
+@media screen and (max-width: 400px) {
+    #rendelesek {
+        grid-template-columns: 1fr;
+    }
+}
+
+article .buttonok {
     margin-bottom: 30px;
 }

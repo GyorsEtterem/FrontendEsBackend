@@ -1,6 +1,6 @@
-class Termek{
+class Termek {
     constructor(node, adat) {
-        console.log(adat)
+        console.log(adat);
         this.node = node;
         /**selectorok elnvezése */
         this.adat = adat;
@@ -12,7 +12,9 @@ class Termek{
         this.kep = this.node.children(".kep");
         this.setAdat(this.adat);
         this.termekTorles = this.node.children(".tTorles").children("button");
-        this.termekModosit = this.node.children(".tModositas").children("button");
+        this.termekModosit = this.node
+            .children(".tModositas")
+            .children("button");
         this.termekTorles.on("click ", () => {
             this.torlesTrigger(this.adat);
         });
@@ -24,7 +26,7 @@ class Termek{
         });
     }
 
-    termekreKatt(adat){
+    termekreKatt(adat) {
         let esemeny = new CustomEvent("kosarbarak", {
             detail: this.adat,
         });
@@ -41,19 +43,17 @@ class Termek{
         this.kep.attr("src", adat.kep);
     }
 
-    torlesTrigger(adat){
-        let esemeny  = new CustomEvent("tTorles", {
+    torlesTrigger(adat) {
+        let esemeny = new CustomEvent("tTorles", {
             detail: this.adat,
         });
-        window.dispatchEvent(esemeny); 
+        window.dispatchEvent(esemeny);
     }
 
-    modositTrigger(){
-        let esemeny  = new CustomEvent("tModositas", {
-
-            detail: this.adat, 
+    modositTrigger() {
+        let esemeny = new CustomEvent("tModositas", {
+            detail: this.adat,
         });
-        window.dispatchEvent(esemeny); 
+        window.dispatchEvent(esemeny);
     }
-     
 }

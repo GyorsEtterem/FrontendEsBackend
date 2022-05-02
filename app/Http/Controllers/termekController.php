@@ -13,17 +13,15 @@ class termekController extends Controller
     {
 
         return termek::all();
-
     }
 
- 
+
 
     public function show($id)
 
     {
 
         return termek::find($id);
-
     }
 
     public function store(Request $request)
@@ -33,11 +31,10 @@ class termekController extends Controller
         //kötelező oszlopok
 
         $request->validate([
-        //'poszt' => 'required'
+            //'poszt' => 'required'
         ]);
 
         return termek::create($request->all());
-
     }
 
 
@@ -58,19 +55,18 @@ class termekController extends Controller
         ]);
 
         $termek = termek::find($termek_id);
-        $termek -> fajta = $request -> fajta;
-        $termek -> termeknev = $request -> termeknev;
-        $termek -> eladhato = $request -> eladhato;
-        $termek -> raktaron = $request -> raktaron;
-        $termek -> meret = $request -> meret;
-        $termek -> kedvezmeny_id = $request -> kedvezmeny_id;
-        $termek -> ar = $request -> ar;
-        $termek -> kep = $request -> kep;
-        $termek -> save();
+        $termek->fajta = $request->fajta;
+        $termek->termeknev = $request->termeknev;
+        $termek->eladhato = $request->eladhato;
+        $termek->raktaron = $request->raktaron;
+        $termek->meret = $request->meret;
+        $termek->kedvezmeny_id = $request->kedvezmeny_id;
+        $termek->ar = $request->ar;
+        $termek->kep = $request->kep;
+        $termek->save();
 
 
         return ['message' => 'Módosítva'];
-
     }
 
 
@@ -84,6 +80,5 @@ class termekController extends Controller
         $article->delete();
 
         return ['message' => 'Törölve'];
-
     }
 }

@@ -1,125 +1,119 @@
 @charset "utf-8";
-article{
+article {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     gap: 10px;
 }
-.kategoriak{
+.kategoriak {
     display: grid;
-    grid-template-columns: 1fr  1fr  1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1px;
     padding: 10px;
 }
-.nagykep{
+.nagykep {
     width: 200px;
     border-radius: 12px;
     height: 450pt;
     cursor: default;
 }
-#kategoriaCim{
+#kategoriaCim {
     text-align: center;
 }
-.kategoria{
+.kategoria {
     position: relative;
     height: 250px;
 }
-.KKepCim{
-    transition: .2s ease;
+.KKepCim {
+    transition: 0.2s ease;
     opacity: 0;
     font-size: 40px;
-    color:black;
+    color: black;
     position: relative;
     bottom: 60%;
 }
-.kep{
+.kep {
     opacity: 1;
-    transition: .2s ease;
+    transition: 0.2s ease;
 }
 
-.kategoria a{
+.kategoria a {
     text-decoration: none;
     letter-spacing: 2px;
     text-align: center;
     font-weight: bold;
 }
-.kategoria:hover .kep{
+.kategoria:hover .kep {
     opacity: 0.1;
-}  
-.kategoria:hover .KKepCim{
+}
+.kategoria:hover .KKepCim {
     opacity: 1;
 }
 
-.belsoMezo::-webkit-scrollbar{
+.belsoMezo::-webkit-scrollbar {
     width: 20px;
     background-color: white;
-    border: 1px solid  white;
+    border: 1px solid white;
     border-radius: 50px;
 }
-.belsoMezo::-webkit-scrollbar-thumb{
+.belsoMezo::-webkit-scrollbar-thumb {
     width: 15px;
     background-color: rgb(51, 0, 0);
-    border: 1px solid  white;
+    border: 1px solid white;
     border-radius: 50px;
 }
 
 /************reszponzivitás****************/
 @media screen and (max-width: 1215px) {
-    .nagykep, .eltun{
+    .nagykep,
+    .eltun {
         display: none;
     }
-    article{
+    article {
         grid-template-columns: 3fr 1fr;
     }
 }
 @media screen and (max-width: 1035px) {
-    article{
+    article {
         grid-template-columns: 2fr 1fr;
     }
-    .kategoriak{
+    .kategoriak {
         grid-template-columns: 1fr 1fr;
     }
 }
 @media screen and (max-width: 800px) {
-    article{
+    article {
         grid-template-columns: 1fr;
     }
-    
-    .kep{   
-       
+
+    .kep {
         display: none;
     }
-    .KKepCim{
+    .KKepCim {
         opacity: 1;
         bottom: 35%;
         color: white;
-
     }
-    .kategoria{
+    .kategoria {
         margin: 15px;
         height: 35px;
         background-color: rgb(51, 0, 0);
-        
     }
 }
 @media screen and (max-width: 565px) {
-    .kategoriak{
+    .kategoriak {
         grid-template-columns: 1fr;
     }
-    .kep{   
-       
+    .kep {
         display: none;
     }
-    .KKepCim{
+    .KKepCim {
         opacity: 1;
         bottom: 35%;
         color: white;
-
     }
-    .kategoria{
+    .kategoria {
         margin: 15px;
         height: 35px;
         background-color: rgb(51, 0, 0);
-        
     }
-
 }

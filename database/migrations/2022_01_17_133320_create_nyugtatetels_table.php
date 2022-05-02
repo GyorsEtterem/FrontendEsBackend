@@ -22,11 +22,11 @@ class CreateNyugtatetelsTable extends Migration
             $table->foreign('termek_id')->references('termek_id')->on('termeks');
             $table->boolean('etelAllapot')->default(true);
             $table->timestamp('datumKesz');
-            $table->primary(['nyugta','termek_id']);
+            $table->primary(['nyugta', 'termek_id']);
             $table->timestamps();
         });
     }
-    
+
 
     /**
      * Reverse the migrations.

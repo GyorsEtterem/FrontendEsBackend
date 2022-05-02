@@ -24,7 +24,8 @@ rend10 {
     }
     .urlap,
     .reklamhozza,
-    .hozzaad, .rendelesek10perc {
+    .hozzaad,
+    .rendelesek10perc {
         display: none;
     }
 }

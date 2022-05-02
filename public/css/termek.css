@@ -1,30 +1,32 @@
 @charset "utf-8";
 
-.termek{
+.termek {
     border: 1px solid rgb(51, 0, 0);
     align-content: center;
     background-color: #ddd2d3;
 }
 
-.termek>h3, .termek>a{
+.termek > h3,
+.termek > a {
     margin: auto;
 }
 
-.termek>p{
+.termek > p {
     text-align: center;
     margin: 1pt;
 }
 
-.tTorles>button, .tModositas>button{
+.tTorles > button,
+.tModositas > button {
     margin-top: 5pt;
     cursor: pointer;
 }
 
-.tModositas{
+.tModositas {
     float: right;
 }
 
-.termeknev{
+.termeknev {
     font-size: x-large;
     width: fit-content;
     padding: 4pt;
@@ -34,65 +36,66 @@
     cursor: pointer;
 }
 
-.termeknev:hover{
+.termeknev:hover {
     background-color: rgb(51, 0, 0);
     color: #ddd2d3;
 }
 
-#termek_id, .titkosKedvAr, .szazalekId{
+#termek_id,
+.titkosKedvAr,
+.szazalekId {
     display: none;
     height: 0;
 }
 
-#ajaxUjTermek{
+#ajaxUjTermek {
     margin-left: 15pt;
     float: right;
 }
 
-#tAjaxModosit{
+#tAjaxModosit {
     float: left;
 }
 
 /* KOSÁR */
-table{
+table {
     width: 100%;
 }
-.kosarTorol{
+.kosarTorol {
     float: right;
 }
-#osszar{
+#osszar {
     font-size: large;
 }
 
 /************reszponzivitás****************/
 @media screen and (max-width: 1110px) {
-    .nagydiv{
-        grid-template-columns: 1fr  1fr;
+    .nagydiv {
+        grid-template-columns: 1fr 1fr;
     }
-    
-    
 }
 
 @media screen and (max-width: 850px) {
-    .termekarticle{
+    .termekarticle {
         grid-template-columns: 1fr;
     }
-    .urlap{
+    .urlap {
         display: none;
     }
-    .kep{   
+    .kep {
         width: 100px;
     }
-    .kosar{
+    .kosar {
         margin: 40px;
     }
-    .tTorles, .tModositas{
+    .tTorles,
+    .tModositas {
         display: none;
     }
 }
 
-@media screen and (max-width: 550px){
-    .nagydiv{
+@media screen and (max-width: 550px) {
+    .nagydiv {
         grid-template-columns: 1fr;
     }
 }

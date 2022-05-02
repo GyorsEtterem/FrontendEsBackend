@@ -1,32 +1,31 @@
-{ "dolgozok": [
-    {
-      "dolg-id": "1",
-      "neve": "Nagy Valaki",
-      "szuldatum": "1997-02-15",
-      "cim": "Érd Madaras utca 15.",
-      "telefonszam": "06-30-2459-898",
-      "munkakor_id": "15",
-      "jelszo": "******"
-      
-      
-    },
-    {
-      "dolg-id": "2",
-      "neve": "Kis Valaki",
-      "szuldatum": "2000-12-18",
-      "cim": "Budapest Petőfi utca 5.",
-      "telefonszam": "06-30-2459-898",
-      "munkakor_id": "14",
-      "jelszo": "******"
-    },
-    {
-        "dolg-id": "3",
-        "neve": "Szabó Valaki",
-        "szuldatum": "2001-10-28",
-        "cim": "Budapest Petőfi utca 9.",
-        "telefonszam": "06-30-2459-898",
-        "munkakor_id": "13",
-        "jelszo": "******"
-    }
-  ]
+{
+    "dolgozok": [
+        {
+            "dolg-id": "1",
+            "neve": "Nagy Valaki",
+            "szuldatum": "1997-02-15",
+            "cim": "Érd Madaras utca 15.",
+            "telefonszam": "06-30-2459-898",
+            "munkakor_id": "15",
+            "jelszo": "******"
+        },
+        {
+            "dolg-id": "2",
+            "neve": "Kis Valaki",
+            "szuldatum": "2000-12-18",
+            "cim": "Budapest Petőfi utca 5.",
+            "telefonszam": "06-30-2459-898",
+            "munkakor_id": "14",
+            "jelszo": "******"
+        },
+        {
+            "dolg-id": "3",
+            "neve": "Szabó Valaki",
+            "szuldatum": "2001-10-28",
+            "cim": "Budapest Petőfi utca 9.",
+            "telefonszam": "06-30-2459-898",
+            "munkakor_id": "13",
+            "jelszo": "******"
+        }
+    ]
 }

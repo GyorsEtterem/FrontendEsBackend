@@ -10,7 +10,7 @@
 #sablonhoz .dolgozo {
     display: none;
 }
-#sablonhoz table{
+#sablonhoz table {
     border: transparent;
 }
 table,
@@ -19,7 +19,7 @@ td {
 }
 table {
     width: 100%;
-    border-radius: 10px ;
+    border-radius: 10px;
 }
 tr {
     padding: 10px;

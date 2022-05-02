@@ -24,9 +24,8 @@ class CreateTermeksTable extends Migration
             $table->index('kedvezmeny_id');
             $table->foreign('kedvezmeny_id')->references('kedvezmeny_id')->on('kedvezmenies');
             $table->Integer('ar');
-            $table->char('kep',35);
+            $table->char('kep', 35);
             $table->timestamps();
-
         });
     }
 

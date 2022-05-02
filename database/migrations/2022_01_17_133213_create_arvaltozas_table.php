@@ -19,7 +19,7 @@ class CreateArvaltozasTable extends Migration
             $table->foreign('termek_id')->references('termek_id')->on('termeks');
             $table->date('datum');
             $table->Integer('regiar');
-            $table->primary(['datum','termek_id']);
+            $table->primary(['datum', 'termek_id']);
             $table->timestamps();
         });
     }
